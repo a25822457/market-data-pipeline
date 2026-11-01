@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T13:35:50.421320+00:00",
+  "generated_at": "2026-11-01T13:40:03.960292+00:00",
   "minimum_bars": 252,
   "us_universe": {
     "target": 100,
@@ -676,7 +676,7 @@
       "errors": []
     },
     {
-      "asset": "BA",
+      "asset": "DASH",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -688,6 +688,17 @@
     },
     {
       "asset": "SBUX",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "ANET",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -743,6 +754,17 @@
     },
     {
       "asset": "SMCI",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "BKNG",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -962,17 +984,6 @@
       "errors": []
     },
     {
-      "asset": "EL",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 344,
-      "first_date": "2025-06-20",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
       "asset": "WFC",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
@@ -985,17 +996,6 @@
     },
     {
       "asset": "BSX",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 344,
-      "first_date": "2025-06-20",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "NEM",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1105,7 +1105,7 @@
       "errors": []
     },
     {
-      "asset": "AXTI",
+      "asset": "BABA",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1125,8 +1125,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SATS-USDT-SWAP",
@@ -1138,8 +1137,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SHIB-USDT-SWAP",
@@ -1151,8 +1149,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BONK-USDT-SWAP",
@@ -1164,8 +1161,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "FLOKI-USDT-SWAP",
@@ -1177,8 +1173,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RSR-USDT-SWAP",
@@ -1190,8 +1185,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PUMP-USDT-SWAP",
@@ -1203,8 +1197,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "DOOD-USDT-SWAP",
@@ -1216,8 +1209,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SOPH-USDT-SWAP",
@@ -1229,8 +1221,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "NEIRO-USDT-SWAP",
@@ -1242,8 +1233,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BOME-USDT-SWAP",
@@ -1255,8 +1245,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MEW-USDT-SWAP",
@@ -1268,8 +1257,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "IOST-USDT-SWAP",
@@ -1281,8 +1269,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "APR-USDT-SWAP",
@@ -1294,8 +1281,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XPL-USDT-SWAP",
@@ -1307,8 +1293,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "DOGE-USDT-SWAP",
@@ -1320,8 +1305,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "OL-USDT-SWAP",
@@ -1333,8 +1317,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PENGU-USDT-SWAP",
@@ -1346,8 +1329,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "HMSTR-USDT-SWAP",
@@ -1359,8 +1341,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GALA-USDT-SWAP",
@@ -1372,8 +1353,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RLS-USDT-SWAP",
@@ -1385,8 +1365,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "NOT-USDT-SWAP",
@@ -1398,8 +1377,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MEME-USDT-SWAP",
@@ -1411,8 +1389,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "WET-USDT-SWAP",
@@ -1424,8 +1401,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BLUR-USDT-SWAP",
@@ -1437,8 +1413,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZAMA-USDT-SWAP",
@@ -1450,8 +1425,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "FOGO-USDT-SWAP",
@@ -1463,8 +1437,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TRX-USDT-SWAP",
@@ -1476,8 +1449,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ONE-USDT-SWAP",
@@ -1489,8 +1461,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "STRK-USDT-SWAP",
@@ -1502,8 +1473,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CORE-USDT-SWAP",
@@ -1515,8 +1485,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PEOPLE-USDT-SWAP",
@@ -1528,8 +1497,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PARTI-USDT-SWAP",
@@ -1541,21 +1509,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "SPK-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RVN-USDT-SWAP",
@@ -1567,8 +1521,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TURBO-USDT-SWAP",
@@ -1580,8 +1533,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "SPK-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BEAT-USDT-SWAP",
@@ -1593,8 +1557,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ENA-USDT-SWAP",
@@ -1606,8 +1569,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BIO-USDT-SWAP",
@@ -1619,8 +1581,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LINEA-USDT-SWAP",
@@ -1632,8 +1593,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZIL-USDT-SWAP",
@@ -1645,8 +1605,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "HOME-USDT-SWAP",
@@ -1658,8 +1617,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TRIA-USDT-SWAP",
@@ -1671,8 +1629,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZK-USDT-SWAP",
@@ -1684,8 +1641,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ATH-USDT-SWAP",
@@ -1697,8 +1653,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "W-USDT-SWAP",
@@ -1710,8 +1665,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "F-USDT-SWAP",
@@ -1723,8 +1677,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "INIT-USDT-SWAP",
@@ -1736,8 +1689,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "HUMA-USDT-SWAP",
@@ -1749,8 +1701,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "WLD-USDT-SWAP",
@@ -1762,8 +1713,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ANIME-USDT-SWAP",
@@ -1775,21 +1725,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "WOO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SAND-USDT-SWAP",
@@ -1801,8 +1737,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "WOO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BIGTIME-USDT-SWAP",
@@ -1814,8 +1761,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "OP-USDT-SWAP",
@@ -1827,8 +1773,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SAHARA-USDT-SWAP",
@@ -1840,21 +1785,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "STX-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ARB-USDT-SWAP",
@@ -1866,8 +1797,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "STX-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "NIGHT-USDT-SWAP",
@@ -1879,8 +1821,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XRP-USDT-SWAP",
@@ -1892,8 +1833,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LA-USDT-SWAP",
@@ -1905,8 +1845,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MON-USDT-SWAP",
@@ -1918,8 +1857,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "USELESS-USDT-SWAP",
@@ -1931,8 +1869,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CHZ-USDT-SWAP",
@@ -1944,8 +1881,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BICO-USDT-SWAP",
@@ -1957,21 +1893,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "ORDER-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MOVE-USDT-SWAP",
@@ -1983,8 +1905,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "ORDER-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ADA-USDT-SWAP",
@@ -1996,8 +1929,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GMT-USDT-SWAP",
@@ -2009,8 +1941,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PLUME-USDT-SWAP",
@@ -2022,8 +1953,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SENT-USDT-SWAP",
@@ -2035,8 +1965,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LAB-USDT-SWAP",
@@ -2048,8 +1977,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SPACE-USDT-SWAP",
@@ -2061,8 +1989,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MERL-USDT-SWAP",
@@ -2074,8 +2001,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MUBARAK-USDT-SWAP",
@@ -2087,8 +2013,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ACT-USDT-SWAP",
@@ -2100,21 +2025,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "EDEN-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BAT-USDT-SWAP",
@@ -2126,8 +2037,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TRUTH-USDT-SWAP",
@@ -2139,8 +2049,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "EDEN-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SEI-USDT-SWAP",
@@ -2152,8 +2073,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "WLFI-USDT-SWAP",
@@ -2165,8 +2085,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "HBAR-USDT-SWAP",
@@ -2178,8 +2097,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LIT-USDT-SWAP",
@@ -2191,8 +2109,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PYTH-USDT-SWAP",
@@ -2204,8 +2121,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XLM-USDT-SWAP",
@@ -2217,8 +2133,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZORA-USDT-SWAP",
@@ -2230,8 +2145,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "2Z-USDT-SWAP",
@@ -2243,8 +2157,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "KMNO-USDT-SWAP",
@@ -2256,8 +2169,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BABY-USDT-SWAP",
@@ -2269,8 +2181,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SUI-USDT-SWAP",
@@ -2282,8 +2193,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AZTEC-USDT-SWAP",
@@ -2295,8 +2205,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ONDO-USDT-SWAP",
@@ -2308,8 +2217,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PIPPIN-USDT-SWAP",
@@ -2321,8 +2229,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZKP-USDT-SWAP",
@@ -2334,8 +2241,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GPS-USDT-SWAP",
@@ -2347,8 +2253,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BRETT-USDT-SWAP",
@@ -2360,8 +2265,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "FIL-USDT-SWAP",
@@ -2373,21 +2277,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "MAGIC-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "NEAR-USDT-SWAP",
@@ -2399,11 +2289,10 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
-      "asset": "YGG-USDT-SWAP",
+      "asset": "MAGIC-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2412,8 +2301,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PNUT-USDT-SWAP",
@@ -2425,8 +2313,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "YGG-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "S-USDT-SWAP",
@@ -2438,8 +2337,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CFX-USDT-SWAP",
@@ -2451,8 +2349,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MOODENG-USDT-SWAP",
@@ -2464,8 +2361,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "POL-USDT-SWAP",
@@ -2477,8 +2373,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "WAL-USDT-SWAP",
@@ -2490,8 +2385,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RESOLV-USDT-SWAP",
@@ -2503,8 +2397,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZBT-USDT-SWAP",
@@ -2516,8 +2409,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CRV-USDT-SWAP",
@@ -2529,21 +2421,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "PI-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SIGN-USDT-SWAP",
@@ -2555,8 +2433,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "PI-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TIA-USDT-SWAP",
@@ -2568,21 +2457,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "SOON-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ALGO-USDT-SWAP",
@@ -2594,8 +2469,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "SOON-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ALLO-USDT-SWAP",
@@ -2607,8 +2493,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ACH-USDT-SWAP",
@@ -2620,8 +2505,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "1INCH-USDT-SWAP",
@@ -2633,8 +2517,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AIXBT-USDT-SWAP",
@@ -2646,8 +2529,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TRUMP-USDT-SWAP",
@@ -2659,8 +2541,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MINA-USDT-SWAP",
@@ -2672,8 +2553,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ESP-USDT-SWAP",
@@ -2685,8 +2565,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GRT-USDT-SWAP",
@@ -2698,8 +2577,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "EIGEN-USDT-SWAP",
@@ -2711,8 +2589,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SHELL-USDT-SWAP",
@@ -2724,21 +2601,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "WIF-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "FARTCOIN-USDT-SWAP",
@@ -2750,8 +2613,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "WIF-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "H-USDT-SWAP",
@@ -2763,8 +2637,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SKY-USDT-SWAP",
@@ -2776,8 +2649,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "FLOW-USDT-SWAP",
@@ -2789,8 +2661,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CC-USDT-SWAP",
@@ -2802,8 +2673,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BREV-USDT-SWAP",
@@ -2815,8 +2685,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "IOTA-USDT-SWAP",
@@ -2828,8 +2697,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PROVE-USDT-SWAP",
@@ -2841,8 +2709,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AGLD-USDT-SWAP",
@@ -2854,8 +2721,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "UNI-USDT-SWAP",
@@ -2867,8 +2733,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RAVE-USDT-SWAP",
@@ -2880,8 +2745,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CELO-USDT-SWAP",
@@ -2893,8 +2757,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ENJ-USDT-SWAP",
@@ -2906,8 +2769,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CRO-USDT-SWAP",
@@ -2919,8 +2781,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MORPHO-USDT-SWAP",
@@ -2932,8 +2793,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZRO-USDT-SWAP",
@@ -2945,21 +2805,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "KAITO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GRASS-USDT-SWAP",
@@ -2971,8 +2817,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "KAITO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "DYDX-USDT-SWAP",
@@ -2984,8 +2841,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZETA-USDT-SWAP",
@@ -2997,8 +2853,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "POPCAT-USDT-SWAP",
@@ -3010,8 +2865,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ENSO-USDT-SWAP",
@@ -3023,8 +2877,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GLM-USDT-SWAP",
@@ -3036,8 +2889,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "APE-USDT-SWAP",
@@ -3049,8 +2901,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ASTER-USDT-SWAP",
@@ -3062,8 +2913,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BERA-USDT-SWAP",
@@ -3075,8 +2925,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RECALL-USDT-SWAP",
@@ -3088,21 +2937,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "JTO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "APT-USDT-SWAP",
@@ -3114,8 +2949,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "JTO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ETHFI-USDT-SWAP",
@@ -3127,8 +2973,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "STABLE-USDT-SWAP",
@@ -3140,8 +2985,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "JUP-USDT-SWAP",
@@ -3153,8 +2997,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "IMX-USDT-SWAP",
@@ -3166,8 +3009,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LUNA-USDT-SWAP",
@@ -3179,8 +3021,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LDO-USDT-SWAP",
@@ -3192,8 +3033,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "0G-USDT-SWAP",
@@ -3205,8 +3045,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MMT-USDT-SWAP",
@@ -3218,8 +3057,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "DOT-USDT-SWAP",
@@ -3231,8 +3069,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AERO-USDT-SWAP",
@@ -3244,8 +3081,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MANA-USDT-SWAP",
@@ -3257,21 +3093,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "AEVO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "JELLYJELLY-USDT-SWAP",
@@ -3283,8 +3105,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "AEVO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SOL-USDT-SWAP",
@@ -3296,8 +3129,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TRUST-USDT-SWAP",
@@ -3309,8 +3141,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LINK-USDT-SWAP",
@@ -3322,8 +3153,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "A-USDT-SWAP",
@@ -3335,8 +3165,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SYRUP-USDT-SWAP",
@@ -3348,8 +3177,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "WCT-USDT-SWAP",
@@ -3361,8 +3189,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ME-USDT-SWAP",
@@ -3374,8 +3201,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AVNT-USDT-SWAP",
@@ -3387,8 +3213,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LIGHT-USDT-SWAP",
@@ -3400,8 +3225,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ONT-USDT-SWAP",
@@ -3413,8 +3237,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MET-USDT-SWAP",
@@ -3426,8 +3249,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AVAX-USDT-SWAP",
@@ -3439,8 +3261,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SUSHI-USDT-SWAP",
@@ -3452,8 +3273,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SNX-USDT-SWAP",
@@ -3465,8 +3285,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BARD-USDT-SWAP",
@@ -3478,8 +3297,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZRX-USDT-SWAP",
@@ -3491,8 +3309,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AT-USDT-SWAP",
@@ -3504,21 +3321,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "COAI-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LAYER-USDT-SWAP",
@@ -3530,8 +3333,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "COAI-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "VIRTUAL-USDT-SWAP",
@@ -3543,8 +3357,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ARKM-USDT-SWAP",
@@ -3556,8 +3369,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "HYPE-USDT-SWAP",
@@ -3569,8 +3381,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ATOM-USDT-SWAP",
@@ -3582,8 +3393,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ACU-USDT-SWAP",
@@ -3595,8 +3405,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "API3-USDT-SWAP",
@@ -3608,8 +3417,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "INJ-USDT-SWAP",
@@ -3621,8 +3429,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "KGEN-USDT-SWAP",
@@ -3634,8 +3441,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RIVER-USDT-SWAP",
@@ -3647,8 +3453,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "MASK-USDT-SWAP",
@@ -3660,8 +3465,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SPX-USDT-SWAP",
@@ -3673,8 +3477,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "THETA-USDT-SWAP",
@@ -3686,8 +3489,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "YB-USDT-SWAP",
@@ -3699,8 +3501,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PENDLE-USDT-SWAP",
@@ -3712,8 +3513,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SAPIEN-USDT-SWAP",
@@ -3725,8 +3525,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ETHW-USDT-SWAP",
@@ -3738,8 +3537,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "PIEVERSE-USDT-SWAP",
@@ -3751,8 +3549,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ETH-USDT-SWAP",
@@ -3764,8 +3561,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AXS-USDT-SWAP",
@@ -3777,8 +3573,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ICP-USDT-SWAP",
@@ -3790,21 +3585,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "RAY-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "RENDER-USDT-SWAP",
@@ -3816,8 +3597,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "RAY-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BAND-USDT-SWAP",
@@ -3829,8 +3621,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XTZ-USDT-SWAP",
@@ -3842,8 +3633,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ORDI-USDT-SWAP",
@@ -3855,8 +3645,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LQTY-USDT-SWAP",
@@ -3868,8 +3657,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZEC-USDT-SWAP",
@@ -3881,8 +3669,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AAVE-USDT-SWAP",
@@ -3894,8 +3681,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ETC-USDT-SWAP",
@@ -3907,8 +3693,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "AR-USDT-SWAP",
@@ -3920,21 +3705,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "AUCTION-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LPT-USDT-SWAP",
@@ -3946,8 +3717,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "UMA-USDT-SWAP",
@@ -3959,8 +3729,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "NMR-USDT-SWAP",
@@ -3972,8 +3741,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "AUCTION-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "LTC-USDT-SWAP",
@@ -3985,8 +3765,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "QTUM-USDT-SWAP",
@@ -3998,8 +3777,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GAS-USDT-SWAP",
@@ -4011,8 +3789,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XAG-USDT-SWAP",
@@ -4024,8 +3801,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ZEN-USDT-SWAP",
@@ -4037,8 +3813,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "VANA-USDT-SWAP",
@@ -4050,21 +3825,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "BCH-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "ENS-USDT-SWAP",
@@ -4076,8 +3837,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "BCH-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "CVX-USDT-SWAP",
@@ -4089,8 +3861,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "SSV-USDT-SWAP",
@@ -4102,8 +3873,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "DASH-USDT-SWAP",
@@ -4115,8 +3885,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "EGLD-USDT-SWAP",
@@ -4128,8 +3897,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "NEO-USDT-SWAP",
@@ -4141,8 +3909,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BNB-USDT-SWAP",
@@ -4154,8 +3921,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "OKB-USDT-SWAP",
@@ -4167,8 +3933,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TRB-USDT-SWAP",
@@ -4180,8 +3945,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GIGGLE-USDT-SWAP",
@@ -4193,21 +3957,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
-    },
-    {
-      "asset": "METIS-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-05",
-      "last_date": "2026-10-30",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "KSM-USDT-SWAP",
@@ -4219,8 +3969,19 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "METIS-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-05",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "COMP-USDT-SWAP",
@@ -4232,8 +3993,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "TAO-USDT-SWAP",
@@ -4245,8 +4005,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "GMX-USDT-SWAP",
@@ -4258,8 +4017,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "BTC-USDT-SWAP",
@@ -4271,8 +4029,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "USDC-USDT-SWAP",
@@ -4284,8 +4041,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XAU-USDT-SWAP",
@@ -4297,8 +4053,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "YFI-USDT-SWAP",
@@ -4310,8 +4065,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XPD-USDT-SWAP",
@@ -4323,8 +4077,7 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     },
     {
       "asset": "XPT-USDT-SWAP",
@@ -4336,11 +4089,10 @@
       "last_date": "2026-10-30",
       "large_calendar_gaps": 0,
       "errors": [],
-      "futures_snapshot_status": "fail",
-      "futures_snapshot_error": "KeyError: 'markPx'"
+      "futures_snapshot_status": "pass"
     }
   ],
-  "futures_snapshot_failed": 248,
+  "futures_snapshot_failed": 0,
   "passed": 348,
   "failed": 0,
   "overall_status": "pass"
