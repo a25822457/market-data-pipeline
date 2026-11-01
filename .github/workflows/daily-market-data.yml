@@ -10,11 +10,17 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-market-data-main
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -35,7 +41,8 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin main
+          git rebase origin/main
           git add data/us_screen.csv data/crypto_screen.csv validation_report.json
           git diff --cached --quiet || git commit -m "Update daily market data snapshot"
-          git push
-
+          git push origin HEAD:main
