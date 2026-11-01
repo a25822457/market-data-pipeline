@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   run:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,8 +42,6 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git fetch origin main
-          git rebase origin/main
           git add data/us_screen.csv data/crypto_screen.csv validation_report.json
           git diff --cached --quiet || git commit -m "Update daily market data snapshot"
           git push origin HEAD:main
