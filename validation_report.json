@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-11-01T10:24:42.441143+00:00",
+  "minimum_bars": 252,
+  "instruments": [
+    {
+      "asset": "SPY",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "QQQ",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "NVDA",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "AMD",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "GOOGL",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "AMZN",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 344,
+      "first_date": "2025-06-20",
+      "last_date": "2026-10-30",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "BTCUSDT",
+      "market": "crypto",
+      "source": "Binance public klines API",
+      "status": "pass",
+      "bars": 999,
+      "first_date": "2024-02-06",
+      "last_date": "2026-10-31",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "ETHUSDT",
+      "market": "crypto",
+      "source": "Binance public klines API",
+      "status": "pass",
+      "bars": 999,
+      "first_date": "2024-02-06",
+      "last_date": "2026-10-31",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "SOLUSDT",
+      "market": "crypto",
+      "source": "Binance public klines API",
+      "status": "pass",
+      "bars": 999,
+      "first_date": "2024-02-06",
+      "last_date": "2026-10-31",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "BNBUSDT",
+      "market": "crypto",
+      "source": "Binance public klines API",
+      "status": "pass",
+      "bars": 999,
+      "first_date": "2024-02-06",
+      "last_date": "2026-10-31",
+      "large_calendar_gaps": 0,
+      "errors": []
+    }
+  ],
+  "passed": 10,
+  "failed": 0,
+  "overall_status": "pass"
+}
