@@ -49,3 +49,6 @@ The requested daily summary automation is not modified. Connecting this output t
 - `sepa_pass`: the explicit trend/price/volume checks in `market_pipeline.screen_us`; it is not investment advice and does not include unsupported discretionary rules.
 - Crypto trend is `up`, `down`, or `mixed` based only on close versus SMA20 and SMA20 versus SMA50.
 
+
+
+Universe expansion is enabled: Nasdaq-100-based 100-stock scan and top-252 Binance USDT spot scan.
