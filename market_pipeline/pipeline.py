@@ -34,6 +34,7 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
         raw[symbol] = rows
         save_raw(rows, output_dir / "raw" / f"{symbol}.csv")
         crypto_screen_rows.append({"asset": symbol, **screen_crypto(rows)})
+        report["instruments"].append({"asset": symbol, "market": "crypto", "source": "Binance public klines API", **validate_rows(rows, min_bars)})
     save_snapshot(us_screen, output_dir / "us_screen.csv"); save_snapshot(crypto_screen_rows, output_dir / "crypto_screen.csv")
     save_sqlite(output_dir / "market_data.sqlite3", raw, us_screen, crypto_screen_rows)
     report["passed"] = sum(i["status"] == "pass" for i in report["instruments"]); report["failed"] = len(report["instruments"]) - report["passed"]; report["overall_status"] = "pass" if report["failed"] == 0 else "fail"
