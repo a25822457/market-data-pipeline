@@ -11,7 +11,7 @@ This project downloads public daily candles, validates them, computes transparen
 - US metrics: SMA50/150/200, SMA200 slope versus 20 sessions earlier, 52-week high/low, volume versus 50-day average, and a price-relative-strength ratio versus SPY.
 - Crypto metrics: last close, 24-hour return from perpetual candles, 20-day annualized volatility, 20-day average quote volume, trend status from SMA20/SMA50, plus futures snapshot fields.
 
-The pipeline deliberately does not invent missing values. A failed or incomplete instrument is recorded as failed and is excluded from screening calculations that require it. The validation report records whether the US list came from the dynamic ranking or the versioned fallback and how many futures snapshots failed.
+The pipeline deliberately does not invent missing values. A failed or incomplete instrument is recorded as failed and is excluded from screening calculations that require it. The validation report records whether the US list came from the dynamic ranking and whether Binance futures access succeeded.
 
 ## Run locally
 
@@ -32,11 +32,11 @@ Outputs include:
 - `data/raw/*.csv`: source candles as received and normalized. GitHub Actions uploads these in the run artifact; it commits only the compact screening snapshots and validation report to avoid repository bloat.
 - `data/market_data.sqlite3`: raw candles and screening snapshots.
 - `data/us_screen.csv`, `data/crypto_screen.csv`: latest metrics.
-- `validation_report.json`: per-instrument counts, date checks, source errors, overall status, universe selection modes, and futures snapshot failures.
+- `validation_report.json`: per-instrument counts, date checks, source errors, overall status, universe selection modes, and futures access/snapshot failures.
 
 ## Data and free-tier limitations
 
-Yahoo Finance's public chart and screener endpoints are unofficial public web endpoints, can rate-limit or change without notice, and have no service-level guarantee. The dynamic US list is therefore a daily volume-based ranking, not a guaranteed market-cap ranking. Binance public USDⓈ-M futures market-data endpoints do not require an API key for these public fields, but they are subject to exchange availability, regional access, rate limits, and endpoint changes. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
+Yahoo Finance's public chart and screener endpoints are unofficial public web endpoints, can rate-limit or change without notice, and have no service-level guarantee. The dynamic US list is therefore a daily volume-based ranking, not a guaranteed market-cap ranking. Binance public USDⓈ-M futures market-data endpoints do not require an API key for these public fields, but they are subject to exchange availability, regional access, rate limits, endpoint changes, and regional HTTP 451 restrictions. If the futures endpoint is unavailable, the run is marked failed and does not silently fall back to spot data. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
 
 This pipeline is market-data analysis, not order execution. It does not place trades, access account balances, or use API keys.
 
