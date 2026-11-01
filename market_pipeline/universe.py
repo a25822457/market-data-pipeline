@@ -76,6 +76,4 @@ def fetch_top_okx_usdt_perpetuals(target: int = 252, min_bars: int = 252) -> dic
             continue
         if len(selected) >= target:
             break
-    if len(selected) < target:
-        raise RuntimeError(f"only {len(selected)} OKX USDT linear swaps had at least {min_bars} complete daily bars; need {target}")
     return selected
