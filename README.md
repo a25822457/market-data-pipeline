@@ -4,8 +4,8 @@ This project downloads public daily candles, validates them, computes transparen
 
 ## Scope
 
-- US stocks: `SPY`, `QQQ`, `NVDA`, `AMD`, `GOOGL`, `AMZN` from Yahoo Finance's public chart endpoint.
-- Binance spot pairs: `BTCUSDT`, `ETHUSDT`, `SOLUSDT`, `BNBUSDT` from Binance's public klines endpoint.
+- US stocks: 100 Nasdaq-100 company names from a versioned 2026-05-01 Nasdaq factsheet, with one Alphabet share class omitted so the universe contains 100 companies, from Yahoo Finance's public chart endpoint. SPY is used as the benchmark.
+- Binance spot pairs: the top 252 eligible USDT spot pairs by 24-hour quote volume, selected from Binance public exchange metadata and ticker data, then validated with daily klines.
 - Minimum history: 252 complete daily bars per instrument.
 - US metrics: SMA50/150/200, SMA200 slope versus 20 sessions earlier, 52-week high/low, volume versus 50-day average, and a price-relative-strength ratio versus SPY.
 - Crypto metrics: last close, 24-hour return from daily candles, 20-day annualized volatility, 20-day average quote volume, and trend status from SMA20/SMA50.
@@ -28,7 +28,7 @@ python -m unittest discover -s tests -v
 
 Outputs include:
 
-- `data/raw/*.csv`: source candles as received and normalized.
+- `data/raw/*.csv`: source candles as received and normalized. GitHub Actions uploads these in the run artifact; it commits only the compact screening snapshots and validation report to avoid repository bloat.
 - `data/market_data.sqlite3`: raw candles and screening snapshots.
 - `data/us_screen.csv`, `data/crypto_screen.csv`: latest metrics.
 - `validation_report.json`: per-instrument counts, date checks, source errors, and overall status.
