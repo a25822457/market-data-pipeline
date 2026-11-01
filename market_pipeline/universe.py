@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from urllib.parse import urlencode
+
 from .sources import (
     fetch_bybit_daily,
     fetch_bybit_json,
@@ -88,6 +90,3 @@ def fetch_top_bybit_usdt_perpetuals(target: int = 252, min_bars: int = 252) -> d
     if len(selected) < target:
         raise RuntimeError(f"only {len(selected)} Bybit USDT linear perpetuals had at least {min_bars} complete daily bars; need {target}")
     return selected
-
-
-from urllib.parse import urlencode
