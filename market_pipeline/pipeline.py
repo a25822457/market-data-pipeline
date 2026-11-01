@@ -3,18 +3,19 @@ from __future__ import annotations
 import argparse, json
 from pathlib import Path
 from .metrics import screen_crypto, screen_us
-from .sources import fetch_binance_daily, fetch_yahoo_daily
+from .sources import fetch_yahoo_daily
 from .storage import save_raw, save_snapshot, save_sqlite
+from .universe import US_TOP100, fetch_top_binance_usdt_pairs
 from .validation import validate_rows
 
-US = ["SPY", "QQQ", "NVDA", "AMD", "GOOGL", "AMZN"]
-CRYPTO = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT"]
+US = US_TOP100
 
 
 def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     output_dir.mkdir(parents=True, exist_ok=True)
     raw, report, us_screen, crypto_screen_rows = {}, {"generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "minimum_bars": min_bars, "instruments": []}, [], []
-    for market, symbols, fetcher in (("us_stock", US, fetch_yahoo_daily), ("crypto", CRYPTO, fetch_binance_daily)):
+    crypto_rows = fetch_top_binance_usdt_pairs(target=252, min_bars=min_bars)
+    for market, symbols, fetcher in (("us_stock", US, fetch_yahoo_daily),):
         for symbol in symbols:
             item = {"asset": symbol, "market": market, "source": "Yahoo Finance chart API" if market == "us_stock" else "Binance public klines API"}
             try:
@@ -25,10 +26,14 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
             except Exception as exc:
                 item.update({"status": "fail", "bars": 0, "errors": [f"{type(exc).__name__}: {exc}"]})
             report["instruments"].append(item)
-    spy = raw.get("SPY")
+    spy = fetch_yahoo_daily("SPY", min_bars=min_bars)
     for symbol in US:
         if symbol in raw and spy:
-            us_screen.append({"asset": symbol, **screen_us(raw[symbol], spy if symbol != "SPY" else spy)})
+            us_screen.append({"asset": symbol, **screen_us(raw[symbol], spy)})
+    for symbol, rows in crypto_rows.items():
+        raw[symbol] = rows
+        save_raw(rows, output_dir / "raw" / f"{symbol}.csv")
+        crypto_screen_rows.append({"asset": symbol, **screen_crypto(rows)})
     save_snapshot(us_screen, output_dir / "us_screen.csv"); save_snapshot(crypto_screen_rows, output_dir / "crypto_screen.csv")
     save_sqlite(output_dir / "market_data.sqlite3", raw, us_screen, crypto_screen_rows)
     report["passed"] = sum(i["status"] == "pass" for i in report["instruments"]); report["failed"] = len(report["instruments"]) - report["passed"]; report["overall_status"] = "pass" if report["failed"] == 0 else "fail"
