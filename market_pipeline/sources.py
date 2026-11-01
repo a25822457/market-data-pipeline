@@ -33,6 +33,13 @@ def fetch_binance_futures_json(path: str) -> dict | list:
     raise RuntimeError(f"all Binance USDⓈ-M futures endpoints failed for {path}; last error: {last_error}")
 
 
+def fetch_bybit_json(path: str) -> dict | list:
+    payload = _get_json(f"https://api.bybit.com{path}")
+    if not isinstance(payload, dict) or payload.get("retCode") != 0:
+        raise RuntimeError(f"Bybit API error for {path}: {payload}")
+    return payload
+
+
 def fetch_yahoo_json(path: str) -> dict:
     last_error = None
     for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
@@ -123,7 +130,7 @@ def fetch_binance_futures_daily(symbol: str, min_bars: int = 252) -> list[dict]:
             continue
         rows.append({"date": datetime.fromtimestamp(open_time / 1000, timezone.utc).date().isoformat(), "open": float(o), "high": float(h), "low": float(low), "close": float(close), "volume": float(volume), "quote_volume": float(quote_volume), "taker_buy_volume": float(item[9]), "taker_buy_quote_volume": float(item[10])})
     if len(rows) < min_bars:
-        raise RuntimeError(f"Binance futures returned {len(rows)} complete bars; need at least {min_bars}")
+        raise RuntimeError(f"Binance futures returned {len(rows)} complete daily bars; need at least {min_bars}")
     return rows
 
 
@@ -132,11 +139,32 @@ def fetch_binance_futures_snapshot(symbol: str) -> dict:
     open_interest = fetch_binance_futures_json(f"/fapi/v1/openInterest?{urlencode({'symbol': symbol})}")
     if not isinstance(premium, dict) or not isinstance(open_interest, dict):
         raise RuntimeError(f"Binance futures snapshot returned an unexpected response for {symbol}")
-    return {
-        "mark_price": float(premium["markPrice"]),
-        "index_price": float(premium["indexPrice"]),
-        "funding_rate": float(premium["lastFundingRate"]) if premium.get("lastFundingRate") not in (None, "") else None,
-        "next_funding_time": premium.get("nextFundingTime"),
-        "open_interest": float(open_interest["openInterest"]),
-        "snapshot_source": "Binance USDⓈ-M futures public market data",
-    }
+    return {"mark_price": float(premium["markPrice"]), "index_price": float(premium["indexPrice"]), "funding_rate": float(premium["lastFundingRate"]) if premium.get("lastFundingRate") not in (None, "") else None, "next_funding_time": premium.get("nextFundingTime"), "open_interest": float(open_interest["openInterest"]), "snapshot_source": "Binance USDⓈ-M futures public market data"}
+
+
+def fetch_bybit_linear_tickers() -> dict[str, dict]:
+    payload = fetch_bybit_json("/v5/market/tickers?category=linear")
+    return {item["symbol"]: item for item in payload.get("result", {}).get("list", [])}
+
+
+def fetch_bybit_daily(symbol: str, min_bars: int = 252) -> list[dict]:
+    query = urlencode({"category": "linear", "symbol": symbol, "interval": "D", "limit": 1000})
+    payload = fetch_bybit_json(f"/v5/market/kline?{query}")
+    items = payload.get("result", {}).get("list", [])
+    now_ms = int(time.time() * 1000)
+    rows = []
+    for item in reversed(items):
+        open_time = int(item[0])
+        if open_time + 86400000 > now_ms:
+            continue
+        rows.append({"date": datetime.fromtimestamp(open_time / 1000, timezone.utc).date().isoformat(), "open": float(item[1]), "high": float(item[2]), "low": float(item[3]), "close": float(item[4]), "volume": float(item[5]), "quote_volume": float(item[6])})
+    if len(rows) < min_bars:
+        raise RuntimeError(f"Bybit returned {len(rows)} complete daily bars; need at least {min_bars}")
+    return rows
+
+
+def fetch_bybit_futures_snapshot(symbol: str, ticker: dict | None = None) -> dict:
+    ticker = ticker or fetch_bybit_linear_tickers().get(symbol)
+    if not ticker:
+        raise RuntimeError(f"Bybit returned no linear ticker for {symbol}")
+    return {"mark_price": float(ticker["markPrice"]), "index_price": float(ticker["indexPrice"]), "funding_rate": float(ticker["fundingRate"]) if ticker.get("fundingRate") not in (None, "") else None, "next_funding_time": ticker.get("nextFundingTime"), "open_interest": float(ticker["openInterest"]), "open_interest_value": float(ticker["openInterestValue"]), "snapshot_source": "Bybit public linear futures market data"}
