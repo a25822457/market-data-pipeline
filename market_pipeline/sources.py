@@ -40,6 +40,13 @@ def fetch_bybit_json(path: str) -> dict | list:
     return payload
 
 
+def fetch_okx_json(path: str) -> dict | list:
+    payload = _get_json(f"https://www.okx.com{path}")
+    if not isinstance(payload, dict) or payload.get("code") != "0":
+        raise RuntimeError(f"OKX API error for {path}: {payload}")
+    return payload
+
+
 def fetch_yahoo_json(path: str) -> dict:
     last_error = None
     for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
@@ -113,7 +120,7 @@ def fetch_binance_daily(symbol: str, min_bars: int = 252) -> list[dict]:
             continue
         rows.append({"date": datetime.fromtimestamp(open_time / 1000, timezone.utc).date().isoformat(), "open": float(o), "high": float(h), "low": float(low), "close": float(close), "volume": float(volume), "quote_volume": float(quote_volume)})
     if len(rows) < min_bars:
-        raise RuntimeError(f"Binance returned {len(rows)} complete bars; need at least {min_bars}")
+        raise RuntimeError(f"Binance returned {len(rows)} complete daily bars; need at least {min_bars}")
     return rows
 
 
@@ -168,3 +175,37 @@ def fetch_bybit_futures_snapshot(symbol: str, ticker: dict | None = None) -> dic
     if not ticker:
         raise RuntimeError(f"Bybit returned no linear ticker for {symbol}")
     return {"mark_price": float(ticker["markPrice"]), "index_price": float(ticker["indexPrice"]), "funding_rate": float(ticker["fundingRate"]) if ticker.get("fundingRate") not in (None, "") else None, "next_funding_time": ticker.get("nextFundingTime"), "open_interest": float(ticker["openInterest"]), "open_interest_value": float(ticker["openInterestValue"]), "snapshot_source": "Bybit public linear futures market data"}
+
+
+def fetch_okx_swap_tickers() -> dict[str, dict]:
+    payload = fetch_okx_json("/api/v5/market/tickers?instType=SWAP")
+    return {item["instId"]: item for item in payload.get("data", [])}
+
+
+def fetch_okx_daily(symbol: str, min_bars: int = 252) -> list[dict]:
+    query = urlencode({"instId": symbol, "bar": "1D", "limit": 300})
+    payload = fetch_okx_json(f"/api/v5/market/candles?{query}")
+    items = payload.get("data", [])
+    rows = []
+    for item in reversed(items):
+        if len(item) < 9 or item[8] != "1":
+            continue
+        open_time = int(item[0])
+        rows.append({"date": datetime.fromtimestamp(open_time / 1000, timezone.utc).date().isoformat(), "open": float(item[1]), "high": float(item[2]), "low": float(item[3]), "close": float(item[4]), "volume": float(item[5]), "quote_volume": float(item[7])})
+    if len(rows) < min_bars:
+        raise RuntimeError(f"OKX returned {len(rows)} complete daily bars; need at least {min_bars}")
+    return rows
+
+
+def fetch_okx_futures_snapshot(symbol: str, ticker: dict | None = None) -> dict:
+    ticker = ticker or fetch_okx_swap_tickers().get(symbol)
+    if not ticker:
+        raise RuntimeError(f"OKX returned no swap ticker for {symbol}")
+    funding = fetch_okx_json(f"/api/v5/public/funding-rate?{urlencode({'instId': symbol})}")
+    funding_item = (funding.get("data") or [{}])[0]
+    return {"mark_price": float(ticker["markPx"]), "index_price": float(ticker["idxPx"]), "funding_rate": float(funding_item["fundingRate"]) if funding_item.get("fundingRate") not in (None, "") else None, "next_funding_time": funding_item.get("nextFundingTime"), "open_interest": float(ticker["oi"]), "open_interest_value": float(ticker["oiCcy"]) if ticker.get("oiCcy") not in (None, "") else None, "snapshot_source": "OKX public SWAP futures market data"}
+
+
+def fetch_okx_swap_instruments() -> list[dict]:
+    payload = fetch_okx_json("/api/v5/public/instruments?instType=SWAP")
+    return payload.get("data", [])
