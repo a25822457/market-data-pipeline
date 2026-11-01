@@ -201,9 +201,24 @@ def fetch_okx_futures_snapshot(symbol: str, ticker: dict | None = None) -> dict:
     ticker = ticker or fetch_okx_swap_tickers().get(symbol)
     if not ticker:
         raise RuntimeError(f"OKX returned no swap ticker for {symbol}")
+    mark = fetch_okx_json(f"/api/v5/public/mark-price?{urlencode({'instType': 'SWAP', 'instId': symbol})}")
+    index_id = symbol.removesuffix("-SWAP")
+    index = fetch_okx_json(f"/api/v5/market/index-tickers?{urlencode({'instId': index_id})}")
     funding = fetch_okx_json(f"/api/v5/public/funding-rate?{urlencode({'instId': symbol})}")
+    open_interest = fetch_okx_json(f"/api/v5/public/open-interest?{urlencode({'instType': 'SWAP', 'instId': symbol})}")
+    mark_item = (mark.get("data") or [{}])[0]
+    index_item = (index.get("data") or [{}])[0]
     funding_item = (funding.get("data") or [{}])[0]
-    return {"mark_price": float(ticker["markPx"]), "index_price": float(ticker["idxPx"]), "funding_rate": float(funding_item["fundingRate"]) if funding_item.get("fundingRate") not in (None, "") else None, "next_funding_time": funding_item.get("nextFundingTime"), "open_interest": float(ticker["oi"]), "open_interest_value": float(ticker["oiCcy"]) if ticker.get("oiCcy") not in (None, "") else None, "snapshot_source": "OKX public SWAP futures market data"}
+    oi_item = (open_interest.get("data") or [{}])[0]
+    return {
+        "mark_price": float(mark_item["markPx"]),
+        "index_price": float(index_item["idxPx"]),
+        "funding_rate": float(funding_item["fundingRate"]) if funding_item.get("fundingRate") not in (None, "") else None,
+        "next_funding_time": funding_item.get("nextFundingTime"),
+        "open_interest": float(oi_item["oi"]),
+        "open_interest_value": float(oi_item["oiCcy"]) if oi_item.get("oiCcy") not in (None, "") else None,
+        "snapshot_source": "OKX public SWAP futures market data",
+    }
 
 
 def fetch_okx_swap_instruments() -> list[dict]:
