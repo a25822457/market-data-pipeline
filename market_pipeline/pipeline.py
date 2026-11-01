@@ -12,10 +12,19 @@ from .validation import validate_rows
 def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     output_dir.mkdir(parents=True, exist_ok=True)
     us, us_universe_mode = fetch_top_us_stocks(target=100, min_bars=min_bars)
-    raw, report, us_screen, crypto_screen_rows = {}, {"generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "minimum_bars": min_bars, "us_universe": {"target": 100, "selection": us_universe_mode}, "crypto_universe": {"target": 252, "market": "OKX USDT linear perpetual swaps", "status": "pending"}, "instruments": []}, [], []
+    raw, report, us_screen, crypto_screen_rows = {}, {"generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "minimum_bars": min_bars, "us_universe": {"target": 100, "selection": us_universe_mode}, "crypto_universe": {"target": 252, "market": "OKX USDT linear perpetual swaps", "status": "pending", "selected": 0}, "warnings": [], "instruments": []}, [], []
     try:
         crypto_rows = fetch_top_okx_usdt_perpetuals(target=252, min_bars=min_bars)
-        report["crypto_universe"]["status"] = "pass"
+        selected_count = len(crypto_rows)
+        report["crypto_universe"]["selected"] = selected_count
+        if selected_count == 0:
+            raise RuntimeError("OKX returned no eligible USDT perpetuals with complete history")
+        if selected_count < 252:
+            report["crypto_universe"]["status"] = "partial"
+            warning = f"OKX supplied {selected_count}/252 eligible USDT perpetuals with at least {min_bars} complete daily bars; missing {252 - selected_count}."
+            report["warnings"].append(warning)
+        else:
+            report["crypto_universe"]["status"] = "pass"
     except Exception as exc:
         crypto_rows = {}
         report["crypto_universe"].update({"status": "fail", "error": f"{type(exc).__name__}: {exc}"})
