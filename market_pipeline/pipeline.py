@@ -3,23 +3,23 @@ from __future__ import annotations
 import argparse, json
 from pathlib import Path
 from .metrics import screen_crypto, screen_us
-from .sources import fetch_binance_futures_snapshot, fetch_yahoo_daily
+from .sources import fetch_bybit_futures_snapshot, fetch_bybit_linear_tickers, fetch_yahoo_daily
 from .storage import save_raw, save_snapshot, save_sqlite
-from .universe import fetch_top_binance_usdt_perpetuals, fetch_top_us_stocks
+from .universe import fetch_top_bybit_usdt_perpetuals, fetch_top_us_stocks
 from .validation import validate_rows
 
 
 def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     output_dir.mkdir(parents=True, exist_ok=True)
     us, us_universe_mode = fetch_top_us_stocks(target=100, min_bars=min_bars)
-    raw, report, us_screen, crypto_screen_rows = {}, {"generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "minimum_bars": min_bars, "us_universe": {"target": 100, "selection": us_universe_mode}, "crypto_universe": {"target": 252, "market": "Binance USDⓈ-M USDT perpetuals", "status": "pending"}, "instruments": []}, [], []
+    raw, report, us_screen, crypto_screen_rows = {}, {"generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "minimum_bars": min_bars, "us_universe": {"target": 100, "selection": us_universe_mode}, "crypto_universe": {"target": 252, "market": "Bybit USDT linear perpetuals", "status": "pending"}, "instruments": []}, [], []
     try:
-        crypto_rows = fetch_top_binance_usdt_perpetuals(target=252, min_bars=min_bars)
+        crypto_rows = fetch_top_bybit_usdt_perpetuals(target=252, min_bars=min_bars)
         report["crypto_universe"]["status"] = "pass"
     except Exception as exc:
         crypto_rows = {}
         report["crypto_universe"].update({"status": "fail", "error": f"{type(exc).__name__}: {exc}"})
-        report["instruments"].append({"asset": "__crypto_universe__", "market": "crypto_futures", "source": "Binance USDⓈ-M futures public market data", "status": "fail", "bars": 0, "errors": [report["crypto_universe"]["error"]]})
+        report["instruments"].append({"asset": "__crypto_universe__", "market": "crypto_futures", "source": "Bybit public linear futures market data", "status": "fail", "bars": 0, "errors": [report["crypto_universe"]["error"]]})
     for market, symbols, fetcher in (("us_stock", us, fetch_yahoo_daily),):
         for symbol in symbols:
             item = {"asset": symbol, "market": market, "source": "Yahoo Finance chart API"}
@@ -34,17 +34,25 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     for symbol in us:
         if symbol in raw and spy:
             us_screen.append({"asset": symbol, **screen_us(raw[symbol], spy)})
+    bybit_tickers = {}
+    ticker_error = None
+    if crypto_rows:
+        try:
+            bybit_tickers = fetch_bybit_linear_tickers()
+        except Exception as exc:
+            ticker_error = f"{type(exc).__name__}: {exc}"
     for symbol, rows in crypto_rows.items():
         raw[symbol] = rows
         save_raw(rows, output_dir / "raw" / f"{symbol}.csv")
         snapshot = None
-        snapshot_error = None
-        try:
-            snapshot = fetch_binance_futures_snapshot(symbol)
-        except Exception as exc:
-            snapshot_error = f"{type(exc).__name__}: {exc}"
+        snapshot_error = ticker_error
+        if not snapshot_error:
+            try:
+                snapshot = fetch_bybit_futures_snapshot(symbol, bybit_tickers.get(symbol))
+            except Exception as exc:
+                snapshot_error = f"{type(exc).__name__}: {exc}"
         crypto_screen_rows.append({"asset": symbol, **screen_crypto(rows, snapshot)})
-        item = {"asset": symbol, "market": "crypto_futures", "source": "Binance USDⓈ-M futures public klines API", **validate_rows(rows, min_bars), "futures_snapshot_status": "pass" if snapshot else "fail"}
+        item = {"asset": symbol, "market": "crypto_futures", "source": "Bybit public linear futures market data", **validate_rows(rows, min_bars), "futures_snapshot_status": "pass" if snapshot else "fail"}
         if snapshot_error:
             item["futures_snapshot_error"] = snapshot_error
         report["instruments"].append(item)
