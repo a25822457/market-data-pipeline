@@ -5,13 +5,13 @@ This project downloads public daily candles, validates them, computes transparen
 ## Scope
 
 - US stocks: every run asks Yahoo Finance's public most-actives screener for a broad candidate list, ranks eligible equities by estimated daily dollar volume, and selects 100 symbols with at least 252 complete daily bars. A versioned Nasdaq-100-based list is used only as an explicit fallback if the dynamic Yahoo ranking fails or cannot produce 100 valid histories. SPY is used as the benchmark.
-- Crypto: every run uses OKX's public USDT-margined linear SWAP market, ranks eligible perpetual swaps by 24-hour quote volume, selects 252 contracts with at least 252 complete daily bars, and uses those perpetual candles as the primary crypto signal.
+- Crypto: every run uses OKX's public USDT-margined linear SWAP market, ranks eligible perpetual swaps by 24-hour quote volume, targets 252 contracts, and accepts a smaller validated set when fewer than 252 contracts have at least 252 complete daily bars. The actual count and shortfall are recorded in the validation report.
 - Futures-specific snapshot fields: mark price, index price, latest funding rate, next funding time, open interest, and open-interest value. If a snapshot call fails, the value is left empty and the validation report records the failure.
 - Minimum history: 252 complete daily bars per instrument.
 - US metrics: SMA50/150/200, SMA200 slope versus 20 sessions earlier, 52-week high/low, volume versus 50-day average, and a price-relative-strength ratio versus SPY.
 - Crypto metrics: last close, 24-hour return from perpetual candles, 20-day annualized volatility, 20-day average quote volume, trend status from SMA20/SMA50, plus futures snapshot fields.
 
-The pipeline deliberately does not invent missing values. A failed or incomplete instrument is recorded as failed and is excluded from screening calculations that require it. The validation report records whether the US list came from the dynamic ranking and whether OKX futures access succeeded.
+The pipeline deliberately does not invent missing values. A failed or incomplete instrument is recorded as failed and is excluded from screening calculations that require it. A shortfall in the OKX target is a warning, not a fabricated pass.
 
 ## Run locally
 
@@ -32,11 +32,11 @@ Outputs include:
 - `data/raw/*.csv`: source candles as received and normalized. GitHub Actions uploads these in the run artifact; it commits only the compact screening snapshots and validation report to avoid repository bloat.
 - `data/market_data.sqlite3`: raw candles and screening snapshots.
 - `data/us_screen.csv`, `data/crypto_screen.csv`: latest metrics.
-- `validation_report.json`: per-instrument counts, date checks, source errors, overall status, universe selection modes, and futures access/snapshot failures.
+- `validation_report.json`: per-instrument counts, date checks, source errors, overall status, actual crypto count, target shortfall, and futures snapshot failures.
 
 ## Data and free-tier limitations
 
-Yahoo Finance's public chart and screener endpoints are unofficial public web endpoints, can rate-limit or change without notice, and have no service-level guarantee. OKX's public market-data endpoints do not require an API key for these fields, but they are subject to exchange availability, regional access, rate limits, endpoint changes, and jurisdictional restrictions. If OKX is unavailable, the run is marked failed and does not silently fall back to spot data. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
+Yahoo Finance's public chart and screener endpoints are unofficial public web endpoints, can rate-limit or change without notice, and have no service-level guarantee. OKX's public market-data endpoints do not require an API key for these fields, but they are subject to exchange availability, regional access, rate limits, endpoint changes, and jurisdictional restrictions. If OKX is unavailable, the run is marked failed and does not silently fall back to spot data. If OKX has fewer than 252 contracts with the requested history, the run continues with the validated smaller set and records the shortfall. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
 
 This pipeline is market-data analysis, not order execution. It does not place trades, access account balances, or use API keys. Binance USDⓈ-M and Bybit support remain in the source module for reference; the daily primary source is OKX because the prior GitHub Actions region returned Binance HTTP 451 and Bybit HTTP 403.
 
@@ -53,4 +53,4 @@ The requested daily summary automation is not modified. Connecting this output t
 - Crypto trend is `up`, `down`, or `mixed` based only on perpetual contract close versus SMA20 and SMA50.
 - `mark_price`, `index_price`, `funding_rate`, `open_interest`, and `open_interest_value` come from OKX public SWAP market-data endpoints and are not fabricated when unavailable.
 
-Universe selection: dynamic Yahoo most-active US equity ranking for 100 stocks, with explicit versioned fallback; dynamic OKX USDT linear perpetual SWAP ranking for 252 contracts.
+Universe selection: dynamic Yahoo most-active US equity ranking for 100 stocks, with explicit versioned fallback; dynamic OKX USDT linear perpetual SWAP ranking targeting 252 contracts with an honest validated shortfall warning when necessary.
