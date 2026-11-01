@@ -1,0 +1,53 @@
+from __future__ import annotations
+
+from statistics import mean, pstdev
+
+
+def _sma(values, window, index):
+    if index + 1 < window:
+        return None
+    return mean(values[index - window + 1:index + 1])
+
+
+def _pct_return(values, window, index):
+    if index < window or values[index - window] == 0:
+        return None
+    return values[index] / values[index - window] - 1
+
+
+def screen_us(rows: list[dict], spy_rows: list[dict] | None = None) -> dict:
+    closes = [float(r["close"]) for r in rows]
+    volumes = [float(r["volume"]) for r in rows]
+    i = len(rows) - 1
+    sma50, sma150, sma200 = (_sma(closes, w, i) for w in (50, 150, 200))
+    old_sma200 = _sma(closes, 200, i - 20) if i >= 220 else None
+    high52, low52 = max(closes[max(0, i - 251):i + 1]), min(closes[max(0, i - 251):i + 1])
+    avg50 = _sma(volumes, 50, i)
+    rs = None
+    if spy_rows and len(spy_rows) > 63:
+        spy_closes = [float(r["close"]) for r in spy_rows]
+        stock_ret, spy_ret = _pct_return(closes, 63, i), _pct_return(spy_closes, 63, len(spy_closes) - 1)
+        if stock_ret is not None and spy_ret not in (None, 0):
+            rs = stock_ret / spy_ret
+    conditions = {
+        "close_above_sma50": sma50 is not None and closes[i] > sma50,
+        "sma50_above_sma150": sma50 is not None and sma150 is not None and sma50 > sma150,
+        "sma150_above_sma200": sma150 is not None and sma200 is not None and sma150 > sma200,
+        "sma200_rising": old_sma200 is not None and sma200 > old_sma200,
+        "near_52w_high": high52 > 0 and closes[i] / high52 >= 0.75,
+        "above_52w_low": low52 > 0 and closes[i] / low52 >= 1.25,
+        "volume_above_average": avg50 is not None and volumes[i] >= avg50,
+    }
+    return {"date": rows[i]["date"], "close": closes[i], "sma50": sma50, "sma150": sma150, "sma200": sma200, "sma200_slope_20d": None if old_sma200 is None else sma200 - old_sma200, "high_52w": high52, "low_52w": low52, "volume_vs_avg50": None if not avg50 else volumes[i] / avg50, "rs_vs_spy_63d": rs, "sepa_pass": all(conditions.values()), **conditions}
+
+
+def screen_crypto(rows: list[dict]) -> dict:
+    closes = [float(r["close"]) for r in rows]
+    quote_volumes = [float(r.get("quote_volume", 0)) for r in rows]
+    i = len(rows) - 1
+    sma20, sma50 = _sma(closes, 20, i), _sma(closes, 50, i)
+    returns = [(closes[j] / closes[j - 1] - 1) for j in range(max(1, i - 19), i + 1) if closes[j - 1]]
+    vol = pstdev(returns) * (365 ** 0.5) if len(returns) > 1 else None
+    trend = "up" if sma20 and sma50 and closes[i] > sma20 > sma50 else "down" if sma20 and sma50 and closes[i] < sma20 < sma50 else "mixed"
+    return {"date": rows[i]["date"], "close": closes[i], "return_1d": None if i == 0 else closes[i] / closes[i - 1] - 1, "sma20": sma20, "sma50": sma50, "annualized_volatility_20d": vol, "avg_quote_volume_20d": mean(quote_volumes[max(0, i - 19):i + 1]), "trend": trend}
+
