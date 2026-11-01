@@ -22,6 +22,29 @@ class PipelineTests(unittest.TestCase):
         crypto = screen_crypto(rows())
         self.assertIn(crypto["trend"], {"up", "down", "mixed"})
 
+    def test_rs_is_date_aligned_wealth_ratio(self):
+        spy = rows()
+        stock = rows()
+        stock[-1]["close"] *= 1.10
+        stock[-1]["high"] = stock[-1]["close"]
+        result = screen_us(stock, spy)
+        self.assertIsNotNone(result["rs_vs_spy_63d"])
+        self.assertGreater(result["rs_vs_spy_63d"], 1.0)
+        self.assertTrue(result["rs_outperforms_spy"])
+
+    def test_sepa_does_not_require_latest_day_volume(self):
+        stock = rows()
+        spy = rows()
+        for row in stock:
+            row["high"] = row["close"]
+            row["low"] = row["close"]
+        stock[-1]["close"] *= 1.10
+        stock[-1]["high"] = stock[-1]["close"]
+        stock[-1]["volume"] = 1
+        result = screen_us(stock, spy)
+        self.assertFalse(result["volume_above_average"])
+        self.assertTrue(result["sepa_pass"])
+
 
 if __name__ == "__main__": unittest.main()
 
