@@ -1,6 +1,11 @@
 from __future__ import annotations
 
-from .sources import fetch_binance_daily, fetch_binance_json, fetch_yahoo_daily, fetch_yahoo_most_active_candidates
+from .sources import (
+    fetch_binance_futures_daily,
+    fetch_binance_futures_json,
+    fetch_yahoo_daily,
+    fetch_yahoo_most_active_candidates,
+)
 
 # Versioned fallback list used only when Yahoo's dynamic most-actives endpoint
 # is unavailable or returns too few valid 252-bar histories.
@@ -44,13 +49,16 @@ def fetch_top_us_stocks(target: int = 100, min_bars: int = 252) -> tuple[list[st
     return selected, mode
 
 
-def fetch_top_binance_usdt_pairs(target: int = 252, min_bars: int = 252) -> dict[str, list[dict]]:
-    exchange = fetch_binance_json("/api/v3/exchangeInfo")
+def fetch_top_binance_usdt_perpetuals(target: int = 252, min_bars: int = 252) -> dict[str, list[dict]]:
+    exchange = fetch_binance_futures_json("/fapi/v1/exchangeInfo")
     allowed = {
-        s["symbol"] for s in exchange.get("symbols", [])
-        if s.get("status") == "TRADING" and s.get("quoteAsset") == "USDT" and s.get("isSpotTradingAllowed", False)
+        s["symbol"]
+        for s in exchange.get("symbols", [])
+        if s.get("status") == "TRADING"
+        and s.get("contractType") == "PERPETUAL"
+        and s.get("quoteAsset") == "USDT"
     }
-    tickers = fetch_binance_json("/api/v3/ticker/24hr")
+    tickers = fetch_binance_futures_json("/fapi/v1/ticker/24hr")
     ranked = sorted(
         (t for t in tickers if t.get("symbol") in allowed),
         key=lambda t: float(t.get("quoteVolume", 0) or 0),
@@ -60,11 +68,11 @@ def fetch_top_binance_usdt_pairs(target: int = 252, min_bars: int = 252) -> dict
     for ticker in ranked:
         symbol = ticker["symbol"]
         try:
-            selected[symbol] = fetch_binance_daily(symbol, min_bars=min_bars)
+            selected[symbol] = fetch_binance_futures_daily(symbol, min_bars=min_bars)
         except Exception:
             continue
         if len(selected) >= target:
             break
     if len(selected) < target:
-        raise RuntimeError(f"only {len(selected)} Binance USDT spot pairs had at least {min_bars} complete daily bars; need {target}")
+        raise RuntimeError(f"only {len(selected)} Binance USDⓈ-M USDT perpetuals had at least {min_bars} complete daily bars; need {target}")
     return selected
