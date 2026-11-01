@@ -12,8 +12,14 @@ from .validation import validate_rows
 def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     output_dir.mkdir(parents=True, exist_ok=True)
     us, us_universe_mode = fetch_top_us_stocks(target=100, min_bars=min_bars)
-    raw, report, us_screen, crypto_screen_rows = {}, {"generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "minimum_bars": min_bars, "us_universe": {"target": 100, "selection": us_universe_mode}, "crypto_universe": {"target": 252, "market": "Binance USDⓈ-M USDT perpetuals"}, "instruments": []}, [], []
-    crypto_rows = fetch_top_binance_usdt_perpetuals(target=252, min_bars=min_bars)
+    raw, report, us_screen, crypto_screen_rows = {}, {"generated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "minimum_bars": min_bars, "us_universe": {"target": 100, "selection": us_universe_mode}, "crypto_universe": {"target": 252, "market": "Binance USDⓈ-M USDT perpetuals", "status": "pending"}, "instruments": []}, [], []
+    try:
+        crypto_rows = fetch_top_binance_usdt_perpetuals(target=252, min_bars=min_bars)
+        report["crypto_universe"]["status"] = "pass"
+    except Exception as exc:
+        crypto_rows = {}
+        report["crypto_universe"].update({"status": "fail", "error": f"{type(exc).__name__}: {exc}"})
+        report["instruments"].append({"asset": "__crypto_universe__", "market": "crypto_futures", "source": "Binance USDⓈ-M futures public market data", "status": "fail", "bars": 0, "errors": [report["crypto_universe"]["error"]]})
     for market, symbols, fetcher in (("us_stock", us, fetch_yahoo_daily),):
         for symbol in symbols:
             item = {"asset": symbol, "market": market, "source": "Yahoo Finance chart API"}
