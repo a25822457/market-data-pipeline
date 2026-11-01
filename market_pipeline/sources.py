@@ -27,7 +27,17 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     period2 = int(time.time()) + 86400
     period1 = period2 - 500 * 86400
     query = urlencode({"period1": period1, "period2": period2, "interval": "1d", "events": "history", "includeAdjustedClose": "true"})
-    payload = _get_json(f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?{query}")
+    last_error = None
+    payload = None
+    for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
+        try:
+            payload = _get_json(f"https://{host}/v8/finance/chart/{symbol}?{query}")
+            if payload.get("chart", {}).get("result"):
+                break
+        except Exception as exc:
+            last_error = exc
+    if payload is None:
+        raise RuntimeError(f"all Yahoo public endpoints failed; last error: {last_error}")
     result = payload.get("chart", {}).get("result")
     error = payload.get("chart", {}).get("error")
     if not result:
