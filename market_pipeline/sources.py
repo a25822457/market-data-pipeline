@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 
-def _get_json(url: str, timeout: int = 30) -> dict:
+def _get_json(url: str, timeout: int = 30) -> dict | list:
     request = Request(url, headers={"User-Agent": "free-market-pipeline/0.1"})
     with urlopen(request, timeout=timeout) as response:
         return json.loads(response.read().decode("utf-8"))
@@ -20,7 +20,17 @@ def fetch_binance_json(path: str) -> dict | list:
             return _get_json(f"https://{host}{path}")
         except Exception as exc:
             last_error = exc
-    raise RuntimeError(f"all Binance public endpoints failed for {path}; last error: {last_error}")
+    raise RuntimeError(f"all Binance spot endpoints failed for {path}; last error: {last_error}")
+
+
+def fetch_binance_futures_json(path: str) -> dict | list:
+    last_error = None
+    for host in ("fapi.binance.com", "fapi1.binance.com", "fapi2.binance.com", "fapi3.binance.com", "fapi4.binance.com"):
+        try:
+            return _get_json(f"https://{host}{path}")
+        except Exception as exc:
+            last_error = exc
+    raise RuntimeError(f"all Binance USDⓈ-M futures endpoints failed for {path}; last error: {last_error}")
 
 
 def fetch_yahoo_json(path: str) -> dict:
@@ -98,3 +108,35 @@ def fetch_binance_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     if len(rows) < min_bars:
         raise RuntimeError(f"Binance returned {len(rows)} complete bars; need at least {min_bars}")
     return rows
+
+
+def fetch_binance_futures_daily(symbol: str, min_bars: int = 252) -> list[dict]:
+    query = urlencode({"symbol": symbol, "interval": "1d", "limit": 1000})
+    payload = fetch_binance_futures_json(f"/fapi/v1/klines?{query}")
+    if not isinstance(payload, list):
+        raise RuntimeError(f"Binance futures returned an error: {payload}")
+    rows = []
+    now_ms = int(time.time() * 1000)
+    for item in payload:
+        open_time, o, h, low, close, volume, close_time, quote_volume = item[:8]
+        if close_time > now_ms:
+            continue
+        rows.append({"date": datetime.fromtimestamp(open_time / 1000, timezone.utc).date().isoformat(), "open": float(o), "high": float(h), "low": float(low), "close": float(close), "volume": float(volume), "quote_volume": float(quote_volume), "taker_buy_volume": float(item[9]), "taker_buy_quote_volume": float(item[10])})
+    if len(rows) < min_bars:
+        raise RuntimeError(f"Binance futures returned {len(rows)} complete bars; need at least {min_bars}")
+    return rows
+
+
+def fetch_binance_futures_snapshot(symbol: str) -> dict:
+    premium = fetch_binance_futures_json(f"/fapi/v1/premiumIndex?{urlencode({'symbol': symbol})}")
+    open_interest = fetch_binance_futures_json(f"/fapi/v1/openInterest?{urlencode({'symbol': symbol})}")
+    if not isinstance(premium, dict) or not isinstance(open_interest, dict):
+        raise RuntimeError(f"Binance futures snapshot returned an unexpected response for {symbol}")
+    return {
+        "mark_price": float(premium["markPrice"]),
+        "index_price": float(premium["indexPrice"]),
+        "funding_rate": float(premium["lastFundingRate"]) if premium.get("lastFundingRate") not in (None, "") else None,
+        "next_funding_time": premium.get("nextFundingTime"),
+        "open_interest": float(open_interest["openInterest"]),
+        "snapshot_source": "Binance USDⓈ-M futures public market data",
+    }
