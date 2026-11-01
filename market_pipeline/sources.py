@@ -37,7 +37,16 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
 
 def fetch_binance_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     query = urlencode({"symbol": symbol, "interval": "1d", "limit": 1000})
-    payload = _get_json(f"https://api.binance.com/api/v3/klines?{query}")
+    last_error = None
+    payload = None
+    for host in ("api.binance.com", "data-api.binance.vision", "api1.binance.com", "api2.binance.com", "api3.binance.com", "api4.binance.com"):
+        try:
+            payload = _get_json(f"https://{host}/api/v3/klines?{query}")
+            break
+        except Exception as exc:
+            last_error = exc
+    if payload is None:
+        raise RuntimeError(f"all Binance public endpoints failed; last error: {last_error}")
     if not isinstance(payload, list):
         raise RuntimeError(f"Binance returned an error: {payload}")
     rows = []
