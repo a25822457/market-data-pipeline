@@ -41,7 +41,7 @@ def screen_us(rows: list[dict], spy_rows: list[dict] | None = None) -> dict:
     return {"date": rows[i]["date"], "close": closes[i], "sma50": sma50, "sma150": sma150, "sma200": sma200, "sma200_slope_20d": None if old_sma200 is None else sma200 - old_sma200, "high_52w": high52, "low_52w": low52, "volume_vs_avg50": None if not avg50 else volumes[i] / avg50, "rs_vs_spy_63d": rs, "sepa_pass": all(conditions.values()), **conditions}
 
 
-def screen_crypto(rows: list[dict]) -> dict:
+def screen_crypto(rows: list[dict], futures_snapshot: dict | None = None) -> dict:
     closes = [float(r["close"]) for r in rows]
     quote_volumes = [float(r.get("quote_volume", 0)) for r in rows]
     i = len(rows) - 1
@@ -49,5 +49,9 @@ def screen_crypto(rows: list[dict]) -> dict:
     returns = [(closes[j] / closes[j - 1] - 1) for j in range(max(1, i - 19), i + 1) if closes[j - 1]]
     vol = pstdev(returns) * (365 ** 0.5) if len(returns) > 1 else None
     trend = "up" if sma20 and sma50 and closes[i] > sma20 > sma50 else "down" if sma20 and sma50 and closes[i] < sma20 < sma50 else "mixed"
-    return {"date": rows[i]["date"], "close": closes[i], "return_1d": None if i == 0 else closes[i] / closes[i - 1] - 1, "sma20": sma20, "sma50": sma50, "annualized_volatility_20d": vol, "avg_quote_volume_20d": mean(quote_volumes[max(0, i - 19):i + 1]), "trend": trend}
-
+    result = {"date": rows[i]["date"], "close": closes[i], "return_1d": None if i == 0 else closes[i] / closes[i - 1] - 1, "sma20": sma20, "sma50": sma50, "annualized_volatility_20d": vol, "avg_quote_volume_20d": mean(quote_volumes[max(0, i - 19):i + 1]), "trend": trend}
+    if futures_snapshot:
+        result.update(futures_snapshot)
+    else:
+        result.update({"mark_price": None, "index_price": None, "funding_rate": None, "next_funding_time": None, "open_interest": None, "snapshot_source": None})
+    return result
