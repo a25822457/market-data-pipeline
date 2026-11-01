@@ -13,6 +13,16 @@ def _get_json(url: str, timeout: int = 30) -> dict:
         return json.loads(response.read().decode("utf-8"))
 
 
+def fetch_binance_json(path: str) -> dict | list:
+    last_error = None
+    for host in ("api.binance.com", "data-api.binance.vision", "api1.binance.com", "api2.binance.com", "api3.binance.com", "api4.binance.com"):
+        try:
+            return _get_json(f"https://{host}{path}")
+        except Exception as exc:
+            last_error = exc
+    raise RuntimeError(f"all Binance public endpoints failed for {path}; last error: {last_error}")
+
+
 def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     period2 = int(time.time()) + 86400
     period1 = period2 - 500 * 86400
@@ -37,16 +47,7 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
 
 def fetch_binance_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     query = urlencode({"symbol": symbol, "interval": "1d", "limit": 1000})
-    last_error = None
-    payload = None
-    for host in ("api.binance.com", "data-api.binance.vision", "api1.binance.com", "api2.binance.com", "api3.binance.com", "api4.binance.com"):
-        try:
-            payload = _get_json(f"https://{host}/api/v3/klines?{query}")
-            break
-        except Exception as exc:
-            last_error = exc
-    if payload is None:
-        raise RuntimeError(f"all Binance public endpoints failed; last error: {last_error}")
+    payload = fetch_binance_json(f"/api/v3/klines?{query}")
     if not isinstance(payload, list):
         raise RuntimeError(f"Binance returned an error: {payload}")
     rows = []
