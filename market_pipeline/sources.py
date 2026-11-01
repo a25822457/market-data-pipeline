@@ -23,6 +23,34 @@ def fetch_binance_json(path: str) -> dict | list:
     raise RuntimeError(f"all Binance public endpoints failed for {path}; last error: {last_error}")
 
 
+def fetch_yahoo_json(path: str) -> dict:
+    last_error = None
+    for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
+        try:
+            return _get_json(f"https://{host}{path}")
+        except Exception as exc:
+            last_error = exc
+    raise RuntimeError(f"all Yahoo public endpoints failed for {path}; last error: {last_error}")
+
+
+def fetch_yahoo_most_active_candidates(limit: int = 250) -> list[str]:
+    payload = fetch_yahoo_json(f"/v1/finance/screener/predefined/saved?{urlencode({'scrIds': 'most_actives', 'count': limit})}")
+    results = payload.get("finance", {}).get("result") or []
+    quotes = results[0].get("quotes", []) if results else []
+    eligible = []
+    for quote in quotes:
+        if quote.get("quoteType") not in (None, "EQUITY"):
+            continue
+        symbol = quote.get("symbol")
+        price = quote.get("regularMarketPrice") or quote.get("regularMarketPreviousClose") or 0
+        volume = quote.get("regularMarketVolume") or 0
+        if symbol and price and volume:
+            eligible.append((symbol, float(price) * float(volume)))
+    if not eligible:
+        raise RuntimeError("Yahoo most-actives response contained no eligible equities")
+    return [symbol for symbol, _ in sorted(eligible, key=lambda item: item[1], reverse=True)]
+
+
 def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     period2 = int(time.time()) + 86400
     period1 = period2 - 500 * 86400
@@ -70,4 +98,3 @@ def fetch_binance_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     if len(rows) < min_bars:
         raise RuntimeError(f"Binance returned {len(rows)} complete bars; need at least {min_bars}")
     return rows
-
