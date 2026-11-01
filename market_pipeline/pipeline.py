@@ -32,6 +32,8 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     save_snapshot(us_screen, output_dir / "us_screen.csv"); save_snapshot(crypto_screen_rows, output_dir / "crypto_screen.csv")
     save_sqlite(output_dir / "market_data.sqlite3", raw, us_screen, crypto_screen_rows)
     report["passed"] = sum(i["status"] == "pass" for i in report["instruments"]); report["failed"] = len(report["instruments"]) - report["passed"]; report["overall_status"] = "pass" if report["failed"] == 0 else "fail"
+    for item in report["instruments"]:
+        print(json.dumps({"asset": item["asset"], "market": item["market"], "status": item["status"], "bars": item.get("bars", 0), "errors": item.get("errors", [])}, ensure_ascii=False))
     report_path.parent.mkdir(parents=True, exist_ok=True); report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     return report
 
