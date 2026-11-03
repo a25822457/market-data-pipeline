@@ -1,7 +1,8 @@
 import unittest
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from market_pipeline.metrics import screen_crypto, screen_us
 from market_pipeline.validation import validate_rows
+from market_pipeline.report_gate import validate_report
 
 
 def rows(n=260):
@@ -15,6 +16,32 @@ class PipelineTests(unittest.TestCase):
 
     def test_validation_rejects_short_data(self):
         self.assertEqual(validate_rows(rows(10))["status"], "fail")
+
+    def test_report_gate_rejects_stale_or_incomplete_report(self):
+        report = {
+            "generated_at": "2026-10-31T01:00:00+00:00",
+            "instruments": [{"status": "pass"}],
+            "passed": 1,
+            "failed": 0,
+            "overall_status": "pass",
+            "crypto_universe": {"status": "partial", "selected": 249, "target": 252},
+        }
+        result = validate_report(report, now=datetime(2026, 11, 3, 2, tzinfo=timezone.utc))
+        self.assertEqual(result["status"], "fail")
+
+    def test_report_gate_accepts_fresh_report_with_partial_warning(self):
+        report = {
+            "generated_at": "2026-11-03T01:00:00+00:00",
+            "instruments": [{"status": "pass"}],
+            "passed": 1,
+            "failed": 0,
+            "overall_status": "pass",
+            "data_as_of": {"us": "2026-11-02", "crypto": "2026-11-02"},
+            "crypto_universe": {"status": "partial", "selected": 249, "target": 252},
+        }
+        result = validate_report(report, now=datetime(2026, 11, 3, 2, tzinfo=timezone.utc))
+        self.assertEqual(result["status"], "pass")
+        self.assertEqual(report["summary_gate"]["status"], "ready_with_warnings")
 
     def test_metrics_are_computed(self):
         result = screen_us(rows(), rows())

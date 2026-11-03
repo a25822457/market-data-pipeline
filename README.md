@@ -5,7 +5,7 @@ This project downloads public daily candles, validates them, computes transparen
 ## Scope
 
 - US stocks: 100 Nasdaq-100 company names from a versioned 2026-05-01 Nasdaq factsheet, with one Alphabet share class omitted so the universe contains 100 companies, from Yahoo Finance's public chart endpoint. SPY is used as the benchmark.
-- Binance spot pairs: the top 252 eligible USDT spot pairs by 24-hour quote volume, selected from Binance public exchange metadata and ticker data, then validated with daily klines.
+- OKX USDT linear perpetual swaps: up to 252 live contracts ranked by 24-hour volume, with an honest partial-universe warning when fewer than 252 have at least 252 complete daily bars.
 - Minimum history: 252 complete daily bars per instrument.
 - US metrics: SMA50/150/200, SMA200 slope versus 20 sessions earlier, 52-week high/low, volume versus 50-day average, and a price-relative-strength ratio versus SPY.
 - Crypto metrics: last close, 24-hour return from daily candles, 20-day annualized volatility, 20-day average quote volume, and trend status from SMA20/SMA50.
@@ -31,13 +31,13 @@ Outputs include:
 - `data/raw/*.csv`: source candles as received and normalized. GitHub Actions uploads these in the run artifact; it commits only the compact screening snapshots and validation report to avoid repository bloat.
 - `data/market_data.sqlite3`: raw candles and screening snapshots.
 - `data/us_screen.csv`, `data/crypto_screen.csv`: latest metrics.
-- `validation_report.json`: per-instrument counts, date checks, source errors, and overall status.
+- `validation_report.json`: per-instrument counts, date checks, source errors, freshness fields, summary gate, and overall status.
 
 ## Data and free-tier limitations
 
-Yahoo Finance's public chart endpoint is an unofficial public web endpoint, can rate-limit or change without notice, and has no service-level guarantee. Binance's public market-data endpoints do not require an API key but are subject to exchange availability, regional access, and rate limits. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
+Yahoo Finance's public chart endpoint is an unofficial public web endpoint, can rate-limit or change without notice, and has no service-level guarantee. OKX's public market-data endpoints do not require an API key but are subject to exchange availability, regional access, and rate limits. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
 
-The requested daily summary automation is not modified. Connecting this output to it requires a separate, authorized integration step: either have the summary process read the committed artifact/SQLite export, or publish the CSV/JSON to a storage location that the summary process can access.
+The daily summary must read the committed CSV/JSON only after checking `generated_at`, `data_as_of`, `overall_status`, `passed`, `failed`, and `summary_gate`. If the report is stale or fails the gate, it must not use old CSVs for technical conclusions. The workflow runs every day and enforces a 30-hour report, 4-day US-data, and 2-day crypto-data freshness limit.
 
 ## Metric definitions
 
