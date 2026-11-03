@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: daily-market-data-main
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   run:
