@@ -32,6 +32,8 @@ jobs:
         run: python -m market_pipeline --output-dir data --report-path validation_report.json
       - name: Check summary data freshness and report schema
         run: python -m market_pipeline.report_gate --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv
+      - name: Build canonical daily summary input
+        run: python -m market_pipeline.summary_export --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv --output-path data/daily_summary_input.json
       - name: Upload data artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -47,6 +49,6 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git fetch origin main
           git reset --soft origin/main
-          git add data/us_screen.csv data/crypto_screen.csv validation_report.json
+          git add data/us_screen.csv data/crypto_screen.csv data/daily_summary_input.json validation_report.json
           git diff --cached --quiet || git commit -m "Update daily market data snapshot"
           git push origin HEAD:main

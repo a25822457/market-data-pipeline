@@ -37,7 +37,7 @@ Outputs include:
 
 Yahoo Finance's public chart endpoint is an unofficial public web endpoint, can rate-limit or change without notice, and has no service-level guarantee. OKX's public market-data endpoints do not require an API key but are subject to exchange availability, regional access, and rate limits. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
 
-The daily summary must read the committed CSV/JSON only after checking `generated_at`, `data_as_of`, `overall_status`, `passed`, `failed`, and `summary_gate`. If the report is stale or fails the gate, it must not use old CSVs for technical conclusions. The workflow runs every day and enforces a 30-hour report, 4-day US-data, and 2-day crypto-data freshness limit.
+The canonical daily-summary source is `data/daily_summary_input.json`. The daily summary must read it from the GitHub project file page and check `generated_at`, `data_as_of`, `overall_status`, `passed`, `failed`, and `summary_gate` before using any rows. If the file is stale or fails the gate, it must not use old CSVs for technical conclusions. The workflow runs every day and enforces a 30-hour report, 4-day US-data, and 2-day crypto-data freshness limit.
 
 ## Metric definitions
 
