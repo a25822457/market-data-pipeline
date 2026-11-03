@@ -1,6 +1,7 @@
 import csv
 import tempfile
 import unittest
+from pathlib import Path
 from datetime import date, datetime, timedelta, timezone
 from market_pipeline.metrics import screen_crypto, screen_us
 from market_pipeline.validation import validate_rows
