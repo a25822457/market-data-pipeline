@@ -29,7 +29,7 @@ class PipelineTests(unittest.TestCase):
         result = validate_report(report, now=datetime(2026, 11, 3, 2, tzinfo=timezone.utc))
         self.assertEqual(result["status"], "fail")
 
-    def test_report_gate_accepts_fresh_report_with_partial_warning(self):
+    def test_report_gate_rejects_fresh_but_partial_report(self):
         report = {
             "generated_at": "2026-11-03T01:00:00+00:00",
             "instruments": [{"status": "pass"}],
@@ -40,8 +40,8 @@ class PipelineTests(unittest.TestCase):
             "crypto_universe": {"status": "partial", "selected": 249, "target": 252},
         }
         result = validate_report(report, now=datetime(2026, 11, 3, 2, tzinfo=timezone.utc))
-        self.assertEqual(result["status"], "pass")
-        self.assertEqual(report["summary_gate"]["status"], "ready_with_warnings")
+        self.assertEqual(result["status"], "fail")
+        self.assertEqual(report["summary_gate"]["status"], "blocked")
 
     def test_metrics_are_computed(self):
         result = screen_us(rows(), rows())

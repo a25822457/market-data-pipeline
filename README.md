@@ -5,7 +5,7 @@ This project downloads public daily candles, validates them, computes transparen
 ## Scope
 
 - US stocks: 100 Nasdaq-100 company names from a versioned 2026-05-01 Nasdaq factsheet, with one Alphabet share class omitted so the universe contains 100 companies, from Yahoo Finance's public chart endpoint. SPY is used as the benchmark.
-- OKX USDT linear perpetual swaps: up to 252 live contracts ranked by 24-hour volume, with an honest partial-universe warning when fewer than 252 have at least 252 complete daily bars.
+- OKX USDT linear perpetual swaps: exactly 252 live contracts ranked by 24-hour volume; fewer than 252 is a failed run, not a warning. Daily candles use OKX `1Dutc` so the latest completed UTC day is available before the Taiwan 09:00 summary.
 - Minimum history: 252 complete daily bars per instrument.
 - US metrics: SMA50/150/200, SMA200 slope versus 20 sessions earlier, 52-week high/low, volume versus 50-day average, and a price-relative-strength ratio versus SPY.
 - Crypto metrics: last close, 24-hour return from daily candles, 20-day annualized volatility, 20-day average quote volume, and trend status from SMA20/SMA50.
@@ -37,7 +37,7 @@ Outputs include:
 
 Yahoo Finance's public chart endpoint is an unofficial public web endpoint, can rate-limit or change without notice, and has no service-level guarantee. OKX's public market-data endpoints do not require an API key but are subject to exchange availability, regional access, and rate limits. GitHub Actions free minutes depend on account and repository policy; scheduled workflows can be delayed, disabled after repository inactivity, or fail when a provider blocks the runner. The workflow stores artifacts for inspection; it does not silently turn a failed run into a successful summary.
 
-The canonical daily-summary source is `data/daily_summary_input.json`. The daily summary must read it from the GitHub project file page and check `generated_at`, `data_as_of`, `overall_status`, `passed`, `failed`, and `summary_gate` before using any rows. If the file is stale or fails the gate, it must not use old CSVs for technical conclusions. The workflow runs every day, retries public-data collection up to three times, and enforces a strict same-day Taiwan-time summary rule with a 12-hour report limit. It also enforces 4-day US-data and 2-day crypto-data limits.
+The canonical daily-summary source is `data/daily_summary_input.json`. The daily summary must use it only when `summary_gate.status` is `ready`, `overall_status=pass`, `passed` and `failed` are consistent, the US rows are exactly 100 and share SPY's latest session date, and the crypto rows are exactly 252 with `data_as_of.crypto` equal to the latest completed UTC day. Any failure blocks the technical sections; old CSVs must never be used as a fallback. The workflow runs every day at about 08:20 Asia/Taipei, retries collection up to three times, requires all OKX futures snapshots, and publishes nothing as successful unless freshness, coverage, and row-level checks pass.
 
 ## Metric definitions
 

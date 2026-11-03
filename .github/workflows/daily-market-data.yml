@@ -4,7 +4,8 @@ on:
   push:
     branches: ["main"]
   schedule:
-    - cron: "17 22 * * *"
+    # 08:20 Asia/Taipei = 00:20 UTC; after the latest UTC daily crypto candle closes.
+    - cron: "20 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +19,7 @@ jobs:
   run:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,11 +38,11 @@ jobs:
               exit 0
             fi
             if [ "$attempt" -lt 3 ]; then
-              sleep 20
+              sleep 30
             fi
           done
           exit 1
-      - name: Check summary data freshness and report schema
+      - name: Check summary data freshness, coverage, and correctness
         run: python -m market_pipeline.report_gate --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv
       - name: Build canonical daily summary input
         run: python -m market_pipeline.summary_export --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv --output-path data/daily_summary_input.json
@@ -49,7 +50,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: market-data-${{ github.run_id }}
+          name: market-data-\${{ github.run_id }}
           path: |
             data/
             validation_report.json

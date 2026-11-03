@@ -183,7 +183,7 @@ def fetch_okx_swap_tickers() -> dict[str, dict]:
 
 
 def fetch_okx_daily(symbol: str, min_bars: int = 252) -> list[dict]:
-    query = urlencode({"instId": symbol, "bar": "1D", "limit": 300})
+    query = urlencode({"instId": symbol, "bar": "1Dutc", "limit": 300})
     payload = fetch_okx_json(f"/api/v5/market/candles?{query}")
     items = payload.get("data", [])
     rows = []
