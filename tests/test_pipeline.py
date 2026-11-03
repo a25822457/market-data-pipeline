@@ -81,7 +81,10 @@ class PipelineTests(unittest.TestCase):
             "asset": "TEST", "date": "2026-11-02", "close": "100",
             "sma50": "99", "sma150": "98", "sma200": "97",
             "sma200_slope_20d": "1", "high_52w": "101", "low_52w": "50",
-            "volume_vs_avg50": "1.2", "rs_vs_spy_63d": "1.1", "sepa_pass": "True",
+            "pivot_20d": "100", "volume_vs_avg50": "1.2", "rs_vs_spy_63d": "1.1",
+            "sepa_pass": "True", "recommended_entry": "100.1",
+            "stop_loss": "92.092", "take_profit_2r": "116.116",
+            "entry_status": "triggered",
         }
         crypto_fields = {
             "asset": "TEST-USDT-SWAP", "date": "2026-11-02", "close": "100",

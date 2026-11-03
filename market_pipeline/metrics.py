@@ -48,6 +48,7 @@ def screen_us(rows: list[dict], spy_rows: list[dict] | None = None) -> dict:
     lookback = rows[max(0, i - 251):i + 1]
     high52 = max(float(r["high"]) for r in lookback)
     low52 = min(float(r["low"]) for r in lookback)
+    pivot20 = max(float(r["high"]) for r in rows[max(0, i - 19):i + 1])
     prior_volumes = volumes[max(0, i - 50):i]
     avg50 = mean(prior_volumes) if len(prior_volumes) == 50 else None
     rs = _relative_strength_vs_spy(rows, spy_rows, 63)
@@ -65,7 +66,39 @@ def screen_us(rows: list[dict], spy_rows: list[dict] | None = None) -> dict:
     # Trend Template gate because a quiet latest day does not invalidate the
     # longer-term trend.
     trend_template = {k: v for k, v in conditions.items() if k != "volume_above_average"}
-    return {"date": rows[i]["date"], "close": closes[i], "sma50": sma50, "sma150": sma150, "sma200": sma200, "sma200_slope_20d": None if old_sma200 is None else sma200 - old_sma200, "high_52w": high52, "low_52w": low52, "volume_vs_avg50": None if avg50 is None else volumes[i] / avg50, "rs_vs_spy_63d": rs, "sepa_pass": all(trend_template.values()), **conditions}
+    sepa_pass = all(trend_template.values())
+    recommended_entry = stop_loss = take_profit_2r = None
+    entry_status = None
+    if sepa_pass:
+        # Reference plan: buy only after a 0.1% break above the recent 20-day
+        # high, cut the position at -8%, and use a mechanical 2R target.
+        recommended_entry = round(pivot20 * 1.001, 4)
+        stop_loss = round(recommended_entry * 0.92, 4)
+        take_profit_2r = round(
+            recommended_entry + 2 * (recommended_entry - stop_loss), 4
+        )
+        entry_status = (
+            "triggered" if closes[i] >= recommended_entry else "waiting_breakout"
+        )
+    return {
+        "date": rows[i]["date"],
+        "close": closes[i],
+        "sma50": sma50,
+        "sma150": sma150,
+        "sma200": sma200,
+        "sma200_slope_20d": None if old_sma200 is None else sma200 - old_sma200,
+        "high_52w": high52,
+        "low_52w": low52,
+        "pivot_20d": pivot20,
+        "volume_vs_avg50": None if avg50 is None else volumes[i] / avg50,
+        "rs_vs_spy_63d": rs,
+        "sepa_pass": sepa_pass,
+        "recommended_entry": recommended_entry,
+        "stop_loss": stop_loss,
+        "take_profit_2r": take_profit_2r,
+        "entry_status": entry_status,
+        **conditions,
+    }
 
 
 def screen_crypto(rows: list[dict], futures_snapshot: dict | None = None) -> dict:

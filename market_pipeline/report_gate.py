@@ -46,8 +46,8 @@ def _validate_us_rows(rows: list[dict[str, str]], as_of: str | None) -> list[str
     errors: list[str] = []
     required = (
         "asset", "date", "close", "sma50", "sma150", "sma200",
-        "sma200_slope_20d", "high_52w", "low_52w", "volume_vs_avg50",
-        "rs_vs_spy_63d", "sepa_pass",
+        "sma200_slope_20d", "high_52w", "low_52w", "pivot_20d",
+        "volume_vs_avg50", "rs_vs_spy_63d", "sepa_pass",
     )
     if len(rows) != US_TARGET:
         errors.append(f"US screen has {len(rows)} rows; need exactly {US_TARGET}")
@@ -63,12 +63,41 @@ def _validate_us_rows(rows: list[dict[str, str]], as_of: str | None) -> list[str
             errors.append(f"US {row['asset']} date {row['date']} differs from data_as_of.us {as_of}")
         for key in (
             "close", "sma50", "sma150", "sma200", "sma200_slope_20d",
-            "high_52w", "low_52w", "volume_vs_avg50", "rs_vs_spy_63d",
+            "high_52w", "low_52w", "pivot_20d", "volume_vs_avg50",
+            "rs_vs_spy_63d",
         ):
             if not _number(row, key):
                 errors.append(f"US {row.get('asset')} has invalid {key}")
         if row.get("sepa_pass") not in {"True", "False"}:
             errors.append(f"US {row.get('asset')} has invalid sepa_pass")
+        level_keys = ("recommended_entry", "stop_loss", "take_profit_2r")
+        if row.get("sepa_pass") == "True":
+            missing_levels = [key for key in (*level_keys, "entry_status") if not row.get(key)]
+            if missing_levels:
+                errors.append(
+                    f"US {row.get('asset')} SEPA row missing entry levels: "
+                    f"{', '.join(missing_levels)}"
+                )
+            else:
+                for key in level_keys:
+                    if not _number(row, key, positive=True):
+                        errors.append(f"US {row.get('asset')} has invalid {key}")
+                if row.get("entry_status") not in {"waiting_breakout", "triggered"}:
+                    errors.append(f"US {row.get('asset')} has invalid entry_status")
+                try:
+                    entry = float(row["recommended_entry"])
+                    stop = float(row["stop_loss"])
+                    target = float(row["take_profit_2r"])
+                    if not stop < entry < target:
+                        errors.append(
+                            f"US {row.get('asset')} entry levels are not ordered stop < entry < target"
+                        )
+                except (KeyError, TypeError, ValueError):
+                    pass
+        elif any(row.get(key) for key in (*level_keys, "entry_status")):
+            errors.append(
+                f"US {row.get('asset')} has entry levels despite sepa_pass=False"
+            )
     return errors
 
 
