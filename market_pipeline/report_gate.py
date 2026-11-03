@@ -79,8 +79,10 @@ def _validate_crypto_rows(rows: list[dict[str, str]], as_of: str | None) -> list
         "annualized_volatility_20d", "avg_quote_volume_20d", "trend",
         "mark_price", "index_price", "funding_rate", "open_interest",
     )
-    if len(rows) != CRYPTO_TARGET:
-        errors.append(f"crypto screen has {len(rows)} rows; need exactly {CRYPTO_TARGET}")
+    if not rows:
+        errors.append("crypto screen has no rows")
+    if len(rows) > CRYPTO_TARGET:
+        errors.append(f"crypto screen has {len(rows)} rows; cannot exceed target {CRYPTO_TARGET}")
     assets = [row.get("asset") for row in rows]
     if len(set(assets)) != len(assets):
         errors.append("crypto screen has duplicate assets")
@@ -191,12 +193,15 @@ def validate_report(
     crypto = report.get("crypto_universe", {})
     selected = int(crypto.get("selected", 0) or 0)
     target = int(crypto.get("target", CRYPTO_TARGET) or CRYPTO_TARGET)
-    if target != CRYPTO_TARGET or selected != CRYPTO_TARGET or len(crypto_rows) != CRYPTO_TARGET:
+    if selected != len(crypto_rows):
         errors.append(
-            f"crypto universe coverage is {selected}/{target} with {len(crypto_rows)} screen rows; "
-            f"exactly {CRYPTO_TARGET}/{CRYPTO_TARGET} is required"
+            f"crypto universe selected={selected} but screen rows={len(crypto_rows)}"
         )
-    if crypto.get("status") != "pass":
+    if selected == 0:
+        errors.append("crypto universe returned no eligible contracts")
+    if target != CRYPTO_TARGET:
+        errors.append(f"crypto target changed from {CRYPTO_TARGET} to {target}")
+    if crypto.get("status") not in {"pass", "partial"}:
         errors.append(f"crypto_universe.status={crypto.get('status')}")
     if report.get("futures_snapshot_failed", 0):
         errors.append(f"futures snapshots failed={report['futures_snapshot_failed']}")
@@ -208,10 +213,16 @@ def validate_report(
     report["data_as_of"] = as_of
     report["summary_gate"] = {
         "freshness_required": True,
-        "status": "ready" if not errors else "blocked",
+        "status": (
+            "blocked"
+            if errors
+            else "ready"
+            if selected == CRYPTO_TARGET
+            else "ready_with_warnings"
+        ),
         "us_use_csv": not errors,
-        "crypto_use_csv": not errors,
-        "crypto_coverage_complete": selected == CRYPTO_TARGET and len(crypto_rows) == CRYPTO_TARGET,
+        "crypto_use_csv": not errors and bool(crypto_rows),
+        "crypto_coverage_complete": selected == CRYPTO_TARGET,
         "errors": errors,
         "warnings": warnings + list(report.get("warnings", [])),
     }

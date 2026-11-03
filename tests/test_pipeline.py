@@ -1,3 +1,5 @@
+import csv
+import tempfile
 import unittest
 from datetime import date, datetime, timedelta, timezone
 from market_pipeline.metrics import screen_crypto, screen_us
@@ -71,6 +73,58 @@ class PipelineTests(unittest.TestCase):
         result = screen_us(stock, spy)
         self.assertFalse(result["volume_above_average"])
         self.assertTrue(result["sepa_pass"])
+
+
+    def test_report_gate_accepts_fresh_valid_partial_universe(self):
+        us_fields = {
+            "asset": "TEST", "date": "2026-11-02", "close": "100",
+            "sma50": "99", "sma150": "98", "sma200": "97",
+            "sma200_slope_20d": "1", "high_52w": "101", "low_52w": "50",
+            "volume_vs_avg50": "1.2", "rs_vs_spy_63d": "1.1", "sepa_pass": "True",
+        }
+        crypto_fields = {
+            "asset": "TEST-USDT-SWAP", "date": "2026-11-02", "close": "100",
+            "return_1d": "0.01", "sma20": "99", "sma50": "98",
+            "annualized_volatility_20d": "0.5", "avg_quote_volume_20d": "1000",
+            "trend": "up", "mark_price": "100", "index_price": "100",
+            "funding_rate": "0.0001", "open_interest": "1000",
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            us_path = Path(tmp) / "us.csv"
+            crypto_path = Path(tmp) / "crypto.csv"
+            with us_path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(handle, fieldnames=list(us_fields))
+                writer.writeheader()
+                for i in range(100):
+                    row = dict(us_fields)
+                    row["asset"] = f"US{i}"
+                    writer.writerow(row)
+            with crypto_path.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(handle, fieldnames=list(crypto_fields))
+                writer.writeheader()
+                for i in range(249):
+                    row = dict(crypto_fields)
+                    row["asset"] = f"C{i}-USDT-SWAP"
+                    writer.writerow(row)
+            report = {
+                "generated_at": "2026-11-03T01:00:00+00:00",
+                "instruments": [{"status": "pass"}],
+                "passed": 1,
+                "failed": 0,
+                "overall_status": "pass",
+                "data_as_of": {"us": "2026-11-02", "crypto": "2026-11-02"},
+                "us_benchmark": {"status": "pass", "last_date": "2026-11-02"},
+                "crypto_universe": {"status": "partial", "selected": 249, "target": 252},
+                "futures_snapshot_failed": 0,
+            }
+            result = validate_report(
+                report,
+                us_path=us_path,
+                crypto_path=crypto_path,
+                now=datetime(2026, 11, 3, 2, tzinfo=timezone.utc),
+            )
+            self.assertEqual(result["status"], "pass")
+            self.assertEqual(report["summary_gate"]["status"], "ready_with_warnings")
 
 
 if __name__ == "__main__": unittest.main()

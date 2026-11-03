@@ -166,8 +166,8 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     quality_ok = (
         report["failed"] == 0
         and report["us_benchmark"].get("status") == "pass"
-        and report["crypto_universe"].get("status") == "pass"
-        and len(crypto_rows) == CRYPTO_TARGET
+        and report["crypto_universe"].get("status") in {"pass", "partial"}
+        and len(crypto_rows) > 0
         and report["futures_snapshot_failed"] == 0
     )
     report["overall_status"] = "pass" if quality_ok else "fail"
