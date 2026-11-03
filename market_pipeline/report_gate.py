@@ -5,6 +5,7 @@ import csv
 import json
 import sys
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 
@@ -40,6 +41,17 @@ def validate_report(report: dict, *, us_path: Path | None = None, crypto_path: P
     except (TypeError, ValueError, AttributeError):
         errors.append("generated_at is not a valid ISO-8601 timestamp")
 
+    try:
+        generated_at_taipei = generated_at.astimezone(ZoneInfo("Asia/Taipei"))
+        report["generated_at_taipei"] = generated_at_taipei.isoformat()
+        report["freshness_policy"] = {
+            "timezone": "Asia/Taipei",
+            "must_be_generated_today": True,
+            "max_age_hours": 12,
+        }
+    except UnboundLocalError:
+        pass
+
     as_of = report.setdefault("data_as_of", {})
     if us_path and us_path.exists():
         as_of["us"] = _last_date(us_path)
@@ -66,6 +78,7 @@ def validate_report(report: dict, *, us_path: Path | None = None, crypto_path: P
     report["report_schema_version"] = 2
     report["data_as_of"] = as_of
     report["summary_gate"] = {
+        "freshness_required": True,
         "status": "blocked" if errors else "ready" if coverage_complete else "ready_with_warnings",
         "us_use_csv": not errors,
         "crypto_use_csv": not errors and selected > 0,

@@ -18,7 +18,7 @@ jobs:
   run:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,7 +29,18 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -s tests -v
       - name: Download, validate, and screen
-        run: python -m market_pipeline --output-dir data --report-path validation_report.json
+        run: |
+          set -e
+          for attempt in 1 2 3; do
+            echo "market data attempt $attempt/3"
+            if python -m market_pipeline --output-dir data --report-path validation_report.json; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              sleep 20
+            fi
+          done
+          exit 1
       - name: Check summary data freshness and report schema
         run: python -m market_pipeline.report_gate --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv
       - name: Build canonical daily summary input

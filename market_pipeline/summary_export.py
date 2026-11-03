@@ -17,6 +17,8 @@ def build_input(report_path: Path, us_path: Path, crypto_path: Path) -> dict:
         "schema_version": 1,
         "source": "a25822457/market-data-pipeline",
         "generated_at": report.get("generated_at"),
+        "generated_at_taipei": report.get("generated_at_taipei"),
+        "freshness_policy": report.get("freshness_policy", {}),
         "data_as_of": report.get("data_as_of", {}),
         "overall_status": report.get("overall_status"),
         "passed": report.get("passed"),
