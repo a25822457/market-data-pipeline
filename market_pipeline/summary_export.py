@@ -20,6 +20,7 @@ def build_input(report_path: Path, us_path: Path, crypto_path: Path) -> dict:
         "generated_at_taipei": report.get("generated_at_taipei"),
         "freshness_policy": report.get("freshness_policy", {}),
         "data_as_of": report.get("data_as_of", {}),
+        "us_benchmark": report.get("us_benchmark", {}),
         "overall_status": report.get("overall_status"),
         "passed": report.get("passed"),
         "failed": report.get("failed"),
