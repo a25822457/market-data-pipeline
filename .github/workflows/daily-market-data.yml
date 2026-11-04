@@ -90,11 +90,14 @@ jobs:
       - name: Build canonical daily summary input
         if: steps.freshness.outputs.already_fresh != 'true'
         run: python -m market_pipeline.summary_export --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv --output-path data/daily_summary_input.json
+      - name: Build readable Markdown daily summary
+        if: steps.freshness.outputs.already_fresh != 'true'
+        run: python -m market_pipeline.daily_summary --input-path data/daily_summary_input.json --output-path data/daily_summary.md
       - name: Upload data artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: market-data-${{ github.run_id }}
+          name: market-data-\${{ github.run_id }}
           path: |
             data/
             validation_report.json
@@ -105,6 +108,6 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git fetch origin main
           git reset --soft origin/main
-          git add data/us_screen.csv data/crypto_screen.csv data/daily_summary_input.json validation_report.json
+          git add data/us_screen.csv data/crypto_screen.csv data/daily_summary_input.json data/daily_summary.md validation_report.json
           git diff --cached --quiet || git commit -m "Update daily market data snapshot"
           git push origin HEAD:main
