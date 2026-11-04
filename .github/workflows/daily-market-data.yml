@@ -4,8 +4,10 @@ on:
   push:
     branches: ["main"]
   schedule:
-    # 08:20 Asia/Taipei = 00:20 UTC; after the latest UTC daily crypto candle closes.
-    - cron: "20 0 * * *"
+    # Primary: 08:10 Asia/Taipei = 00:10 UTC, after the latest UTC daily candle closes.
+    - cron: "10 0 * * *"
+    # Recovery: 08:40 Asia/Taipei = 00:40 UTC if the primary scheduled run was delayed or missed.
+    - cron: "40 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -29,7 +31,42 @@ jobs:
           python-version: "3.11"
       - name: Run tests
         run: python -m unittest discover -s tests -v
+      - name: Skip duplicate daily run when today's snapshot is already fresh
+        id: freshness
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          path = Path("data/daily_summary_input.json")
+          already_fresh = False
+          try:
+              payload = json.loads(path.read_text(encoding="utf-8"))
+              generated = datetime.fromisoformat(
+                  payload["generated_at_taipei"].replace("Z", "+00:00")
+              )
+              already_fresh = (
+                  generated.astimezone(ZoneInfo("Asia/Taipei")).date()
+                  == datetime.now(ZoneInfo("Asia/Taipei")).date()
+                  and payload.get("overall_status") == "pass"
+                  and payload.get("failed") == 0
+                  and payload.get("summary_gate", {}).get("status")
+                  in {"ready", "ready_with_warnings"}
+              )
+          except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError):
+              pass
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+              handle.write(f"already_fresh={'true' if already_fresh else 'false'}\n")
+          print(f"already_fresh={already_fresh}")
+          PY
+
       - name: Download, validate, and screen
+        if: steps.freshness.outputs.already_fresh != 'true'
         run: |
           set -e
           for attempt in 1 2 3; do
@@ -43,8 +80,10 @@ jobs:
           done
           exit 1
       - name: Check summary data freshness, coverage, and correctness
+        if: steps.freshness.outputs.already_fresh != 'true'
         run: python -m market_pipeline.report_gate --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv
       - name: Build canonical daily summary input
+        if: steps.freshness.outputs.already_fresh != 'true'
         run: python -m market_pipeline.summary_export --report-path validation_report.json --us-path data/us_screen.csv --crypto-path data/crypto_screen.csv --output-path data/daily_summary_input.json
       - name: Upload data artifacts
         if: always()
@@ -55,7 +94,7 @@ jobs:
             data/
             validation_report.json
       - name: Commit successful snapshot
-        if: success()
+        if: success() && steps.freshness.outputs.already_fresh != 'true'
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
