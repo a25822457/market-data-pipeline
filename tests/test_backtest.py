@@ -40,7 +40,7 @@ class BacktestTests(unittest.TestCase):
                 "asset": "TEST",
                 "date": "2026-11-02",
                 "close": "105",
-                "high": "105",
+                "high": "117",
                 "low": "101",
                 "sepa_pass": "False",
             }
