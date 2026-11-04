@@ -44,6 +44,92 @@ def _is_sepa(row: dict) -> bool:
     return row.get("sepa_pass") in {True, "True", "true", 1, "1"}
 
 
+
+
+def _backtest_section(backtest: dict) -> list[str]:
+    lines = ["## 三、昨日觀察名單回測", ""]
+    status = backtest.get("status")
+    if status == "no_previous_observation":
+        lines.extend(
+            [
+                "這是第一次保存觀察名單；下一次成功執行會自動用本次名單回測。",
+                "",
+                "已保存：美股 SEPA 名單，以及 252 檔 OKX 合約的昨日趨勢。",
+                "",
+            ]
+        )
+        return lines
+    if status in {None, "not_available"}:
+        lines.extend(["目前沒有可驗證的回測檔案。", ""])
+        return lines
+
+    lines.extend(
+        [
+            f"回測區間：{backtest.get('previous_date', '—')} → {backtest.get('current_date', '—')}",
+            "",
+            "### 美股觀察名單",
+            "",
+            "| 項目 | 數量 |",
+            "|---|---:|",
+        ]
+    )
+    us_summary = backtest.get("us", {}).get("summary", {})
+    lines.extend(
+        [
+            f"| 昨日 SEPA 名單 | {us_summary.get('watchlist', 0)} |",
+            f"| 已判定 | {us_summary.get('evaluated', 0)} |",
+            f"| 待補資料 | {us_summary.get('pending', 0)} |",
+            "",
+            "| 股票 | 結果 | 今日收盤 |",
+            "|---|---|---:|",
+        ]
+    )
+    result_labels = {
+        "not_triggered": "未觸發",
+        "triggered_open": "已觸發、持續觀察",
+        "open": "持倉中、未觸及目標或停損",
+        "target": "達到 2R 止盈",
+        "stop": "觸及停損",
+        "triggered_and_stop": "觸發後觸及停損",
+        "both_levels_hit_same_day_unknown": "同日同時穿越停損/止盈，順序不明",
+        "pending": "待補資料",
+    }
+    for row in backtest.get("us", {}).get("results", []):
+        lines.append(
+            f"| {row.get('asset', '—')} | "
+            f"{result_labels.get(row.get('result'), row.get('result', '—'))} | "
+            f"{_value(row, 'current_close')} |"
+        )
+    if not backtest.get("us", {}).get("results"):
+        lines.append("| — | 無昨日 SEPA 名單 | — |")
+
+    crypto_summary = backtest.get("crypto", {}).get("summary", {})
+    hit_rate = crypto_summary.get("hit_rate")
+    hit_rate_text = "—" if hit_rate is None else f"{hit_rate * 100:.2f}%"
+    lines.extend(
+        [
+            "",
+            "### OKX 合約方向回測",
+            "",
+            "| 項目 | 數量 |",
+            "|---|---:|",
+            f"| 昨日方向名單 | {crypto_summary.get('watchlist', 0)} |",
+            f"| 已判定 | {crypto_summary.get('evaluated', 0)} |",
+            f"| 同方向 | {crypto_summary.get('hits', 0)} |",
+            f"| 反方向 | {crypto_summary.get('misses', 0)} |",
+            f"| mixed 排除 | {crypto_summary.get('excluded_mixed', 0)} |",
+            f"| 待補資料 | {crypto_summary.get('pending', 0)} |",
+            f"| 方向命中率（只計 up/down） | {hit_rate_text} |",
+            "",
+            "定義：美股用昨日參考價位對今日高低價判定；若同一日同時穿越停損與止盈，不擅自猜測先後。合約只檢查昨日 up/down 方向與今日報酬同向，不等同實際損益。",
+            "",
+            "[查看完整回測 JSON](https://github.com/a25822457/market-data-pipeline/blob/main/data/backtest.json)　"
+            "[查看觀察名單歷史](https://github.com/a25822457/market-data-pipeline/blob/main/data/observation_history.json)",
+            "",
+        ]
+    )
+    return lines
+
 def render_summary(payload: dict) -> str:
     generated = payload.get("generated_at_taipei") or payload.get("generated_at") or "unknown"
     data_as_of = payload.get("data_as_of", {})
@@ -110,7 +196,10 @@ def render_summary(payload: dict) -> str:
         "",
         "以上進場、停損、2R 止盈為規則計算的參考價位，不是下單指令或獲利保證。",
         "",
-        "## 三、OKX USDT 線性永續合約",
+    ])
+    lines.extend(_backtest_section(payload.get("backtest", {"status": "not_available"})))
+    lines.extend([
+        "## 四、OKX USDT 線性永續合約",
         "",
         f"以下列出本次驗證後的全部 {len(crypto_rows)} 檔，不混入現貨或其他交易所。",
         "",
@@ -137,6 +226,7 @@ def render_summary(payload: dict) -> str:
     lines.extend([
         "",
         "本檔案由 GitHub Actions 直接產生；未包含新聞、財報文字或宏觀事件。",
+        "昨日觀察名單與回測結果由 GitHub 保存，不依賴聊天記憶。",
         "",
     ])
     return "\n".join(lines)

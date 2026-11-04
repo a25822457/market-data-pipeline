@@ -83,6 +83,8 @@ def screen_us(rows: list[dict], spy_rows: list[dict] | None = None) -> dict:
     return {
         "date": rows[i]["date"],
         "close": closes[i],
+        "high": float(rows[i]["high"]),
+        "low": float(rows[i]["low"]),
         "sma50": sma50,
         "sma150": sma150,
         "sma200": sma200,

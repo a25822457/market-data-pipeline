@@ -52,3 +52,8 @@ The canonical daily-summary source is `data/daily_summary_input.json`. The zero-
 - `recommended_entry`, `stop_loss`, `take_profit_2r`: emitted only when `sepa_pass=True`. The reference plan uses a 0.1% buffer above `pivot_20d`, an 8% loss cut below entry, and a 2R target. `entry_status` is `waiting_breakout` or `triggered`. These are educational reference levels, not orders, guarantees, or position-sizing advice.
 - Crypto trend is `up`, `down`, or `mixed` based only on close versus SMA20 and SMA20 versus SMA50.
 
+
+
+## Yesterday watchlist backtest
+
+The first successful run after this feature is deployed reports \`no_previous_observation\` because it is creating the baseline. From the following successful run onward, GitHub Actions calculates the backtest automatically and commits both the JSON result and the history file. No ChatGPT Work run is required. If a collection or validation run fails, no new observation snapshot is written and the previous result is not presented as today's backtest.

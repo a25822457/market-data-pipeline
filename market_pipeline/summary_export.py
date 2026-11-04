@@ -11,8 +11,16 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(handle))
 
 
-def build_input(report_path: Path, us_path: Path, crypto_path: Path) -> dict:
+def build_input(
+    report_path: Path,
+    us_path: Path,
+    crypto_path: Path,
+    backtest_path: Path | None = None,
+) -> dict:
     report = json.loads(report_path.read_text(encoding="utf-8"))
+    backtest = {"status": "not_available"}
+    if backtest_path and backtest_path.exists():
+        backtest = json.loads(backtest_path.read_text(encoding="utf-8"))
     return {
         "schema_version": 1,
         "source": "a25822457/market-data-pipeline",
@@ -27,6 +35,7 @@ def build_input(report_path: Path, us_path: Path, crypto_path: Path) -> dict:
         "crypto_universe": report.get("crypto_universe", {}),
         "summary_gate": report.get("summary_gate", {}),
         "warnings": report.get("warnings", []),
+        "backtest": backtest,
         "us_screen": read_csv(us_path),
         "crypto_screen": read_csv(crypto_path),
     }
@@ -37,9 +46,15 @@ def main() -> int:
     parser.add_argument("--report-path", type=Path, required=True)
     parser.add_argument("--us-path", type=Path, required=True)
     parser.add_argument("--crypto-path", type=Path, required=True)
+    parser.add_argument("--backtest-path", type=Path)
     parser.add_argument("--output-path", type=Path, required=True)
     args = parser.parse_args()
-    payload = build_input(args.report_path, args.us_path, args.crypto_path)
+    payload = build_input(
+        args.report_path,
+        args.us_path,
+        args.crypto_path,
+        args.backtest_path,
+    )
     args.output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({
         "output": str(args.output_path),
