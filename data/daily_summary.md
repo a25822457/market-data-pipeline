@@ -28,7 +28,15 @@
 
 以上進場、停損、2R 止盈為規則計算的參考價位，不是下單指令或獲利保證。
 
-## 三、OKX USDT 線性永續合約
+## 三、昨日觀察名單回測
+
+這是第一次保存觀察名單；下一次成功執行會自動用本次名單回測。
+
+已保存：美股 SEPA 名單，以及 252 檔 OKX 合約的昨日趨勢。
+
+[查看完整回測 JSON](https://github.com/a25822457/market-data-pipeline/blob/main/data/backtest.json)　[查看觀察名單歷史](https://github.com/a25822457/market-data-pipeline/blob/main/data/observation_history.json)
+
+## 四、OKX USDT 線性永續合約
 
 以下列出本次驗證後的全部 252 檔，不混入現貨或其他交易所。
 
@@ -288,3 +296,6 @@
 | GLM-USDT-SWAP | 2026-11-03 | 0.1122 | mixed | 1.18% | 65.89% | 251,476 | 0.1131 | 0.1129 | 0.0050% | 206,316 |
 
 本檔案由 GitHub Actions 直接產生；未包含新聞、財報文字或宏觀事件。
+
+
+昨日觀察名單與回測結果由 GitHub 保存，不依賴聊天記憶。

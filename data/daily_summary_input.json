@@ -7283,5 +7283,20 @@
       "open_interest_value": "331.0718",
       "snapshot_source": "OKX public SWAP futures market data"
     }
-  ]
+  ],
+  "backtest": {
+    "schema_version": 1,
+    "status": "no_previous_observation",
+    "current_date": "2026-11-03",
+    "previous_date": null,
+    "message": "首次建立觀察名單；下一次執行會用這批名單回測。",
+    "us": {
+      "summary": {},
+      "results": []
+    },
+    "crypto": {
+      "summary": {},
+      "results": []
+    }
+  }
 }

@@ -1,0 +1,1581 @@
+{
+  "schema_version": 1,
+  "retention_snapshots": 60,
+  "snapshots": [
+    {
+      "schema_version": 1,
+      "date": "2026-11-03",
+      "generated_at_taipei": "2026-11-05T00:44:06.290543+08:00",
+      "data_as_of": {
+        "us": "2026-11-03",
+        "crypto": "2026-11-03"
+      },
+      "us": [
+        {
+          "asset": "MSFT",
+          "date": "2026-11-03",
+          "close": 520.989990234375,
+          "rs_vs_spy_63d": 1.0906609772703282,
+          "recommended_entry": 551.7012,
+          "stop_loss": 507.5651,
+          "take_profit_2r": 639.9734,
+          "entry_status": "waiting_breakout"
+        },
+        {
+          "asset": "MRNA",
+          "date": "2026-11-03",
+          "close": 228.44000244140625,
+          "rs_vs_spy_63d": 4.143910728549239,
+          "recommended_entry": 254.7345,
+          "stop_loss": 234.3557,
+          "take_profit_2r": 295.4921,
+          "entry_status": "waiting_breakout"
+        },
+        {
+          "asset": "XOM",
+          "date": "2026-11-03",
+          "close": 177.4600067138672,
+          "rs_vs_spy_63d": 1.1943035320827624,
+          "recommended_entry": 188.6885,
+          "stop_loss": 173.5934,
+          "take_profit_2r": 218.8787,
+          "entry_status": "waiting_breakout"
+        },
+        {
+          "asset": "KO",
+          "date": "2026-11-03",
+          "close": 94.80000305175781,
+          "rs_vs_spy_63d": 1.114135245246639,
+          "recommended_entry": 96.3563,
+          "stop_loss": 88.6478,
+          "take_profit_2r": 111.7733,
+          "entry_status": "waiting_breakout"
+        },
+        {
+          "asset": "CNQ",
+          "date": "2026-11-03",
+          "close": 53.599998474121094,
+          "rs_vs_spy_63d": 1.2222811376115301,
+          "recommended_entry": 56.3263,
+          "stop_loss": 51.8202,
+          "take_profit_2r": 65.3385,
+          "entry_status": "waiting_breakout"
+        }
+      ],
+      "crypto": [
+        {
+          "asset": "SATS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 9.092e-9,
+          "trend": "down"
+        },
+        {
+          "asset": "PEPE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0000048695,
+          "trend": "up"
+        },
+        {
+          "asset": "SHIB-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.000004625,
+          "trend": "down"
+        },
+        {
+          "asset": "BONK-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.000002885,
+          "trend": "down"
+        },
+        {
+          "asset": "FLOKI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0000224,
+          "trend": "down"
+        },
+        {
+          "asset": "PUMP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.004326,
+          "trend": "down"
+        },
+        {
+          "asset": "NEIRO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0000624,
+          "trend": "down"
+        },
+        {
+          "asset": "BOME-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0006123,
+          "trend": "down"
+        },
+        {
+          "asset": "DOOD-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.001735,
+          "trend": "mixed"
+        },
+        {
+          "asset": "MEW-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0003802,
+          "trend": "down"
+        },
+        {
+          "asset": "DOGE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.07517,
+          "trend": "down"
+        },
+        {
+          "asset": "HMSTR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0001362,
+          "trend": "down"
+        },
+        {
+          "asset": "PENGU-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.007107,
+          "trend": "down"
+        },
+        {
+          "asset": "IOST-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0006997,
+          "trend": "down"
+        },
+        {
+          "asset": "NOT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0003437,
+          "trend": "down"
+        },
+        {
+          "asset": "HUMA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02247,
+          "trend": "down"
+        },
+        {
+          "asset": "MEME-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0004305,
+          "trend": "down"
+        },
+        {
+          "asset": "GALA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.001655,
+          "trend": "down"
+        },
+        {
+          "asset": "SOPH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.001439,
+          "trend": "down"
+        },
+        {
+          "asset": "RSR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.001424,
+          "trend": "mixed"
+        },
+        {
+          "asset": "STRK-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04225,
+          "trend": "down"
+        },
+        {
+          "asset": "WLFI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05109,
+          "trend": "down"
+        },
+        {
+          "asset": "PEOPLE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.006445,
+          "trend": "down"
+        },
+        {
+          "asset": "BLUR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.007671,
+          "trend": "down"
+        },
+        {
+          "asset": "ONE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0010988,
+          "trend": "down"
+        },
+        {
+          "asset": "TURBO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0007704,
+          "trend": "down"
+        },
+        {
+          "asset": "XPL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.06302,
+          "trend": "down"
+        },
+        {
+          "asset": "FOGO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.00235,
+          "trend": "down"
+        },
+        {
+          "asset": "APR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04027,
+          "trend": "down"
+        },
+        {
+          "asset": "RVN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.001343,
+          "trend": "down"
+        },
+        {
+          "asset": "ENA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.17477,
+          "trend": "down"
+        },
+        {
+          "asset": "W-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.010975,
+          "trend": "down"
+        },
+        {
+          "asset": "ZIL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.001777,
+          "trend": "down"
+        },
+        {
+          "asset": "WLD-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.377,
+          "trend": "down"
+        },
+        {
+          "asset": "MON-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01797,
+          "trend": "down"
+        },
+        {
+          "asset": "RLS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.002086,
+          "trend": "down"
+        },
+        {
+          "asset": "HOME-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.005509,
+          "trend": "mixed"
+        },
+        {
+          "asset": "NIGHT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.042586,
+          "trend": "up"
+        },
+        {
+          "asset": "OL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.006331,
+          "trend": "down"
+        },
+        {
+          "asset": "XRP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.2763,
+          "trend": "down"
+        },
+        {
+          "asset": "ADA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1899,
+          "trend": "down"
+        },
+        {
+          "asset": "LINEA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.002327,
+          "trend": "down"
+        },
+        {
+          "asset": "ZK-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.010193,
+          "trend": "mixed"
+        },
+        {
+          "asset": "ARB-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1579,
+          "trend": "down"
+        },
+        {
+          "asset": "USELESS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.12696,
+          "trend": "down"
+        },
+        {
+          "asset": "ANIME-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.00267,
+          "trend": "down"
+        },
+        {
+          "asset": "2Z-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02376,
+          "trend": "down"
+        },
+        {
+          "asset": "BEAT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.10007,
+          "trend": "mixed"
+        },
+        {
+          "asset": "CORE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01202,
+          "trend": "down"
+        },
+        {
+          "asset": "KMNO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03331,
+          "trend": "mixed"
+        },
+        {
+          "asset": "ATH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.004962,
+          "trend": "down"
+        },
+        {
+          "asset": "SAND-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04575,
+          "trend": "down"
+        },
+        {
+          "asset": "PARTI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04393,
+          "trend": "up"
+        },
+        {
+          "asset": "ACT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.008551,
+          "trend": "down"
+        },
+        {
+          "asset": "TRIA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.002571,
+          "trend": "down"
+        },
+        {
+          "asset": "MUBARAK-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.039501,
+          "trend": "down"
+        },
+        {
+          "asset": "SPACE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.003477,
+          "trend": "down"
+        },
+        {
+          "asset": "ZAMA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.06662,
+          "trend": "down"
+        },
+        {
+          "asset": "TRUTH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01663,
+          "trend": "mixed"
+        },
+        {
+          "asset": "CHZ-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01182,
+          "trend": "down"
+        },
+        {
+          "asset": "TRUMP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.585,
+          "trend": "down"
+        },
+        {
+          "asset": "XLM-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.16235,
+          "trend": "down"
+        },
+        {
+          "asset": "F-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.00269,
+          "trend": "down"
+        },
+        {
+          "asset": "HBAR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.06955,
+          "trend": "down"
+        },
+        {
+          "asset": "OP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.10924,
+          "trend": "down"
+        },
+        {
+          "asset": "MERL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02749,
+          "trend": "mixed"
+        },
+        {
+          "asset": "BICO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01506,
+          "trend": "down"
+        },
+        {
+          "asset": "SUI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.8935,
+          "trend": "down"
+        },
+        {
+          "asset": "LAB-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04593,
+          "trend": "mixed"
+        },
+        {
+          "asset": "BIO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02056,
+          "trend": "down"
+        },
+        {
+          "asset": "MOVE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.006122,
+          "trend": "down"
+        },
+        {
+          "asset": "PYTH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0647,
+          "trend": "mixed"
+        },
+        {
+          "asset": "GMT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.006351,
+          "trend": "down"
+        },
+        {
+          "asset": "ONDO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.3899,
+          "trend": "down"
+        },
+        {
+          "asset": "ALGO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.09318,
+          "trend": "down"
+        },
+        {
+          "asset": "PNUT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03901,
+          "trend": "down"
+        },
+        {
+          "asset": "PLUME-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.014297,
+          "trend": "down"
+        },
+        {
+          "asset": "SPK-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0165,
+          "trend": "down"
+        },
+        {
+          "asset": "INIT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.12284,
+          "trend": "mixed"
+        },
+        {
+          "asset": "POL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.09192,
+          "trend": "mixed"
+        },
+        {
+          "asset": "PI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.07656,
+          "trend": "down"
+        },
+        {
+          "asset": "FIL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.8585,
+          "trend": "down"
+        },
+        {
+          "asset": "SAHARA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.006838,
+          "trend": "down"
+        },
+        {
+          "asset": "S-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03827,
+          "trend": "mixed"
+        },
+        {
+          "asset": "TRX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.32145,
+          "trend": "down"
+        },
+        {
+          "asset": "NEAR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3.832,
+          "trend": "mixed"
+        },
+        {
+          "asset": "FARTCOIN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1188,
+          "trend": "down"
+        },
+        {
+          "asset": "BRETT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.00417,
+          "trend": "down"
+        },
+        {
+          "asset": "SEI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04758,
+          "trend": "down"
+        },
+        {
+          "asset": "PIPPIN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01362,
+          "trend": "down"
+        },
+        {
+          "asset": "CRV-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.261,
+          "trend": "down"
+        },
+        {
+          "asset": "ZORA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.005553,
+          "trend": "down"
+        },
+        {
+          "asset": "MAGIC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.08015,
+          "trend": "mixed"
+        },
+        {
+          "asset": "BIGTIME-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.006623,
+          "trend": "down"
+        },
+        {
+          "asset": "GPS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.00832,
+          "trend": "mixed"
+        },
+        {
+          "asset": "AIXBT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01604,
+          "trend": "down"
+        },
+        {
+          "asset": "BAT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.12893,
+          "trend": "mixed"
+        },
+        {
+          "asset": "SENT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01885,
+          "trend": "down"
+        },
+        {
+          "asset": "CFX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04616,
+          "trend": "down"
+        },
+        {
+          "asset": "WAL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02826,
+          "trend": "mixed"
+        },
+        {
+          "asset": "WIF-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1719,
+          "trend": "down"
+        },
+        {
+          "asset": "ORDER-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03528,
+          "trend": "down"
+        },
+        {
+          "asset": "ACH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.004585,
+          "trend": "down"
+        },
+        {
+          "asset": "MINA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05522,
+          "trend": "down"
+        },
+        {
+          "asset": "BABY-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.011656,
+          "trend": "down"
+        },
+        {
+          "asset": "MOODENG-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03462,
+          "trend": "down"
+        },
+        {
+          "asset": "LIT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3.3568,
+          "trend": "mixed"
+        },
+        {
+          "asset": "TIA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.4333,
+          "trend": "mixed"
+        },
+        {
+          "asset": "RAVE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1383,
+          "trend": "down"
+        },
+        {
+          "asset": "WOO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.012205,
+          "trend": "mixed"
+        },
+        {
+          "asset": "LA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05963,
+          "trend": "mixed"
+        },
+        {
+          "asset": "YGG-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02389,
+          "trend": "down"
+        },
+        {
+          "asset": "CC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.09643,
+          "trend": "down"
+        },
+        {
+          "asset": "OPN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04162,
+          "trend": "down"
+        },
+        {
+          "asset": "RESOLV-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01492,
+          "trend": "down"
+        },
+        {
+          "asset": "STX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.3264,
+          "trend": "down"
+        },
+        {
+          "asset": "STABLE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02737,
+          "trend": "mixed"
+        },
+        {
+          "asset": "H-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05255,
+          "trend": "down"
+        },
+        {
+          "asset": "WET-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0552,
+          "trend": "mixed"
+        },
+        {
+          "asset": "FLOW-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02233,
+          "trend": "down"
+        },
+        {
+          "asset": "SIGN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.009967,
+          "trend": "down"
+        },
+        {
+          "asset": "APE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1105,
+          "trend": "down"
+        },
+        {
+          "asset": "UNI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 7.222,
+          "trend": "mixed"
+        },
+        {
+          "asset": "SHELL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.02337,
+          "trend": "mixed"
+        },
+        {
+          "asset": "DOT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.9382,
+          "trend": "down"
+        },
+        {
+          "asset": "AZTEC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01416,
+          "trend": "mixed"
+        },
+        {
+          "asset": "DYDX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.10354,
+          "trend": "down"
+        },
+        {
+          "asset": "GRT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01961,
+          "trend": "down"
+        },
+        {
+          "asset": "JTO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.3501,
+          "trend": "down"
+        },
+        {
+          "asset": "BERA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1298,
+          "trend": "down"
+        },
+        {
+          "asset": "GRASS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.5655,
+          "trend": "mixed"
+        },
+        {
+          "asset": "ALLO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.15966,
+          "trend": "down"
+        },
+        {
+          "asset": "MMT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1188,
+          "trend": "down"
+        },
+        {
+          "asset": "ZBT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.06605,
+          "trend": "down"
+        },
+        {
+          "asset": "CRO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05013,
+          "trend": "down"
+        },
+        {
+          "asset": "JUP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2485,
+          "trend": "down"
+        },
+        {
+          "asset": "SOON-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2559,
+          "trend": "mixed"
+        },
+        {
+          "asset": "ENJ-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.024,
+          "trend": "down"
+        },
+        {
+          "asset": "APT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.6176,
+          "trend": "down"
+        },
+        {
+          "asset": "IOTA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04005,
+          "trend": "down"
+        },
+        {
+          "asset": "EIGEN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1791,
+          "trend": "down"
+        },
+        {
+          "asset": "SKY-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.06542,
+          "trend": "down"
+        },
+        {
+          "asset": "MET-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2703,
+          "trend": "down"
+        },
+        {
+          "asset": "AERO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.6264,
+          "trend": "down"
+        },
+        {
+          "asset": "SOL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 92.79,
+          "trend": "down"
+        },
+        {
+          "asset": "ME-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05205,
+          "trend": "down"
+        },
+        {
+          "asset": "LDO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.3317,
+          "trend": "down"
+        },
+        {
+          "asset": "AEVO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.01986,
+          "trend": "down"
+        },
+        {
+          "asset": "ETHFI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.5762,
+          "trend": "down"
+        },
+        {
+          "asset": "IMX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.11781,
+          "trend": "down"
+        },
+        {
+          "asset": "ZETA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03581,
+          "trend": "down"
+        },
+        {
+          "asset": "KAITO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2338,
+          "trend": "down"
+        },
+        {
+          "asset": "ASTER-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.6995,
+          "trend": "down"
+        },
+        {
+          "asset": "LUNA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03958,
+          "trend": "down"
+        },
+        {
+          "asset": "ZRO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.8735,
+          "trend": "up"
+        },
+        {
+          "asset": "0G-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1565,
+          "trend": "down"
+        },
+        {
+          "asset": "POPCAT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03956,
+          "trend": "down"
+        },
+        {
+          "asset": "PIEVERSE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.1642,
+          "trend": "mixed"
+        },
+        {
+          "asset": "VIRTUAL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.5894,
+          "trend": "down"
+        },
+        {
+          "asset": "A-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.08047,
+          "trend": "down"
+        },
+        {
+          "asset": "EDEN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05582,
+          "trend": "down"
+        },
+        {
+          "asset": "WCT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03314,
+          "trend": "down"
+        },
+        {
+          "asset": "ZKP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04021,
+          "trend": "down"
+        },
+        {
+          "asset": "SYRUP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1602,
+          "trend": "down"
+        },
+        {
+          "asset": "AVNT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.08782,
+          "trend": "down"
+        },
+        {
+          "asset": "ONT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04484,
+          "trend": "down"
+        },
+        {
+          "asset": "JELLYJELLY-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.04087,
+          "trend": "down"
+        },
+        {
+          "asset": "BREV-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.07845,
+          "trend": "down"
+        },
+        {
+          "asset": "ESP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.07824,
+          "trend": "down"
+        },
+        {
+          "asset": "MANA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.07284,
+          "trend": "down"
+        },
+        {
+          "asset": "LINK-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 11.024,
+          "trend": "down"
+        },
+        {
+          "asset": "TRUST-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05525,
+          "trend": "mixed"
+        },
+        {
+          "asset": "CELO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.07226,
+          "trend": "down"
+        },
+        {
+          "asset": "SUSHI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1913,
+          "trend": "down"
+        },
+        {
+          "asset": "LIGHT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2444,
+          "trend": "up"
+        },
+        {
+          "asset": "1INCH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.08138,
+          "trend": "down"
+        },
+        {
+          "asset": "SNX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1771,
+          "trend": "down"
+        },
+        {
+          "asset": "HYPE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 85.096,
+          "trend": "mixed"
+        },
+        {
+          "asset": "BARD-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1102,
+          "trend": "down"
+        },
+        {
+          "asset": "LAYER-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.05705,
+          "trend": "down"
+        },
+        {
+          "asset": "ARKM-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.11322,
+          "trend": "down"
+        },
+        {
+          "asset": "ETH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 2274,
+          "trend": "down"
+        },
+        {
+          "asset": "ENSO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.5041,
+          "trend": "down"
+        },
+        {
+          "asset": "ACU-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.12224,
+          "trend": "mixed"
+        },
+        {
+          "asset": "SPX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.3699,
+          "trend": "mixed"
+        },
+        {
+          "asset": "AVAX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 8.514,
+          "trend": "down"
+        },
+        {
+          "asset": "RIVER-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.8933,
+          "trend": "down"
+        },
+        {
+          "asset": "KGEN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.07074,
+          "trend": "down"
+        },
+        {
+          "asset": "SAPIEN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.0503,
+          "trend": "down"
+        },
+        {
+          "asset": "RAY-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.54,
+          "trend": "down"
+        },
+        {
+          "asset": "ATOM-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.405,
+          "trend": "down"
+        },
+        {
+          "asset": "THETA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1516,
+          "trend": "down"
+        },
+        {
+          "asset": "AGLD-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1755,
+          "trend": "down"
+        },
+        {
+          "asset": "PENDLE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.75,
+          "trend": "down"
+        },
+        {
+          "asset": "INJ-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 7.248,
+          "trend": "mixed"
+        },
+        {
+          "asset": "YB-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.06005,
+          "trend": "down"
+        },
+        {
+          "asset": "API3-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2386,
+          "trend": "down"
+        },
+        {
+          "asset": "AT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1203,
+          "trend": "down"
+        },
+        {
+          "asset": "ZRX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.09573,
+          "trend": "down"
+        },
+        {
+          "asset": "RECALL-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.03143,
+          "trend": "down"
+        },
+        {
+          "asset": "PROVE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1895,
+          "trend": "down"
+        },
+        {
+          "asset": "ICP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 2.497,
+          "trend": "down"
+        },
+        {
+          "asset": "MORPHO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 2.1434,
+          "trend": "down"
+        },
+        {
+          "asset": "XAG-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 49.99,
+          "trend": "down"
+        },
+        {
+          "asset": "GLM-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.11218,
+          "trend": "mixed"
+        },
+        {
+          "asset": "AXS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.846,
+          "trend": "down"
+        },
+        {
+          "asset": "ZEC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1218.52,
+          "trend": "mixed"
+        },
+        {
+          "asset": "BAND-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1903,
+          "trend": "down"
+        },
+        {
+          "asset": "ETHW-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2221,
+          "trend": "down"
+        },
+        {
+          "asset": "RENDER-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.49,
+          "trend": "down"
+        },
+        {
+          "asset": "XTZ-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2466,
+          "trend": "down"
+        },
+        {
+          "asset": "MASK-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.3818,
+          "trend": "down"
+        },
+        {
+          "asset": "ORDI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3.434,
+          "trend": "down"
+        },
+        {
+          "asset": "COAI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.2377,
+          "trend": "down"
+        },
+        {
+          "asset": "ETC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 7.05,
+          "trend": "down"
+        },
+        {
+          "asset": "LQTY-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.1922,
+          "trend": "down"
+        },
+        {
+          "asset": "LPT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.377,
+          "trend": "down"
+        },
+        {
+          "asset": "MSTR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 134.96,
+          "trend": "down"
+        },
+        {
+          "asset": "AR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3.133,
+          "trend": "down"
+        },
+        {
+          "asset": "LTC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 54.28,
+          "trend": "down"
+        },
+        {
+          "asset": "QTUM-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.7487,
+          "trend": "down"
+        },
+        {
+          "asset": "UMA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.3417,
+          "trend": "down"
+        },
+        {
+          "asset": "AAVE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 127.05,
+          "trend": "down"
+        },
+        {
+          "asset": "ZEN-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 5.219,
+          "trend": "down"
+        },
+        {
+          "asset": "CVX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.873,
+          "trend": "mixed"
+        },
+        {
+          "asset": "OKB-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 107.8,
+          "trend": "down"
+        },
+        {
+          "asset": "ENS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 4.872,
+          "trend": "down"
+        },
+        {
+          "asset": "VANA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 0.7823,
+          "trend": "down"
+        },
+        {
+          "asset": "DASH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 46.13,
+          "trend": "down"
+        },
+        {
+          "asset": "BCH-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 274.52,
+          "trend": "down"
+        },
+        {
+          "asset": "TSLA-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 396.5,
+          "trend": "up"
+        },
+        {
+          "asset": "AUCTION-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3.173,
+          "trend": "down"
+        },
+        {
+          "asset": "SSV-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 2.295,
+          "trend": "down"
+        },
+        {
+          "asset": "GAS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.1449,
+          "trend": "down"
+        },
+        {
+          "asset": "XAU-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3946.4,
+          "trend": "down"
+        },
+        {
+          "asset": "BTC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 77439.4,
+          "trend": "down"
+        },
+        {
+          "asset": "NEO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.953,
+          "trend": "down"
+        },
+        {
+          "asset": "TRB-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 16.25,
+          "trend": "down"
+        },
+        {
+          "asset": "NMR-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 9.631,
+          "trend": "down"
+        },
+        {
+          "asset": "KSM-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3.363,
+          "trend": "down"
+        },
+        {
+          "asset": "USDC-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1.000861,
+          "trend": "up"
+        },
+        {
+          "asset": "METIS-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 2.753,
+          "trend": "mixed"
+        },
+        {
+          "asset": "EGLD-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 3.417,
+          "trend": "down"
+        },
+        {
+          "asset": "BNB-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 698.05,
+          "trend": "down"
+        },
+        {
+          "asset": "TAO-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 225.84,
+          "trend": "down"
+        },
+        {
+          "asset": "HOOD-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 85.45,
+          "trend": "down"
+        },
+        {
+          "asset": "GMX-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 8.613,
+          "trend": "up"
+        },
+        {
+          "asset": "COMP-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 19.92,
+          "trend": "down"
+        },
+        {
+          "asset": "GIGGLE-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 29.7,
+          "trend": "down"
+        },
+        {
+          "asset": "XPD-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 945.9,
+          "trend": "down"
+        },
+        {
+          "asset": "XPT-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 1430.8,
+          "trend": "down"
+        },
+        {
+          "asset": "YFI-USDT-SWAP",
+          "date": "2026-11-03",
+          "close": 2010,
+          "trend": "down"
+        }
+      ]
+    }
+  ]
+}
