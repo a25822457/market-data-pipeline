@@ -56,6 +56,9 @@ jobs:
                   == datetime.now(ZoneInfo("Asia/Taipei")).date()
                   and payload.get("overall_status") == "pass"
                   and payload.get("failed") == 0
+                  and payload.get("us_benchmark", {}).get("status") == "pass"
+                  and payload.get("us_benchmark", {}).get("last_date")
+                  == payload.get("data_as_of", {}).get("us")
                   and payload.get("summary_gate", {}).get("status")
                   in {"ready", "ready_with_warnings"}
               )
