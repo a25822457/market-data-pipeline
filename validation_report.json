@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T16:44:06.290543+00:00",
+  "generated_at": "2026-11-04T18:06:39.534773+00:00",
   "minimum_bars": 252,
   "us_universe": {
     "target": 100,
@@ -69,7 +69,7 @@
       "errors": []
     },
     {
-      "asset": "AMZN",
+      "asset": "MSFT",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -80,7 +80,7 @@
       "errors": []
     },
     {
-      "asset": "MSFT",
+      "asset": "AMZN",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -179,7 +179,29 @@
       "errors": []
     },
     {
+      "asset": "AVGO",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
       "asset": "PLTR",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "LITE",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -201,29 +223,7 @@
       "errors": []
     },
     {
-      "asset": "AVGO",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
       "asset": "BE",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "ANET",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -256,6 +256,28 @@
       "errors": []
     },
     {
+      "asset": "UNH",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "ANET",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
       "asset": "MRNA",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
@@ -278,7 +300,29 @@
       "errors": []
     },
     {
+      "asset": "XOM",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
       "asset": "MCD",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "WMT",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -300,7 +344,7 @@
       "errors": []
     },
     {
-      "asset": "WMT",
+      "asset": "CVS",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -333,40 +377,7 @@
       "errors": []
     },
     {
-      "asset": "VST",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
       "asset": "LRCX",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "CVS",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "XOM",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -388,17 +399,6 @@
       "errors": []
     },
     {
-      "asset": "DDOG",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
       "asset": "VRT",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
@@ -410,40 +410,29 @@
       "errors": []
     },
     {
+      "asset": "VST",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "DDOG",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
       "asset": "NEE",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "C",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "FSLR",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "BKNG",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -476,7 +465,7 @@
       "errors": []
     },
     {
-      "asset": "BAC",
+      "asset": "BKNG",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -498,7 +487,7 @@
       "errors": []
     },
     {
-      "asset": "IREN",
+      "asset": "C",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -509,7 +498,51 @@
       "errors": []
     },
     {
-      "asset": "BABA",
+      "asset": "COHR",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "CVX",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "FSLR",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "BAC",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "COF",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -531,6 +564,39 @@
       "errors": []
     },
     {
+      "asset": "IREN",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "PG",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "BABA",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
       "asset": "RIOT",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
@@ -542,7 +608,7 @@
       "errors": []
     },
     {
-      "asset": "WFC",
+      "asset": "SHOP",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -553,7 +619,18 @@
       "errors": []
     },
     {
-      "asset": "SHOP",
+      "asset": "XYZ",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "WFC",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -586,51 +663,7 @@
       "errors": []
     },
     {
-      "asset": "XYZ",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
       "asset": "CVNA",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "NKE",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "DIS",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "BSX",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -652,17 +685,6 @@
       "errors": []
     },
     {
-      "asset": "CRCL",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
       "asset": "SO",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
@@ -674,7 +696,18 @@
       "errors": []
     },
     {
-      "asset": "APH",
+      "asset": "BSX",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "NKE",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -696,7 +729,29 @@
       "errors": []
     },
     {
-      "asset": "NVO",
+      "asset": "KLAC",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "DIS",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "APH",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -718,7 +773,7 @@
       "errors": []
     },
     {
-      "asset": "FIS",
+      "asset": "CRCL",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -729,7 +784,40 @@
       "errors": []
     },
     {
-      "asset": "WULF",
+      "asset": "NVO",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "COP",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "MDT",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "ABT",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -751,7 +839,40 @@
       "errors": []
     },
     {
-      "asset": "RKLB",
+      "asset": "SHEL",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "AAL",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "FIS",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "NXT",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -763,6 +884,39 @@
     },
     {
       "asset": "SOFI",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "WULF",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "RKLB",
+      "market": "us_stock",
+      "source": "Yahoo Finance chart API",
+      "status": "pass",
+      "bars": 345,
+      "first_date": "2025-06-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": []
+    },
+    {
+      "asset": "CCL",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -795,7 +949,7 @@
       "errors": []
     },
     {
-      "asset": "CNP",
+      "asset": "SLB",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -806,62 +960,7 @@
       "errors": []
     },
     {
-      "asset": "BMNR",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "STM",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "AAL",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "HPE",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "MCHP",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "AXTI",
+      "asset": "MOD",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -883,40 +982,7 @@
       "errors": []
     },
     {
-      "asset": "CVI",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "CIFR",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "HUT",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "T",
+      "asset": "HPE",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -938,7 +1004,7 @@
       "errors": []
     },
     {
-      "asset": "SLB",
+      "asset": "BMNR",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -949,7 +1015,7 @@
       "errors": []
     },
     {
-      "asset": "FCX",
+      "asset": "MCHP",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -960,7 +1026,7 @@
       "errors": []
     },
     {
-      "asset": "CCL",
+      "asset": "SWKS",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -971,7 +1037,7 @@
       "errors": []
     },
     {
-      "asset": "NU",
+      "asset": "DAL",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -982,7 +1048,7 @@
       "errors": []
     },
     {
-      "asset": "RIVN",
+      "asset": "CNP",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -993,7 +1059,7 @@
       "errors": []
     },
     {
-      "asset": "ASTS",
+      "asset": "STM",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1004,7 +1070,7 @@
       "errors": []
     },
     {
-      "asset": "ENPH",
+      "asset": "HUT",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1015,7 +1081,7 @@
       "errors": []
     },
     {
-      "asset": "CPNG",
+      "asset": "AXTI",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1026,7 +1092,7 @@
       "errors": []
     },
     {
-      "asset": "CMCSA",
+      "asset": "NRG",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1037,7 +1103,7 @@
       "errors": []
     },
     {
-      "asset": "DVN",
+      "asset": "GEHC",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1048,73 +1114,7 @@
       "errors": []
     },
     {
-      "asset": "APLD",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "TOST",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "NOK",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "IONQ",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "U",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "CNQ",
-      "market": "us_stock",
-      "source": "Yahoo Finance chart API",
-      "status": "pass",
-      "bars": 345,
-      "first_date": "2025-06-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": []
-    },
-    {
-      "asset": "KHC",
+      "asset": "CIFR",
       "market": "us_stock",
       "source": "Yahoo Finance chart API",
       "status": "pass",
@@ -1317,7 +1317,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "MEME-USDT-SWAP",
+      "asset": "GALA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1329,7 +1329,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "GALA-USDT-SWAP",
+      "asset": "MEME-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1354,6 +1354,18 @@
     },
     {
       "asset": "RSR-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "ONE-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1401,30 +1413,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "BLUR-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "ONE-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "TURBO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -1461,19 +1449,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "APR-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "RVN-USDT-SWAP",
+      "asset": "BLUR-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1497,7 +1473,31 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "APR-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "W-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "RVN-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1533,7 +1533,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "MON-USDT-SWAP",
+      "asset": "RLS-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1545,7 +1545,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "RLS-USDT-SWAP",
+      "asset": "MON-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1617,6 +1617,18 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "ZK-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "LINEA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -1629,7 +1641,19 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ZK-USDT-SWAP",
+      "asset": "ANIME-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "SAND-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1665,7 +1689,19 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ANIME-USDT-SWAP",
+      "asset": "CORE-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "ATH-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1701,139 +1737,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "CORE-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "KMNO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "ATH-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "SAND-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "PARTI-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "ACT-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "TRIA-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 272,
-      "first_date": "2026-02-05",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "MUBARAK-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "SPACE-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 285,
-      "first_date": "2026-01-23",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "ZAMA-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "TRUTH-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "CHZ-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1857,7 +1761,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "XLM-USDT-SWAP",
+      "asset": "KMNO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1869,7 +1773,79 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "F-USDT-SWAP",
+      "asset": "ACT-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "SPACE-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 285,
+      "first_date": "2026-01-23",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "MUBARAK-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "TRIA-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 272,
+      "first_date": "2026-02-05",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "ZAMA-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "CHZ-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "TRUTH-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1893,7 +1869,19 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "OP-USDT-SWAP",
+      "asset": "F-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "XLM-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1917,31 +1905,19 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "OP-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "BICO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "SUI-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "LAB-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1965,6 +1941,30 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "LAB-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "SUI-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "MOVE-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -1977,7 +1977,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "PYTH-USDT-SWAP",
+      "asset": "GMT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -1989,7 +1989,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "GMT-USDT-SWAP",
+      "asset": "PNUT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2025,7 +2025,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "PNUT-USDT-SWAP",
+      "asset": "PYTH-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2073,7 +2073,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "POL-USDT-SWAP",
+      "asset": "FIL-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2097,7 +2097,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "FIL-USDT-SWAP",
+      "asset": "POL-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2121,31 +2121,19 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "MAGIC-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "S-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "TRX-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "NEAR-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2169,7 +2157,19 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "BRETT-USDT-SWAP",
+      "asset": "NEAR-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "TRX-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2182,6 +2182,18 @@
     },
     {
       "asset": "SEI-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "BRETT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2229,7 +2241,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "MAGIC-USDT-SWAP",
+      "asset": "AIXBT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2265,18 +2277,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "AIXBT-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "BAT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2301,7 +2301,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "CFX-USDT-SWAP",
+      "asset": "WAL-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2313,7 +2313,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "WAL-USDT-SWAP",
+      "asset": "CFX-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2337,18 +2337,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ORDER-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "ACH-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2361,7 +2349,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "MINA-USDT-SWAP",
+      "asset": "ORDER-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2374,6 +2362,18 @@
     },
     {
       "asset": "BABY-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "MINA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2409,6 +2409,18 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "STX-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "TIA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2421,7 +2433,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "RAVE-USDT-SWAP",
+      "asset": "WOO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2433,7 +2445,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "WOO-USDT-SWAP",
+      "asset": "RAVE-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2469,7 +2481,19 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "CC-USDT-SWAP",
+      "asset": "STABLE-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "RESOLV-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2493,31 +2517,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "RESOLV-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "STX-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "STABLE-USDT-SWAP",
+      "asset": "CC-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2530,30 +2530,6 @@
     },
     {
       "asset": "H-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "WET-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "FLOW-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2589,6 +2565,42 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "FLOW-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "ALLO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "WET-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "UNI-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2601,7 +2613,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "SHELL-USDT-SWAP",
+      "asset": "DOT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2613,7 +2625,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "DOT-USDT-SWAP",
+      "asset": "SHELL-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2649,7 +2661,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "GRT-USDT-SWAP",
+      "asset": "JTO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2661,7 +2673,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "JTO-USDT-SWAP",
+      "asset": "GRT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2685,6 +2697,30 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "MMT-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "SOON-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "GRASS-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2697,19 +2733,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ALLO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "MMT-USDT-SWAP",
+      "asset": "JUP-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2745,30 +2769,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "JUP-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "SOON-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "ENJ-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2793,18 +2793,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "IOTA-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "EIGEN-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2817,7 +2805,19 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "SKY-USDT-SWAP",
+      "asset": "IOTA-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "LDO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2841,7 +2841,31 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "SKY-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "AERO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "LUNA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2877,30 +2901,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "LDO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "AEVO-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "ETHFI-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2925,18 +2925,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ZETA-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "KAITO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -2949,7 +2937,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ASTER-USDT-SWAP",
+      "asset": "ZETA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2961,7 +2949,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "LUNA-USDT-SWAP",
+      "asset": "AEVO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -2985,7 +2973,19 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "0G-USDT-SWAP",
+      "asset": "ASTER-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "A-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3009,7 +3009,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "PIEVERSE-USDT-SWAP",
+      "asset": "0G-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3033,7 +3033,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "A-USDT-SWAP",
+      "asset": "PIEVERSE-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3069,7 +3069,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ZKP-USDT-SWAP",
+      "asset": "ONT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3081,7 +3081,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "SYRUP-USDT-SWAP",
+      "asset": "ZKP-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3105,7 +3105,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ONT-USDT-SWAP",
+      "asset": "SYRUP-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3141,18 +3141,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ESP-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 267,
-      "first_date": "2026-02-10",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "MANA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -3165,31 +3153,19 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "ESP-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 267,
+      "first_date": "2026-02-10",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "LINK-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "TRUST-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "CELO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3213,6 +3189,18 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "CELO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "LIGHT-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -3225,31 +3213,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "1INCH-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "SNX-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "HYPE-USDT-SWAP",
+      "asset": "TRUST-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3285,6 +3249,30 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "SNX-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "HYPE-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "ARKM-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -3297,7 +3285,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ETH-USDT-SWAP",
+      "asset": "1INCH-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3310,6 +3298,18 @@
     },
     {
       "asset": "ENSO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "ETH-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3345,7 +3345,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "AVAX-USDT-SWAP",
+      "asset": "RIVER-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3357,7 +3357,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "RIVER-USDT-SWAP",
+      "asset": "AVAX-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3405,6 +3405,18 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "AT-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "ATOM-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -3417,7 +3429,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "THETA-USDT-SWAP",
+      "asset": "AGLD-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3429,7 +3441,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "AGLD-USDT-SWAP",
+      "asset": "THETA-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3489,7 +3501,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "AT-USDT-SWAP",
+      "asset": "ZRX-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3501,7 +3513,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ZRX-USDT-SWAP",
+      "asset": "ICP-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3537,18 +3549,6 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ICP-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "MORPHO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -3573,6 +3573,18 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "AXS-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "GLM-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -3585,7 +3597,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "AXS-USDT-SWAP",
+      "asset": "ETHW-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3610,18 +3622,6 @@
     },
     {
       "asset": "BAND-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "ETHW-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3681,7 +3681,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "COAI-USDT-SWAP",
+      "asset": "ETC-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3693,7 +3693,7 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "ETC-USDT-SWAP",
+      "asset": "COAI-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -3729,24 +3729,24 @@
       "futures_snapshot_status": "pass"
     },
     {
-      "asset": "MSTR-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 252,
-      "first_date": "2026-02-25",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
       "asset": "AR-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
       "bars": 299,
       "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
+      "asset": "MSTR-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 252,
+      "first_date": "2026-02-25",
       "last_date": "2026-11-03",
       "large_calendar_gaps": 0,
       "errors": [],
@@ -3933,6 +3933,18 @@
       "futures_snapshot_status": "pass"
     },
     {
+      "asset": "NEO-USDT-SWAP",
+      "market": "crypto_futures",
+      "source": "OKX public SWAP market data",
+      "status": "pass",
+      "bars": 299,
+      "first_date": "2026-01-09",
+      "last_date": "2026-11-03",
+      "large_calendar_gaps": 0,
+      "errors": [],
+      "futures_snapshot_status": "pass"
+    },
+    {
       "asset": "XAU-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
@@ -3946,18 +3958,6 @@
     },
     {
       "asset": "BTC-USDT-SWAP",
-      "market": "crypto_futures",
-      "source": "OKX public SWAP market data",
-      "status": "pass",
-      "bars": 299,
-      "first_date": "2026-01-09",
-      "last_date": "2026-11-03",
-      "large_calendar_gaps": 0,
-      "errors": [],
-      "futures_snapshot_status": "pass"
-    },
-    {
-      "asset": "NEO-USDT-SWAP",
       "market": "crypto_futures",
       "source": "OKX public SWAP market data",
       "status": "pass",
@@ -4153,7 +4153,7 @@
   "passed": 352,
   "failed": 0,
   "overall_status": "pass",
-  "generated_at_taipei": "2026-11-05T00:44:06.290543+08:00",
+  "generated_at_taipei": "2026-11-05T02:06:39.534773+08:00",
   "freshness_policy": {
     "timezone": "Asia/Taipei",
     "must_be_generated_today": true,
