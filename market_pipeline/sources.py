@@ -98,10 +98,16 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     timestamps = block.get("timestamp", [])
     quote = block.get("indicators", {}).get("quote", [{}])[0]
     rows = []
+    current_utc_date = datetime.now(timezone.utc).date()
     for i, stamp in enumerate(timestamps):
+        bar_date = datetime.fromtimestamp(stamp, timezone.utc).date()
+        # Yahoo includes the in-progress US session. The Taiwan morning run
+        # must use only the latest completed US trading session.
+        if bar_date >= current_utc_date:
+            continue
         vals = {key: (quote.get(key) or [None] * len(timestamps))[i] for key in ("open", "high", "low", "close", "volume")}
         if all(v is not None for v in vals.values()):
-            rows.append({"date": datetime.fromtimestamp(stamp, timezone.utc).date().isoformat(), "open": vals["open"], "high": vals["high"], "low": vals["low"], "close": vals["close"], "volume": vals["volume"]})
+            rows.append({"date": bar_date.isoformat(), "open": vals["open"], "high": vals["high"], "low": vals["low"], "close": vals["close"], "volume": vals["volume"]})
     if len(rows) < min_bars:
         raise RuntimeError(f"Yahoo returned {len(rows)} complete bars; need at least {min_bars}")
     return rows
