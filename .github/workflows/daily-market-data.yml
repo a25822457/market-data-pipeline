@@ -8,6 +8,8 @@ on:
     - cron: "10 0 * * *"
     # Recovery: 08:40 Asia/Taipei = 00:40 UTC if the primary scheduled run was delayed or missed.
     - cron: "40 0 * * *"
+    # Final recovery: 09:05 Asia/Taipei = 01:05 UTC before the summary window.
+    - cron: "5 1 * * *"
   workflow_dispatch:
 
 permissions:
