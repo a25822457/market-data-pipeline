@@ -25,13 +25,22 @@ def _truthy(value) -> bool:
     return value in {True, "True", "true", 1, "1"}
 
 
-def _current_date(report: dict) -> str:
-    data_as_of = report.get("data_as_of", {})
-    value = data_as_of.get("us") or data_as_of.get("crypto")
+def _market_date(report: dict, market: str) -> str:
+    value = report.get("data_as_of", {}).get(market)
     if value:
         return str(value)[:10]
     generated = report.get("generated_at_taipei") or report.get("generated_at") or ""
     return str(generated)[:10] or "unknown"
+
+
+def _current_date(report: dict) -> str:
+    dates = [
+        _market_date(report, "us"),
+        _market_date(report, "crypto"),
+    ]
+    return max(date for date in dates if date != "unknown") if any(
+        date != "unknown" for date in dates
+    ) else "unknown"
 
 
 def _make_snapshot(report: dict, us_rows: list[dict], crypto_rows: list[dict]) -> dict:
@@ -128,7 +137,41 @@ def _classify_us(previous: dict, current: dict | None) -> dict:
     return {"result": "pending", "reason": "previous entry status is missing"}
 
 
-def _backtest_us(previous: dict, current_rows: list[dict], current_date: str) -> dict:
+def _backtest_us(
+    previous: dict,
+    current_rows: list[dict],
+    current_date: str,
+    current_data_date: str,
+) -> dict:
+    previous_data_date = (
+        previous.get("data_as_of", {}).get("us") or previous.get("date") or "unknown"
+    )
+    if current_data_date <= previous_data_date:
+        results = [
+            {
+                "asset": item.get("asset"),
+                "previous_date": item.get("date") or previous.get("date"),
+                "current_date": current_data_date,
+                "previous_entry_status": item.get("entry_status"),
+                "current_close": None,
+                "result": "pending",
+                "reason": (
+                    f"US data date did not advance: {current_data_date} "
+                    f"<= {previous_data_date}"
+                ),
+            }
+            for item in previous.get("us", [])
+        ]
+        return {
+            "results": results,
+            "summary": {
+                "watchlist": len(results),
+                "evaluated": 0,
+                "pending": len(results),
+                "counts": {"pending": len(results)} if results else {},
+            },
+        }
+
     current_by_asset = {row.get("asset"): row for row in current_rows}
     results = []
     for item in previous.get("us", []):
@@ -159,7 +202,46 @@ def _backtest_us(previous: dict, current_rows: list[dict], current_date: str) ->
     }
 
 
-def _backtest_crypto(previous: dict, current_rows: list[dict], current_date: str) -> dict:
+def _backtest_crypto(
+    previous: dict,
+    current_rows: list[dict],
+    current_date: str,
+    current_data_date: str,
+) -> dict:
+    previous_data_date = (
+        previous.get("data_as_of", {}).get("crypto")
+        or previous.get("date")
+        or "unknown"
+    )
+    if current_data_date <= previous_data_date:
+        results = [
+            {
+                "asset": item.get("asset"),
+                "previous_date": item.get("date") or previous.get("date"),
+                "current_date": current_data_date,
+                "previous_trend": item.get("trend"),
+                "current_return_1d": None,
+                "result": "pending",
+                "reason": (
+                    f"crypto data date did not advance: {current_data_date} "
+                    f"<= {previous_data_date}"
+                ),
+            }
+            for item in previous.get("crypto", [])
+        ]
+        return {
+            "summary": {
+                "watchlist": len(results),
+                "evaluated": 0,
+                "hits": 0,
+                "misses": 0,
+                "pending": len(results),
+                "excluded_mixed": 0,
+                "hit_rate": None,
+            },
+            "results": results,
+        }
+
     current_by_asset = {row.get("asset"): row for row in current_rows}
     results = []
     for item in previous.get("crypto", []):
@@ -212,7 +294,9 @@ def build_backtest(
     crypto_rows: list[dict],
     history: dict,
 ) -> tuple[dict, dict, dict]:
-    current_date = _current_date(report)
+    current_us_date = _market_date(report, "us")
+    current_crypto_date = _market_date(report, "crypto")
+    current_date = max(current_us_date, current_crypto_date)
     snapshot = _make_snapshot(report, us_rows, crypto_rows)
     updated_history = _history_with_snapshot(history, snapshot)
     previous = _previous_snapshot(history, current_date)
@@ -229,8 +313,10 @@ def build_backtest(
         }
         return result, snapshot, updated_history
 
-    us = _backtest_us(previous, us_rows, current_date)
-    crypto = _backtest_crypto(previous, crypto_rows, current_date)
+    us = _backtest_us(previous, us_rows, current_date, current_us_date)
+    crypto = _backtest_crypto(
+        previous, crypto_rows, current_date, current_crypto_date
+    )
     pending = us["summary"]["pending"] + crypto["summary"]["pending"]
     result = {
         "schema_version": 1,
