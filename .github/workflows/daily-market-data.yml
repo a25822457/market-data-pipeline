@@ -10,6 +10,8 @@ on:
     - cron: "40 0 * * *"
     # Final recovery: 09:05 Asia/Taipei = 01:05 UTC before the summary window.
     - cron: "5 1 * * *"
+    # Last recovery: 09:15 Asia/Taipei = 01:15 UTC before the 09:20 summary.
+    - cron: "15 1 * * *"
   workflow_dispatch:
 
 permissions:
