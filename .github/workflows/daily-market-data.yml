@@ -12,6 +12,8 @@ on:
     - cron: "5 1 * * *"
     # Last recovery: 09:15 Asia/Taipei = 01:15 UTC before the 09:20 summary.
     - cron: "15 1 * * *"
+    # Catch-up: 10:10 Asia/Taipei = 02:10 UTC if GitHub delayed the morning schedules.
+    - cron: "10 2 * * *"
   workflow_dispatch:
 
 permissions:
