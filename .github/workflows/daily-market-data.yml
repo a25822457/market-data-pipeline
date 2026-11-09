@@ -14,6 +14,9 @@ on:
     - cron: "15 1 * * *"
     # Catch-up: 10:10 Asia/Taipei = 02:10 UTC if GitHub delayed the morning schedules.
     - cron: "10 2 * * *"
+    # Safety net: run every 30 minutes from 08:00 through 14:30 Asia/Taipei.
+    # The freshness guard skips duplicate work after a valid snapshot exists.
+    - cron: "*/30 0-6 * * *"
   workflow_dispatch:
 
 permissions:
