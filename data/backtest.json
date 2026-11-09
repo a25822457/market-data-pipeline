@@ -99,12 +99,12 @@
   "crypto": {
     "summary": {
       "watchlist": 252,
-      "evaluated": 225,
-      "hits": 216,
+      "evaluated": 224,
+      "hits": 215,
       "misses": 9,
       "pending": 1,
-      "excluded_mixed": 26,
-      "hit_rate": 0.96
+      "excluded_mixed": 27,
+      "hit_rate": 0.9598214285714286
     },
     "results": [
       {
@@ -2024,8 +2024,8 @@
         "previous_date": "2026-11-07",
         "current_date": "2026-11-08",
         "previous_trend": "down",
-        "current_return_1d": -0.05119240854039209,
-        "result": "hit"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "CRCL-USDT-SWAP",
@@ -2120,8 +2120,8 @@
         "previous_date": "2026-11-07",
         "current_date": "2026-11-08",
         "previous_trend": "mixed",
-        "current_return_1d": null,
-        "result": "pending"
+        "current_return_1d": -0.008810327041570365,
+        "result": "excluded_mixed"
       }
     ]
   },
