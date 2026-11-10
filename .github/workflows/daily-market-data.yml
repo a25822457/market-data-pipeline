@@ -47,7 +47,7 @@ jobs:
           python - <<'PY'
           import json
           import os
-          from datetime import datetime
+          from datetime import datetime, timedelta, timezone
           from pathlib import Path
           from zoneinfo import ZoneInfo
 
@@ -58,17 +58,30 @@ jobs:
               generated = datetime.fromisoformat(
                   payload["generated_at_taipei"].replace("Z", "+00:00")
               )
+              now_taipei = datetime.now(ZoneInfo("Asia/Taipei"))
+              now_utc = datetime.now(timezone.utc)
+              generated_taipei = generated.astimezone(ZoneInfo("Asia/Taipei"))
+              age_hours = (now_taipei - generated_taipei).total_seconds() / 3600
+              latest_completed_utc_day = (now_utc - timedelta(days=1)).date().isoformat()
+              data_as_of = payload.get("data_as_of", {})
               already_fresh = (
-                  generated.astimezone(ZoneInfo("Asia/Taipei")).date()
-                  == datetime.now(ZoneInfo("Asia/Taipei")).date()
+                  generated_taipei.date() == now_taipei.date()
+                  and 0 <= age_hours <= 12
                   and payload.get("overall_status") == "pass"
                   and payload.get("failed") == 0
                   and payload.get("us_benchmark", {}).get("status") == "pass"
                   and payload.get("us_benchmark", {}).get("last_date")
-                  == payload.get("data_as_of", {}).get("us")
+                  == data_as_of.get("us")
+                  and data_as_of.get("crypto") == latest_completed_utc_day
                   and payload.get("summary_gate", {}).get("status")
                   in {"ready", "ready_with_warnings"}
                   and os.environ.get("GITHUB_EVENT_NAME") == "schedule"
+              )
+              print(
+                  f"generated_at_taipei={generated_taipei.isoformat()} "
+                  f"age_hours={age_hours:.2f} "
+                  f"latest_completed_utc_day={latest_completed_utc_day} "
+                  f"data_as_of_crypto={data_as_of.get('crypto')}"
               )
           except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError):
               pass
