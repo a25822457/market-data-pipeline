@@ -4,19 +4,9 @@ on:
   push:
     branches: ["main"]
   schedule:
-    # Primary: 08:10 Asia/Taipei = 00:10 UTC, after the latest UTC daily candle closes.
-    - cron: "10 0 * * *"
-    # Recovery: 08:40 Asia/Taipei = 00:40 UTC if the primary scheduled run was delayed or missed.
-    - cron: "40 0 * * *"
-    # Final recovery: 09:05 Asia/Taipei = 01:05 UTC before the summary window.
-    - cron: "5 1 * * *"
-    # Last recovery: 09:15 Asia/Taipei = 01:15 UTC before the 09:20 summary.
-    - cron: "15 1 * * *"
-    # Catch-up: 10:10 Asia/Taipei = 02:10 UTC if GitHub delayed the morning schedules.
-    - cron: "10 2 * * *"
-    # Safety net: run every 30 minutes from 08:00 through 14:30 Asia/Taipei.
+    # Run every 30 minutes so a delayed or missed GitHub schedule is recovered.
     # The freshness guard skips duplicate work after a valid snapshot exists.
-    - cron: "*/30 0-6 * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
