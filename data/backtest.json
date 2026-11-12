@@ -22,12 +22,13 @@
         "current_close": 355.6300048828125
       },
       {
-        "result": "not_triggered",
+        "result": "pending",
+        "reason": "current instrument is missing",
         "asset": "MRNA",
         "previous_date": "2026-11-10",
         "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": 248.69000244140625
+        "current_close": null
       },
       {
         "result": "triggered_open",
@@ -56,13 +57,12 @@
         "current_close": null
       },
       {
-        "result": "pending",
-        "reason": "current instrument is missing",
+        "result": "triggered_open",
         "asset": "KDP",
         "previous_date": "2026-11-10",
         "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null
+        "current_close": 38.25
       },
       {
         "result": "pending",
@@ -74,35 +74,34 @@
         "current_close": null
       },
       {
-        "result": "pending",
-        "reason": "current instrument is missing",
+        "result": "not_triggered",
         "asset": "S",
         "previous_date": "2026-11-10",
         "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null
+        "current_close": 23.780000686645508
       }
     ],
     "summary": {
       "watchlist": 9,
-      "evaluated": 4,
-      "pending": 5,
+      "evaluated": 5,
+      "pending": 4,
       "counts": {
         "not_triggered": 2,
-        "triggered_open": 2,
-        "pending": 5
+        "triggered_open": 3,
+        "pending": 4
       }
     }
   },
   "crypto": {
     "summary": {
       "watchlist": 252,
-      "evaluated": 232,
-      "hits": 187,
+      "evaluated": 231,
+      "hits": 186,
       "misses": 45,
-      "pending": 0,
+      "pending": 1,
       "excluded_mixed": 20,
-      "hit_rate": 0.8060344827586207
+      "hit_rate": 0.8051948051948052
     },
     "results": [
       {
@@ -2094,8 +2093,8 @@
         "previous_date": "2026-11-10",
         "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.020209059233449622,
-        "result": "hit"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "XAU-USDT-SWAP",
