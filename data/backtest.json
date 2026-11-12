@@ -1,2105 +1,2127 @@
 {
   "schema_version": 1,
   "status": "complete_with_pending",
-  "current_date": "2026-11-10",
-  "previous_date": "2026-11-09",
+  "current_date": "2026-11-11",
+  "previous_date": "2026-11-10",
   "us": {
     "results": [
       {
-        "result": "not_triggered",
-        "asset": "AAPL",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_entry_status": "waiting_breakout",
-        "current_close": 348.510009765625
-      },
-      {
-        "result": "not_triggered",
         "asset": "MSFT",
-        "previous_date": "2026-11-09",
+        "previous_date": "2026-11-10",
         "current_date": "2026-11-10",
         "previous_entry_status": "waiting_breakout",
-        "current_close": 533.1599731445312
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
       },
       {
-        "result": "not_triggered",
+        "asset": "AAPL",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-10",
+        "previous_entry_status": "waiting_breakout",
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+      },
+      {
         "asset": "MRNA",
-        "previous_date": "2026-11-09",
+        "previous_date": "2026-11-10",
         "current_date": "2026-11-10",
         "previous_entry_status": "waiting_breakout",
-        "current_close": 250.8300018310547
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
       },
       {
-        "result": "not_triggered",
         "asset": "KO",
-        "previous_date": "2026-11-09",
+        "previous_date": "2026-11-10",
         "current_date": "2026-11-10",
         "previous_entry_status": "waiting_breakout",
-        "current_close": 96.91000366210938
-      },
-      {
+        "current_close": null,
         "result": "pending",
-        "reason": "current instrument is missing",
-        "asset": "TEM",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_entry_status": "waiting_breakout",
-        "current_close": null
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
       },
       {
-        "result": "not_triggered",
+        "asset": "TEVA",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-10",
+        "previous_entry_status": "waiting_breakout",
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+      },
+      {
+        "asset": "ZETA",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-10",
+        "previous_entry_status": "waiting_breakout",
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+      },
+      {
         "asset": "KDP",
-        "previous_date": "2026-11-09",
+        "previous_date": "2026-11-10",
         "current_date": "2026-11-10",
         "previous_entry_status": "waiting_breakout",
-        "current_close": 37.59000015258789
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
       },
       {
-        "result": "pending",
-        "reason": "current instrument is missing",
-        "asset": "MNST",
-        "previous_date": "2026-11-09",
+        "asset": "VTRS",
+        "previous_date": "2026-11-10",
         "current_date": "2026-11-10",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+      },
+      {
+        "asset": "S",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-10",
+        "previous_entry_status": "waiting_breakout",
+        "current_close": null,
+        "result": "pending",
+        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
       }
     ],
     "summary": {
-      "watchlist": 7,
-      "evaluated": 5,
-      "pending": 2,
+      "watchlist": 9,
+      "evaluated": 0,
+      "pending": 9,
       "counts": {
-        "not_triggered": 5,
-        "pending": 2
+        "pending": 9
       }
     }
   },
   "crypto": {
     "summary": {
       "watchlist": 252,
-      "evaluated": 222,
-      "hits": 147,
-      "misses": 75,
-      "pending": 7,
-      "excluded_mixed": 23,
-      "hit_rate": 0.6621621621621622
+      "evaluated": 232,
+      "hits": 187,
+      "misses": 45,
+      "pending": 0,
+      "excluded_mixed": 20,
+      "hit_rate": 0.8060344827586207
     },
     "results": [
       {
         "asset": "PEPE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "up",
-        "current_return_1d": 0.048135434545170774,
-        "result": "hit"
+        "current_return_1d": -0.15822478600669876,
+        "result": "miss"
       },
       {
         "asset": "SATS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.0071874631789796695,
-        "result": "miss"
+        "current_return_1d": -0.014038371548900419,
+        "result": "hit"
       },
       {
         "asset": "SHIB-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.008821533589685515,
-        "result": "miss"
+        "current_return_1d": -0.021973094170403495,
+        "result": "hit"
       },
       {
         "asset": "BONK-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.012535816618911122,
-        "result": "miss"
-      },
-      {
-        "asset": "FLOKI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.005273250239693272,
-        "result": "miss"
-      },
-      {
-        "asset": "PUMP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03124136024329549,
+        "current_return_1d": -0.03183586841174402,
         "result": "hit"
       },
       {
         "asset": "ONE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "mixed",
-        "current_return_1d": 0.255597398151318,
+        "current_return_1d": -0.19811320754716977,
         "result": "excluded_mixed"
+      },
+      {
+        "asset": "PUMP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01084474885844755,
+        "result": "hit"
+      },
+      {
+        "asset": "FLOKI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.011921793037672823,
+        "result": "hit"
       },
       {
         "asset": "NEIRO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.003721244925575018,
-        "result": "miss"
-      },
-      {
-        "asset": "RSR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.06689734717416373,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "HMSTR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.014671814671814554,
-        "result": "miss"
+        "current_return_1d": -0.03606336366700369,
+        "result": "hit"
       },
       {
         "asset": "BOME-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.003778544438968301,
+        "current_return_1d": -0.006266490765171495,
         "result": "hit"
       },
       {
-        "asset": "ZIL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "HMSTR-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.0279465370595382,
-        "result": "hit"
-      },
-      {
-        "asset": "DOGE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.028710184259391536,
-        "result": "hit"
-      },
-      {
-        "asset": "DOOD-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.018292682926829174,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "IOST-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.016136130262578874,
-        "result": "hit"
-      },
-      {
-        "asset": "SOPH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.09279204639602323,
+        "current_return_1d": 0.003805175038051889,
         "result": "miss"
       },
       {
-        "asset": "MEW-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "IOST-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.009540329575021711,
+        "current_return_1d": -0.04055464440137169,
         "result": "hit"
       },
       {
         "asset": "NOT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.04006259780907673,
-        "result": "miss"
-      },
-      {
-        "asset": "MEME-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.014670578821018854,
-        "result": "miss"
-      },
-      {
-        "asset": "PENGU-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.019145569620253267,
+        "current_return_1d": -0.023171832681312177,
         "result": "hit"
       },
       {
-        "asset": "GALA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "DOGE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.012459016393442712,
+        "current_return_1d": -0.00794117647058823,
         "result": "hit"
       },
       {
-        "asset": "ACT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "RSR-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "mixed",
-        "current_return_1d": 0.08845315904139417,
+        "current_return_1d": -0.04388133498145863,
         "result": "excluded_mixed"
-      },
-      {
-        "asset": "HUMA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0962888665997993,
-        "result": "hit"
-      },
-      {
-        "asset": "RLS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.005561735261401468,
-        "result": "miss"
       },
       {
         "asset": "INIT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "up",
-        "current_return_1d": 0.06157422424045844,
-        "result": "hit"
+        "current_return_1d": -0.327850486326832,
+        "result": "miss"
       },
       {
-        "asset": "STRK-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "SOPH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.01852818371607523,
+        "current_return_1d": -0.05079605761940864,
         "result": "hit"
       },
       {
-        "asset": "FOGO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MEW-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.00783699059561116,
+        "current_return_1d": -0.018096906012842973,
         "result": "hit"
       },
       {
-        "asset": "MERL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "PENGU-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.005323439264397489,
+        "result": "miss"
+      },
+      {
+        "asset": "DOOD-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "mixed",
-        "current_return_1d": -0.03640851589015737,
+        "current_return_1d": -0.047204968944099424,
         "result": "excluded_mixed"
       },
       {
-        "asset": "ARB-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.08122960673192514,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "TURBO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MEME-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.012039660056657242,
-        "result": "hit"
-      },
-      {
-        "asset": "HOME-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.059309021113243654,
+        "current_return_1d": 0.0034174553101997684,
         "result": "miss"
       },
       {
-        "asset": "RVN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "GALA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.002431118314424552,
-        "result": "miss"
-      },
-      {
-        "asset": "OL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.055283277788668705,
+        "current_return_1d": -0.02058432934926957,
         "result": "hit"
       },
       {
-        "asset": "KAT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "HUMA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.017185185185185192,
+        "current_return_1d": -0.11098779134295234,
         "result": "hit"
       },
       {
-        "asset": "LINEA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "ZIL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.0014506769825919363,
-        "result": "miss"
-      },
-      {
-        "asset": "SIGN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.013412984670874817,
-        "result": "miss"
-      },
-      {
-        "asset": "XPL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.010426723305657415,
-        "result": "miss"
-      },
-      {
-        "asset": "WLFI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0069109947643979375,
-        "result": "hit"
-      },
-      {
-        "asset": "ENA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.02088772845953013,
-        "result": "hit"
-      },
-      {
-        "asset": "PEOPLE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0005184929139302463,
-        "result": "hit"
-      },
-      {
-        "asset": "XRP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.038871187983614,
-        "result": "hit"
-      },
-      {
-        "asset": "ZK-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.004318936877076407,
-        "result": "miss"
-      },
-      {
-        "asset": "TRIA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.007518796992481369,
-        "result": "hit"
-      },
-      {
-        "asset": "PARTI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "up",
-        "current_return_1d": -0.16167800453514736,
-        "result": "miss"
-      },
-      {
-        "asset": "APR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.01659513590844075,
-        "result": "hit"
-      },
-      {
-        "asset": "WLD-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.022919937205651553,
-        "result": "hit"
-      },
-      {
-        "asset": "BLUR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0051120132310931155,
-        "result": "hit"
-      },
-      {
-        "asset": "MON-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.009041591320072428,
-        "result": "hit"
-      },
-      {
-        "asset": "ANIME-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0025052192066805645,
-        "result": "hit"
-      },
-      {
-        "asset": "F-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0016792611251049694,
-        "result": "hit"
-      },
-      {
-        "asset": "W-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.011739693104085624,
-        "result": "hit"
-      },
-      {
-        "asset": "NIGHT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "up",
-        "current_return_1d": 0.03177463954177373,
-        "result": "hit"
-      },
-      {
-        "asset": "ADA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.01974055273547659,
-        "result": "hit"
-      },
-      {
-        "asset": "PI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.08545704257591935,
-        "result": "miss"
-      },
-      {
-        "asset": "SAND-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.01589938300901772,
-        "result": "miss"
-      },
-      {
-        "asset": "ATH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.00022016732716867438,
-        "result": "miss"
-      },
-      {
-        "asset": "BIO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.014661274014155845,
-        "result": "miss"
-      },
-      {
-        "asset": "GMT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.0011625975751536899,
-        "result": "miss"
-      },
-      {
-        "asset": "SPACE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.011494252873563315,
-        "result": "miss"
-      },
-      {
-        "asset": "PIEVERSE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.08911824542251767,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "STABLE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.04190999656475436,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "BEAT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.060313929056976856,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "OP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.02008950770760809,
+        "current_return_1d": -0.03500000000000003,
         "result": "hit"
       },
       {
         "asset": "CORE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.09406779661016951,
-        "result": "miss"
-      },
-      {
-        "asset": "HBAR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.019745699326851218,
+        "current_return_1d": -0.07358636715724243,
         "result": "hit"
       },
       {
-        "asset": "ONDO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "TURBO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.018459069020866803,
+        "current_return_1d": -0.019354838709677358,
         "result": "hit"
       },
       {
-        "asset": "H-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.276840806252571,
-        "result": "hit"
-      },
-      {
-        "asset": "CHZ-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.010009099181073622,
-        "result": "hit"
-      },
-      {
-        "asset": "USELESS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.039862492685781126,
-        "result": "miss"
-      },
-      {
-        "asset": "ZAMA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.04364071140337755,
-        "result": "hit"
-      },
-      {
-        "asset": "PLUME-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.025896259429193602,
-        "result": "miss"
-      },
-      {
-        "asset": "ROBO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.037218631602406904,
-        "result": "hit"
-      },
-      {
-        "asset": "BICO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.005204460966542812,
-        "result": "hit"
-      },
-      {
-        "asset": "LAB-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.014026602176541614,
-        "result": "hit"
-      },
-      {
-        "asset": "TRUTH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "ACT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "mixed",
-        "current_return_1d": -0.03277995774222753,
+        "current_return_1d": -0.0917734187349879,
         "result": "excluded_mixed"
       },
       {
-        "asset": "SUI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "FOGO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.025568181818181768,
+        "current_return_1d": 0.010005265929436513,
+        "result": "miss"
+      },
+      {
+        "asset": "H-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.23521046643913535,
         "result": "hit"
       },
       {
-        "asset": "MUBARAK-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "HOME-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.015582533067584614,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "STRK-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.04864739047224953,
+        "current_return_1d": -0.027652220154214313,
+        "result": "hit"
+      },
+      {
+        "asset": "KAT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.023213747362074266,
+        "result": "hit"
+      },
+      {
+        "asset": "OL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.07428927163311905,
+        "result": "hit"
+      },
+      {
+        "asset": "ARB-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.05507788161993776,
+        "result": "hit"
+      },
+      {
+        "asset": "MERL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.09830291386487355,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "APR-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.02851323828920571,
+        "result": "miss"
+      },
+      {
+        "asset": "ENA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03079999999999994,
+        "result": "hit"
+      },
+      {
+        "asset": "PEOPLE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01158568217188316,
+        "result": "hit"
+      },
+      {
+        "asset": "BLUR-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.005138280187396038,
+        "result": "hit"
+      },
+      {
+        "asset": "RVN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0056588520614390125,
+        "result": "hit"
+      },
+      {
+        "asset": "NIGHT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "up",
+        "current_return_1d": 0.13342585724198974,
+        "result": "hit"
+      },
+      {
+        "asset": "ZK-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.007277538868673439,
+        "result": "miss"
+      },
+      {
+        "asset": "F-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.029015979814970616,
+        "result": "hit"
+      },
+      {
+        "asset": "W-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03844355065007965,
+        "result": "hit"
+      },
+      {
+        "asset": "XRP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.003788596325061566,
+        "result": "hit"
+      },
+      {
+        "asset": "XPL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.013185553219950408,
+        "result": "hit"
+      },
+      {
+        "asset": "RLS-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.042035398230088394,
+        "result": "hit"
+      },
+      {
+        "asset": "WLD-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.014460154241645262,
+        "result": "hit"
+      },
+      {
+        "asset": "LINEA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.005794302269435003,
+        "result": "hit"
+      },
+      {
+        "asset": "MON-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.014598540145985384,
+        "result": "miss"
+      },
+      {
+        "asset": "ANIME-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.015487651737128516,
+        "result": "hit"
+      },
+      {
+        "asset": "ADA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.0028768699654775354,
+        "result": "miss"
+      },
+      {
+        "asset": "WLFI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.005904681568958181,
+        "result": "hit"
+      },
+      {
+        "asset": "ATH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.0035219018269865288,
+        "result": "miss"
+      },
+      {
+        "asset": "PARTI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.07303218826075197,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "BEAT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": 0.01762462185979219,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "TRIA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.014354066985645897,
         "result": "hit"
       },
       {
         "asset": "PYTH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.0018430348640761096,
-        "result": "miss"
-      },
-      {
-        "asset": "TRUMP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.02144772117962468,
-        "result": "miss"
-      },
-      {
-        "asset": "ZORA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.013563501849568449,
+        "current_return_1d": -0.017936532270427574,
         "result": "hit"
       },
       {
-        "asset": "GPS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "LAB-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.006112774451097813,
+        "current_return_1d": -0.026980623007113125,
         "result": "hit"
+      },
+      {
+        "asset": "ROBO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.009490740740740744,
+        "result": "hit"
+      },
+      {
+        "asset": "BICO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.005979073243647215,
+        "result": "hit"
+      },
+      {
+        "asset": "USELESS-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.10318632622916224,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "TRUTH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": 0.007739358382224282,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "SAND-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.02919878533053033,
+        "result": "hit"
+      },
+      {
+        "asset": "BIO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.013452914798206206,
+        "result": "hit"
+      },
+      {
+        "asset": "GMT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.004810882548108797,
+        "result": "miss"
       },
       {
         "asset": "XLM-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.01952807160292913,
+        "current_return_1d": 0.01742738589211612,
+        "result": "miss"
+      },
+      {
+        "asset": "OP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0119760479041916,
         "result": "hit"
       },
       {
-        "asset": "S-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "SPACE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.005395198273536517,
+        "current_return_1d": -0.03347665847665848,
         "result": "hit"
       },
       {
-        "asset": "SAHARA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "2Z-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.010107492379271554,
+        "current_return_1d": -0.045273631840796025,
+        "result": "hit"
+      },
+      {
+        "asset": "PI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.012231126107127732,
+        "result": "hit"
+      },
+      {
+        "asset": "CHZ-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.015625,
+        "result": "hit"
+      },
+      {
+        "asset": "HBAR-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0019838242026553043,
+        "result": "hit"
+      },
+      {
+        "asset": "PLUME-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.003714372346876882,
+        "result": "hit"
+      },
+      {
+        "asset": "MUBARAK-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.025608264238140555,
+        "result": "hit"
+      },
+      {
+        "asset": "SUI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.001700680272108901,
+        "result": "hit"
+      },
+      {
+        "asset": "ONDO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.023712183156173294,
         "result": "hit"
       },
       {
         "asset": "BABY-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.005703992794956481,
-        "result": "miss"
+        "current_return_1d": -0.03681592039800996,
+        "result": "hit"
       },
       {
-        "asset": "2Z-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "ZAMA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.029185867895545448,
-        "result": "miss"
+        "current_return_1d": -0.006094702297233967,
+        "result": "hit"
       },
       {
         "asset": "PNUT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.0015142337976984388,
+        "current_return_1d": -0.012132241431604407,
         "result": "hit"
       },
       {
-        "asset": "ENJ-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "TRUMP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.03038194444444442,
-        "result": "miss"
-      },
-      {
-        "asset": "MOVE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.009948481080120919,
-        "result": "hit"
-      },
-      {
-        "asset": "SEI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.004984141368373329,
+        "current_return_1d": -0.01837270341207342,
         "result": "hit"
       },
       {
         "asset": "MAGIC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": 0.014780100937274554,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "FIL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.008009453781512743,
-        "result": "hit"
-      },
-      {
-        "asset": "BAT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.06169330055316535,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "BRETT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.015220293724966694,
-        "result": "hit"
-      },
-      {
-        "asset": "CFX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.011358144030932826,
-        "result": "hit"
-      },
-      {
-        "asset": "ACH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0075082121069920404,
-        "result": "hit"
-      },
-      {
-        "asset": "WAL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0089413447782547,
-        "result": "hit"
-      },
-      {
-        "asset": "BIGTIME-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0239154616240268,
-        "result": "hit"
-      },
-      {
-        "asset": "SENT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.0037014188772364065,
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "up",
+        "current_return_1d": -0.04641799881586728,
         "result": "miss"
       },
       {
-        "asset": "MINA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "SAHARA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.0234283483014448,
-        "result": "miss"
-      },
-      {
-        "asset": "FARTCOIN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03209459459459474,
+        "current_return_1d": -0.027714748784440912,
         "result": "hit"
       },
       {
-        "asset": "PIPPIN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "SIGN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.015637216575449475,
-        "result": "hit"
-      },
-      {
-        "asset": "POL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.010435368043087978,
-        "result": "hit"
-      },
-      {
-        "asset": "BERA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.006763285024154575,
+        "current_return_1d": 0.03481259036814577,
         "result": "miss"
       },
       {
         "asset": "SPK-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.0018867924528302993,
-        "result": "hit"
-      },
-      {
-        "asset": "KMNO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0342548076923076,
-        "result": "hit"
-      },
-      {
-        "asset": "RESOLV-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.01969365426695835,
-        "result": "miss"
-      },
-      {
-        "asset": "ORDER-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.005853658536585371,
-        "result": "hit"
-      },
-      {
-        "asset": "MOODENG-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.009967845659163865,
-        "result": "hit"
-      },
-      {
-        "asset": "FLOW-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.0019588638589618235,
-        "result": "miss"
-      },
-      {
-        "asset": "CRV-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.04450464396284837,
-        "result": "hit"
-      },
-      {
-        "asset": "ALGO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.02337915358805065,
-        "result": "hit"
-      },
-      {
-        "asset": "MET-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.07440846824408465,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "TIA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.00791986955508972,
-        "result": "hit"
-      },
-      {
-        "asset": "AIXBT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.010832769126608022,
+        "current_return_1d": -0.013862633900440957,
         "result": "hit"
       },
       {
         "asset": "NEAR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.011579818031430933,
+        "current_return_1d": -0.0008368200836820217,
         "result": "hit"
       },
       {
-        "asset": "TRX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "SENT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.00025194469813882847,
-        "result": "miss"
-      },
-      {
-        "asset": "CC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.02262295081967214,
+        "current_return_1d": -0.020897357098955127,
         "result": "hit"
       },
       {
-        "asset": "YB-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "BIGTIME-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.011149401986620733,
+        "current_return_1d": -0.03038936372269696,
         "result": "hit"
       },
       {
-        "asset": "WIF-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "ZORA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.0012722646310432406,
-        "result": "miss"
+        "current_return_1d": -0.0016666666666664831,
+        "result": "hit"
       },
       {
-        "asset": "YGG-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MOVE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.00898345153664315,
-        "result": "miss"
+        "current_return_1d": -0.008433518751121527,
+        "result": "hit"
       },
       {
-        "asset": "APE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "BAT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.03463522476050107,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "PIEVERSE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.10900473933649302,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "PIPPIN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.018554879246023948,
+        "current_return_1d": -0.019062748212867353,
+        "result": "hit"
+      },
+      {
+        "asset": "CFX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0075776093864582394,
+        "result": "hit"
+      },
+      {
+        "asset": "CRV-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.023086269744835963,
+        "result": "hit"
+      },
+      {
+        "asset": "SEI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.005009107468123775,
+        "result": "hit"
+      },
+      {
+        "asset": "S-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.022782750203417468,
+        "result": "hit"
+      },
+      {
+        "asset": "POL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.010318630230184866,
+        "result": "hit"
+      },
+      {
+        "asset": "FIL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0030443414956982107,
+        "result": "hit"
+      },
+      {
+        "asset": "WAL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.013713460844460457,
         "result": "hit"
       },
       {
         "asset": "ALLO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.021293855201784728,
-        "result": "hit"
-      },
-      {
-        "asset": "JUP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.006730007917656433,
+        "current_return_1d": 0.023967398811990615,
         "result": "miss"
       },
       {
-        "asset": "ZBT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "BRETT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.004091374019774996,
+        "current_return_1d": -0.013015184381778733,
+        "result": "hit"
+      },
+      {
+        "asset": "KGEN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.3475710633177922,
         "result": "miss"
       },
       {
-        "asset": "AZTEC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "FARTCOIN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.008573655494933718,
+        "current_return_1d": -0.007853403141361293,
         "result": "hit"
       },
       {
-        "asset": "WOO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.016245487364620947,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "ASTER-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "AIXBT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.01710060083192111,
+        "current_return_1d": -0.017111567419575646,
         "result": "hit"
       },
       {
-        "asset": "LIT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": 0.0736881165156622,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "STX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "CC-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.006717850287907945,
-        "result": "miss"
-      },
-      {
-        "asset": "GRT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03540305010893252,
-        "result": "hit"
-      },
-      {
-        "asset": "DYDX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.007053118800969815,
-        "result": "hit"
-      },
-      {
-        "asset": "DOT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.015646893974778253,
-        "result": "hit"
-      },
-      {
-        "asset": "ETHFI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": 0.012746972594009032,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "IOTA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.0034843205574912606,
-        "result": "miss"
-      },
-      {
-        "asset": "KAITO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.024233432245301723,
-        "result": "miss"
-      },
-      {
-        "asset": "LA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.025263157894736765,
-        "result": "hit"
-      },
-      {
-        "asset": "OPN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0212534059945505,
-        "result": "hit"
-      },
-      {
-        "asset": "UNI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.045259238040676,
-        "result": "hit"
-      },
-      {
-        "asset": "SOON-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.021285304952926687,
-        "result": "hit"
-      },
-      {
-        "asset": "EIGEN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.007504690431519689,
-        "result": "miss"
-      },
-      {
-        "asset": "CRO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.018333333333333313,
-        "result": "hit"
-      },
-      {
-        "asset": "IMX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.029093031010336667,
-        "result": "hit"
-      },
-      {
-        "asset": "ZRO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.03688939936490776,
-        "result": "miss"
-      },
-      {
-        "asset": "GRASS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.06165352739033747,
-        "result": "hit"
-      },
-      {
-        "asset": "AERO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03282469836763657,
-        "result": "hit"
-      },
-      {
-        "asset": "AVAX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03236994219653189,
-        "result": "hit"
-      },
-      {
-        "asset": "LUNA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0016330974414807686,
-        "result": "hit"
-      },
-      {
-        "asset": "MMT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.01744186046511631,
-        "result": "miss"
-      },
-      {
-        "asset": "APT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03711270003404843,
-        "result": "hit"
-      },
-      {
-        "asset": "ONT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.007333170373991615,
-        "result": "miss"
-      },
-      {
-        "asset": "RAVE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.006074411541381997,
-        "result": "miss"
-      },
-      {
-        "asset": "SYRUP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.019174041297935096,
-        "result": "miss"
-      },
-      {
-        "asset": "LDO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0009179926560586305,
-        "result": "hit"
-      },
-      {
-        "asset": "JTO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.003282602208296015,
-        "result": "hit"
-      },
-      {
-        "asset": "SOL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0388831198800047,
-        "result": "hit"
-      },
-      {
-        "asset": "SHELL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.0070105157736604085,
-        "result": "miss"
-      },
-      {
-        "asset": "ESP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.020943762120232634,
+        "current_return_1d": 0.013530135301353052,
         "result": "miss"
       },
       {
         "asset": "BARD-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.1253644314868806,
+        "current_return_1d": -0.08333333333333326,
         "result": "hit"
       },
       {
-        "asset": "MANA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "TIA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.014950398211541205,
+        "current_return_1d": -0.024184080770133787,
         "result": "hit"
       },
       {
-        "asset": "POPCAT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "KMNO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.008731082654249156,
+        "current_return_1d": -0.018979464841319182,
         "result": "hit"
       },
       {
-        "asset": "WET-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "ACH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.02598212429848268,
+        "current_return_1d": -0.01891252955082745,
         "result": "hit"
       },
       {
-        "asset": "AEVO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "TRX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.01902173913043481,
+        "current_return_1d": -0.0031170303202040506,
+        "result": "hit"
+      },
+      {
+        "asset": "JUP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.003145890680298802,
         "result": "miss"
       },
       {
-        "asset": "ZETA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MINA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.01297169811320742,
-        "result": "hit"
-      },
-      {
-        "asset": "EDEN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.02400698384984734,
+        "current_return_1d": 0.032239603204883505,
         "result": "miss"
       },
       {
-        "asset": "SPX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MOODENG-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.003056404556821324,
-        "result": "miss"
-      },
-      {
-        "asset": "WCT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.002020202020202033,
-        "result": "miss"
-      },
-      {
-        "asset": "A-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.004730617608409982,
-        "result": "hit"
-      },
-      {
-        "asset": "SKY-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.019974017538161748,
-        "result": "hit"
-      },
-      {
-        "asset": "LAYER-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.002761341222879743,
-        "result": "hit"
-      },
-      {
-        "asset": "CELO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.020389391384332267,
-        "result": "miss"
-      },
-      {
-        "asset": "ME-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.010045662100456543,
-        "result": "hit"
-      },
-      {
-        "asset": "0G-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.03591549295774654,
-        "result": "miss"
-      },
-      {
-        "asset": "AVNT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.011770416211624779,
-        "result": "hit"
-      },
-      {
-        "asset": "SNX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.01243781094527363,
-        "result": "miss"
-      },
-      {
-        "asset": "SUSHI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.006783493499152082,
-        "result": "hit"
-      },
-      {
-        "asset": "LINK-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.034715706511540545,
-        "result": "hit"
-      },
-      {
-        "asset": "TRUST-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.06029716655148587,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "ZKP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.04315729699034643,
-        "result": "hit"
-      },
-      {
-        "asset": "1INCH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.033135636926250656,
-        "result": "hit"
-      },
-      {
-        "asset": "ARKM-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.00834945524895625,
-        "result": "miss"
-      },
-      {
-        "asset": "VIRTUAL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03151758061577714,
-        "result": "hit"
-      },
-      {
-        "asset": "RIVER-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.011467889908256979,
-        "result": "miss"
-      },
-      {
-        "asset": "XTZ-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.018363273453093742,
-        "result": "hit"
-      },
-      {
-        "asset": "RAY-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.07530309067106833,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "INJ-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.01133842740941593,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "JELLYJELLY-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.009291813159216344,
-        "result": "miss"
-      },
-      {
-        "asset": "HYPE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03817850346653895,
-        "result": "hit"
-      },
-      {
-        "asset": "ETH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03832816292866714,
-        "result": "hit"
-      },
-      {
-        "asset": "BREV-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.027577428935086856,
-        "result": "hit"
-      },
-      {
-        "asset": "ATOM-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.021929824561403466,
-        "result": "miss"
-      },
-      {
-        "asset": "SAPIEN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.009032826613791567,
-        "result": "hit"
-      },
-      {
-        "asset": "RENDER-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.017654476670870167,
-        "result": "miss"
-      },
-      {
-        "asset": "ENSO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.011646494633478,
-        "result": "miss"
-      },
-      {
-        "asset": "ZRX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.01657706093189959,
-        "result": "hit"
-      },
-      {
-        "asset": "ACU-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "up",
-        "current_return_1d": 0.02044854881266489,
-        "result": "hit"
-      },
-      {
-        "asset": "AGLD-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.007042253521126862,
-        "result": "hit"
-      },
-      {
-        "asset": "THETA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.007087172218284921,
-        "result": "hit"
-      },
-      {
-        "asset": "API3-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.04968152866242037,
+        "current_return_1d": -0.009093861643390766,
         "result": "hit"
       },
       {
         "asset": "RECALL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.03443526170798905,
-        "result": "miss"
-      },
-      {
-        "asset": "KGEN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.011716372489348537,
-        "result": "miss"
-      },
-      {
-        "asset": "LIGHT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.042942176870748305,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "PROVE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.020011771630370934,
-        "result": "miss"
-      },
-      {
-        "asset": "AXS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.007668521954236174,
+        "current_return_1d": -0.043275632490013316,
         "result": "hit"
       },
       {
-        "asset": "XAG-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "FLOW-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.021505376344086002,
+        "result": "hit"
+      },
+      {
+        "asset": "YGG-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01921274601686973,
+        "result": "hit"
+      },
+      {
+        "asset": "ALGO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.011747755735343035,
+        "result": "hit"
+      },
+      {
+        "asset": "WOO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03311926605504589,
+        "result": "hit"
+      },
+      {
+        "asset": "LIT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "mixed",
-        "current_return_1d": -0.03401869158878501,
+        "current_return_1d": -0.06209319739646324,
         "result": "excluded_mixed"
+      },
+      {
+        "asset": "UNI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.06585658565856589,
+        "result": "hit"
+      },
+      {
+        "asset": "GPS-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.004267603865946934,
+        "result": "hit"
+      },
+      {
+        "asset": "RESOLV-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.027896995708154515,
+        "result": "hit"
+      },
+      {
+        "asset": "WIF-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.013977128335451172,
+        "result": "hit"
+      },
+      {
+        "asset": "BERA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.018234165067178454,
+        "result": "hit"
+      },
+      {
+        "asset": "ZBT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.036162988115449934,
+        "result": "hit"
+      },
+      {
+        "asset": "GRASS-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.02283498492029301,
+        "result": "hit"
+      },
+      {
+        "asset": "CRO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.034592529711375164,
+        "result": "miss"
+      },
+      {
+        "asset": "GRT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01242236024844734,
+        "result": "hit"
+      },
+      {
+        "asset": "ORDER-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.018645731108930308,
+        "result": "hit"
+      },
+      {
+        "asset": "OPN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03479955456570161,
+        "result": "hit"
+      },
+      {
+        "asset": "0G-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.023113528212100443,
+        "result": "miss"
+      },
+      {
+        "asset": "DOT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.004270462633451877,
+        "result": "hit"
+      },
+      {
+        "asset": "APE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.04451335400620193,
+        "result": "hit"
+      },
+      {
+        "asset": "ENJ-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03917438921651217,
+        "result": "hit"
+      },
+      {
+        "asset": "STABLE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.03908210828253855,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "AERO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01064024949550546,
+        "result": "hit"
+      },
+      {
+        "asset": "DYDX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.017758046614872347,
+        "result": "miss"
+      },
+      {
+        "asset": "ASTER-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.027115987460815116,
+        "result": "miss"
+      },
+      {
+        "asset": "RAVE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.044528301886792576,
+        "result": "hit"
+      },
+      {
+        "asset": "STX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.02287893231649185,
+        "result": "hit"
+      },
+      {
+        "asset": "MET-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.008409014463504838,
+        "result": "hit"
+      },
+      {
+        "asset": "EDEN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01705029838022165,
+        "result": "hit"
+      },
+      {
+        "asset": "JTO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.020958083832335328,
+        "result": "hit"
+      },
+      {
+        "asset": "ETHFI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": 0.0025173064820640523,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "APT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.004420084865629281,
+        "result": "hit"
+      },
+      {
+        "asset": "LA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.042018456705281815,
+        "result": "hit"
+      },
+      {
+        "asset": "KAITO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.015451472718493564,
+        "result": "hit"
+      },
+      {
+        "asset": "ONT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.001941276389225921,
+        "result": "miss"
+      },
+      {
+        "asset": "SOON-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01882057716436636,
+        "result": "hit"
+      },
+      {
+        "asset": "AZTEC-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.00786163522012584,
+        "result": "hit"
+      },
+      {
+        "asset": "IMX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.0016313213703098572,
+        "result": "miss"
+      },
+      {
+        "asset": "SOL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.001080432172869239,
+        "result": "hit"
+      },
+      {
+        "asset": "AEVO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.012266666666666759,
+        "result": "hit"
+      },
+      {
+        "asset": "IOTA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01938657407407396,
+        "result": "hit"
+      },
+      {
+        "asset": "LDO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.033996937212863676,
+        "result": "hit"
+      },
+      {
+        "asset": "EIGEN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01613904407200495,
+        "result": "hit"
+      },
+      {
+        "asset": "SKY-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.026677713338856712,
+        "result": "hit"
+      },
+      {
+        "asset": "ZRO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.0056688603635890455,
+        "result": "miss"
+      },
+      {
+        "asset": "JELLYJELLY-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.02363772082607629,
+        "result": "miss"
+      },
+      {
+        "asset": "POPCAT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.026423957721667612,
+        "result": "hit"
+      },
+      {
+        "asset": "ZKP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.025816023738872484,
+        "result": "hit"
+      },
+      {
+        "asset": "WCT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.025201612903225867,
+        "result": "hit"
+      },
+      {
+        "asset": "LUNA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01881134133042517,
+        "result": "hit"
+      },
+      {
+        "asset": "A-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.042645893847372496,
+        "result": "hit"
+      },
+      {
+        "asset": "SPX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0038781163434903343,
+        "result": "hit"
+      },
+      {
+        "asset": "SYRUP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.04558610709117217,
+        "result": "hit"
+      },
+      {
+        "asset": "SHELL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03132769766285426,
+        "result": "hit"
+      },
+      {
+        "asset": "ESP-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.022413574775230982,
+        "result": "hit"
       },
       {
         "asset": "ICP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.05680868838763553,
+        "current_return_1d": 0.022529644268774796,
         "result": "miss"
+      },
+      {
+        "asset": "MMT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03020408163265298,
+        "result": "hit"
+      },
+      {
+        "asset": "ZETA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0068697729988053124,
+        "result": "hit"
+      },
+      {
+        "asset": "YB-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.020295202952029467,
+        "result": "hit"
+      },
+      {
+        "asset": "SNX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.00614250614250611,
+        "result": "hit"
+      },
+      {
+        "asset": "ACU-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "up",
+        "current_return_1d": 0.017453135100194084,
+        "result": "hit"
+      },
+      {
+        "asset": "1INCH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.017735698093079066,
+        "result": "hit"
+      },
+      {
+        "asset": "AVNT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.004052062868369344,
+        "result": "miss"
+      },
+      {
+        "asset": "ME-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.012223247232472367,
+        "result": "hit"
+      },
+      {
+        "asset": "INJ-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.062453253552730015,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "AVAX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.01660692951015541,
+        "result": "miss"
+      },
+      {
+        "asset": "VIRTUAL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0058314522197140395,
+        "result": "hit"
+      },
+      {
+        "asset": "LAYER-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0073180379746835555,
+        "result": "hit"
+      },
+      {
+        "asset": "CELO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.010066105769230616,
+        "result": "hit"
+      },
+      {
+        "asset": "WET-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.016431924882629123,
+        "result": "hit"
+      },
+      {
+        "asset": "RIVER-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.011071095104708606,
+        "result": "miss"
+      },
+      {
+        "asset": "SUSHI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.025042686397268032,
+        "result": "hit"
+      },
+      {
+        "asset": "MANA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.008085106382978546,
+        "result": "hit"
       },
       {
         "asset": "GLM-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.01014931199375424,
+        "current_return_1d": -0.007887212856157011,
         "result": "hit"
       },
       {
-        "asset": "AT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "TRUST-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.023479188900747183,
+        "current_return_1d": -0.06508549365692229,
         "result": "hit"
       },
       {
-        "asset": "ZEC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "LINK-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.10257203502711265,
+        "current_return_1d": -0.01020606531881807,
         "result": "hit"
       },
       {
-        "asset": "ORDI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "ATOM-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.0043983663210807045,
+        "current_return_1d": -0.0042918454935622075,
+        "result": "hit"
+      },
+      {
+        "asset": "ETH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.0015398484516238042,
         "result": "miss"
       },
       {
-        "asset": "ETC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "ARKM-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.012336613305918731,
+        "current_return_1d": -0.02322528526709089,
+        "result": "hit"
+      },
+      {
+        "asset": "BREV-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.05308318789994182,
+        "result": "hit"
+      },
+      {
+        "asset": "LIGHT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": 0.059973345179920035,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "RAY-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.006709343838483428,
+        "result": "hit"
+      },
+      {
+        "asset": "HYPE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0031544868424694394,
+        "result": "hit"
+      },
+      {
+        "asset": "ENSO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.028668171557562072,
+        "result": "hit"
+      },
+      {
+        "asset": "XTZ-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03253355022366822,
+        "result": "hit"
+      },
+      {
+        "asset": "RENDER-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.0384138785625775,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "ZEC-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.07720887475941052,
+        "result": "hit"
+      },
+      {
+        "asset": "ZRX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.011731207289293888,
+        "result": "hit"
+      },
+      {
+        "asset": "SNDK-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.09597523219814241,
+        "result": "miss"
+      },
+      {
+        "asset": "PROVE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.0028851702250431988,
+        "result": "miss"
+      },
+      {
+        "asset": "NVDA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.056914862406853395,
+        "result": "hit"
+      },
+      {
+        "asset": "API3-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.013404825737265424,
+        "result": "hit"
+      },
+      {
+        "asset": "THETA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.005710206995003575,
+        "result": "hit"
+      },
+      {
+        "asset": "AGLD-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.024500322372662753,
+        "result": "hit"
+      },
+      {
+        "asset": "AXS-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.008101707590676854,
         "result": "hit"
       },
       {
         "asset": "INTC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.020732319010199007,
+        "current_return_1d": 0.03414717432132486,
+        "result": "miss"
+      },
+      {
+        "asset": "SAPIEN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.02956869719875499,
+        "result": "hit"
+      },
+      {
+        "asset": "AT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.02622950819672132,
+        "result": "hit"
+      },
+      {
+        "asset": "XAG-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.006191950464396245,
         "result": "hit"
       },
       {
         "asset": "BAND-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.007437070938215218,
+        "current_return_1d": -0.0144092219020171,
+        "result": "hit"
+      },
+      {
+        "asset": "CL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "mixed",
+        "current_return_1d": -0.0016370439663236924,
+        "result": "excluded_mixed"
+      },
+      {
+        "asset": "ETHW-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.0119161105815061,
         "result": "hit"
       },
       {
         "asset": "AR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.013741411617739008,
-        "result": "miss"
-      },
-      {
-        "asset": "ETHW-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.000954198473282375,
-        "result": "miss"
-      },
-      {
-        "asset": "MASK-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.018753447324875827,
-        "result": "hit"
-      },
-      {
-        "asset": "PENDLE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.0025316455696202667,
-        "result": "hit"
-      },
-      {
-        "asset": "LQTY-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.007054673721340388,
-        "result": "hit"
-      },
-      {
-        "asset": "MORPHO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.013613740607006819,
-        "result": "hit"
-      },
-      {
-        "asset": "LPT-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.00919540229885063,
-        "result": "hit"
-      },
-      {
-        "asset": "CRCL-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.04576122029920804,
+        "current_return_1d": -0.04467036352433762,
         "result": "hit"
       },
       {
         "asset": "COAI-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.01648610456900601,
+        "current_return_1d": -0.005268199233716575,
         "result": "hit"
       },
       {
-        "asset": "LTC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MASK-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.013234721681588124,
+        "current_return_1d": -0.013490725126475644,
         "result": "hit"
       },
       {
-        "asset": "UMA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MORPHO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.016046213093709905,
+        "current_return_1d": -0.012515458817709657,
+        "result": "hit"
+      },
+      {
+        "asset": "ORDI-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.010009383797309979,
+        "result": "hit"
+      },
+      {
+        "asset": "PENDLE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03426395939086302,
+        "result": "hit"
+      },
+      {
+        "asset": "ETC-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.018438661710037163,
+        "result": "hit"
+      },
+      {
+        "asset": "CRCL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.018444512757454623,
+        "result": "miss"
+      },
+      {
+        "asset": "LQTY-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.031971580817051426,
         "result": "hit"
       },
       {
         "asset": "MSTR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.04066834804539721,
+        "current_return_1d": -0.011091028590206942,
         "result": "hit"
       },
       {
-        "asset": "AAVE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "MU-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.061112800243235066,
-        "result": "hit"
+        "current_return_1d": 0.08041996182165256,
+        "result": "miss"
       },
       {
-        "asset": "QTUM-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "LTC-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.008900373241458537,
-        "result": "hit"
-      },
-      {
-        "asset": "ZEN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.007422266800401145,
-        "result": "hit"
-      },
-      {
-        "asset": "GAS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.00408202012530845,
-        "result": "hit"
-      },
-      {
-        "asset": "NEO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.024509803921568762,
-        "result": "hit"
-      },
-      {
-        "asset": "SSV-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.034036433365292273,
+        "current_return_1d": -0.009861932938856066,
         "result": "hit"
       },
       {
         "asset": "OKB-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": 0.006846473029045619,
+        "current_return_1d": 0.005872656089016992,
         "result": "miss"
       },
       {
-        "asset": "DASH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "UMA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.09098603470165034,
+        "current_return_1d": -0.016307893020221842,
+        "result": "hit"
+      },
+      {
+        "asset": "LPT-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.028615622583139877,
+        "result": "hit"
+      },
+      {
+        "asset": "DASH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.02420856610800748,
+        "result": "hit"
+      },
+      {
+        "asset": "QTUM-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.007676709154113559,
+        "result": "hit"
+      },
+      {
+        "asset": "SSV-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.028287841191066976,
+        "result": "miss"
+      },
+      {
+        "asset": "GAS-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.006958345248307962,
+        "result": "hit"
+      },
+      {
+        "asset": "ZEN-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.030113177041228734,
+        "result": "hit"
+      },
+      {
+        "asset": "AAVE-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.023558937823834225,
         "result": "hit"
       },
       {
         "asset": "ENS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.015425888665325238,
-        "result": "hit"
-      },
-      {
-        "asset": "VANA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.01223823769377208,
-        "result": "hit"
-      },
-      {
-        "asset": "EGLD-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": 0.0006738544474393926,
-        "result": "miss"
-      },
-      {
-        "asset": "CVX-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": -0.03523489932885904,
-        "result": "excluded_mixed"
-      },
-      {
-        "asset": "BCH-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.03284595081486452,
+        "current_return_1d": -0.007720254314259711,
         "result": "hit"
       },
       {
         "asset": "USDC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "up",
-        "current_return_1d": -0.00011289410532921984,
+        "current_return_1d": -8.093323008517839e-05,
+        "result": "miss"
+      },
+      {
+        "asset": "VANA-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01624449339207057,
+        "result": "hit"
+      },
+      {
+        "asset": "NEO-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.01005025125628145,
+        "result": "hit"
+      },
+      {
+        "asset": "BCH-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.010699588477366295,
+        "result": "hit"
+      },
+      {
+        "asset": "XCU-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.003111771024199239,
+        "result": "hit"
+      },
+      {
+        "asset": "GOOGL-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.014507772020725396,
+        "result": "miss"
+      },
+      {
+        "asset": "EGLD-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.03569023569023577,
+        "result": "hit"
+      },
+      {
+        "asset": "CVX-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": -0.012173913043478368,
+        "result": "hit"
+      },
+      {
+        "asset": "QQQ-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.00819128718122486,
+        "result": "miss"
+      },
+      {
+        "asset": "TRB-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
+        "previous_trend": "down",
+        "current_return_1d": 0.00402955003357941,
         "result": "miss"
       },
       {
         "asset": "KSM-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.004444444444444362,
+        "current_return_1d": -0.018494897959183798,
         "result": "hit"
       },
       {
         "asset": "AUCTION-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.02974983096686956,
+        "current_return_1d": -0.020209059233449622,
         "result": "hit"
-      },
-      {
-        "asset": "BTC-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.020586829527350026,
-        "result": "hit"
-      },
-      {
-        "asset": "TSLA-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "mixed",
-        "current_return_1d": null,
-        "result": "pending"
-      },
-      {
-        "asset": "TRB-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": -0.00799467021985334,
-        "result": "hit"
-      },
-      {
-        "asset": "COIN-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": null,
-        "result": "pending"
       },
       {
         "asset": "XAU-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "mixed",
-        "current_return_1d": -0.02392956217585329,
+        "current_return_1d": -0.015075501075056175,
         "result": "excluded_mixed"
       },
       {
-        "asset": "NMR-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "asset": "BTC-USDT-SWAP",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": null,
-        "result": "pending"
-      },
-      {
-        "asset": "METIS-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": null,
-        "result": "pending"
-      },
-      {
-        "asset": "BNB-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": null,
-        "result": "pending"
+        "current_return_1d": 0.0028534866760472344,
+        "result": "miss"
       },
       {
         "asset": "TAO-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
+        "previous_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_trend": "down",
-        "current_return_1d": -0.021691390669116628,
+        "current_return_1d": -0.010307389252828814,
         "result": "hit"
-      },
-      {
-        "asset": "COMP-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": null,
-        "result": "pending"
-      },
-      {
-        "asset": "GIGGLE-USDT-SWAP",
-        "previous_date": "2026-11-09",
-        "current_date": "2026-11-10",
-        "previous_trend": "down",
-        "current_return_1d": null,
-        "result": "pending"
       }
     ]
   },
