@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import date, datetime, timedelta, timezone
 from market_pipeline.metrics import screen_crypto, screen_us
 from market_pipeline.validation import validate_rows
-from market_pipeline.report_gate import validate_report
+from market_pipeline.report_gate import latest_expected_us_trading_day, validate_report
 
 
 def rows(n=260):
@@ -45,6 +45,28 @@ class PipelineTests(unittest.TestCase):
         result = validate_report(report, now=datetime(2026, 11, 3, 2, tzinfo=timezone.utc))
         self.assertEqual(result["status"], "fail")
         self.assertEqual(report["summary_gate"]["status"], "blocked")
+
+    def test_veterans_day_is_a_completed_us_trading_day(self):
+        now = datetime(2026, 11, 12, 2, tzinfo=timezone.utc)
+        self.assertEqual(latest_expected_us_trading_day(now), "2026-11-11")
+
+    def test_report_gate_rejects_previous_us_session_after_close(self):
+        report = {
+            "generated_at": "2026-11-12T01:59:00+00:00",
+            "instruments": [{"status": "pass"}],
+            "passed": 1,
+            "failed": 0,
+            "overall_status": "pass",
+            "data_as_of": {"us": "2026-11-10", "crypto": "2026-11-11"},
+            "us_benchmark": {"status": "pass", "last_date": "2026-11-10"},
+            "crypto_universe": {"status": "partial", "selected": 249, "target": 252},
+        }
+        result = validate_report(
+            report,
+            now=datetime(2026, 11, 12, 2, tzinfo=timezone.utc),
+        )
+        self.assertEqual(result["status"], "fail")
+        self.assertTrue(any("latest completed NYSE/Nasdaq" in error for error in result["errors"]))
 
     def test_metrics_are_computed(self):
         result = screen_us(rows(), rows())
