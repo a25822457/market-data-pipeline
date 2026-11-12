@@ -5,7 +5,7 @@ import csv
 import json
 import math
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -13,6 +13,88 @@ from zoneinfo import ZoneInfo
 TAIPEI = ZoneInfo("Asia/Taipei")
 US_TARGET = 100
 CRYPTO_TARGET = 252
+
+
+NEW_YORK = ZoneInfo("America/New_York")
+
+
+def _observed_fixed_holiday(year: int, month: int, day: int) -> date:
+    holiday = date(year, month, day)
+    if holiday.weekday() == 5:
+        return holiday - timedelta(days=1)
+    if holiday.weekday() == 6:
+        return holiday + timedelta(days=1)
+    return holiday
+
+
+def _nth_weekday(year: int, month: int, weekday: int, occurrence: int) -> date:
+    first = date(year, month, 1)
+    offset = (weekday - first.weekday()) % 7
+    return first + timedelta(days=offset + 7 * (occurrence - 1))
+
+
+def _last_weekday(year: int, month: int, weekday: int) -> date:
+    if month == 12:
+        next_month = date(year + 1, 1, 1)
+    else:
+        next_month = date(year, month + 1, 1)
+    last = next_month - timedelta(days=1)
+    return last - timedelta(days=(last.weekday() - weekday) % 7)
+
+
+def _easter_sunday(year: int) -> date:
+    # Gregorian computus, sufficient for the current and future calendar years.
+    a = year % 19
+    b = year // 100
+    c = year % 100
+    d = b // 4
+    e = b % 4
+    f = (b + 8) // 25
+    g = (b - f + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    i = c // 4
+    k = c % 4
+    l = (32 + 2 * e + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * l) // 451
+    month = (h + l - 7 * m + 114) // 31
+    day = ((h + l - 7 * m + 114) % 31) + 1
+    return date(year, month, day)
+
+
+def _us_market_holidays(year: int) -> set[date]:
+    return {
+        _observed_fixed_holiday(year, 1, 1),
+        _nth_weekday(year, 1, 0, 3),   # Martin Luther King Jr. Day
+        _nth_weekday(year, 2, 0, 3),   # Washington's Birthday
+        _easter_sunday(year) - timedelta(days=2),  # Good Friday
+        _last_weekday(year, 5, 0),      # Memorial Day
+        _observed_fixed_holiday(year, 6, 19),     # Juneteenth
+        _observed_fixed_holiday(year, 7, 4),      # Independence Day
+        _nth_weekday(year, 9, 0, 1),   # Labor Day
+        _nth_weekday(year, 11, 3, 4),  # Thanksgiving Day
+        _observed_fixed_holiday(year, 12, 25),    # Christmas Day
+    }
+
+
+def latest_expected_us_trading_day(now: datetime | None = None) -> str:
+    """Return the latest completed NYSE/Nasdaq session date.
+
+    Veterans Day is intentionally not in the full-day holiday list because
+    NYSE and Nasdaq trade normally on that date.
+    """
+    now = now or datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    ny_now = now.astimezone(NEW_YORK)
+    candidate = ny_now.date()
+    if ny_now.time() < time(16, 0):
+        candidate -= timedelta(days=1)
+    holidays = set()
+    for year in range(candidate.year - 1, candidate.year + 2):
+        holidays.update(_us_market_holidays(year))
+    while candidate.weekday() >= 5 or candidate in holidays:
+        candidate -= timedelta(days=1)
+    return candidate.isoformat()
 
 
 def _parse_datetime(value: str) -> datetime:
@@ -198,6 +280,17 @@ def validate_report(
         errors.append("SPY benchmark validation did not pass")
     if us_date and benchmark_date and us_date != benchmark_date:
         errors.append(f"US data date {us_date} differs from SPY date {benchmark_date}")
+    expected_us_date = latest_expected_us_trading_day(now)
+    if us_date and us_date != expected_us_date:
+        errors.append(
+            f"US data date {us_date} is not the latest completed NYSE/Nasdaq "
+            f"trading day {expected_us_date}"
+        )
+    if benchmark_date and benchmark_date != expected_us_date:
+        errors.append(
+            f"SPY benchmark date {benchmark_date} is not the latest completed "
+            f"NYSE/Nasdaq trading day {expected_us_date}"
+        )
     if us_date:
         try:
             us_age_days = (now.date() - datetime.fromisoformat(us_date).date()).days
