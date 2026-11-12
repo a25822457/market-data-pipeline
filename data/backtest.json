@@ -6,93 +6,91 @@
   "us": {
     "results": [
       {
+        "result": "not_triggered",
         "asset": "MSFT",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": 521.1300048828125
       },
       {
+        "result": "triggered_open",
         "asset": "AAPL",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": 355.6300048828125
       },
       {
+        "result": "not_triggered",
         "asset": "MRNA",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": 248.69000244140625
       },
       {
+        "result": "triggered_open",
         "asset": "KO",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": 97.56999969482422
       },
       {
+        "result": "pending",
+        "reason": "current instrument is missing",
         "asset": "TEVA",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": null
       },
       {
+        "result": "pending",
+        "reason": "current instrument is missing",
         "asset": "ZETA",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": null
       },
       {
+        "result": "pending",
+        "reason": "current instrument is missing",
         "asset": "KDP",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": null
       },
       {
+        "result": "pending",
+        "reason": "current instrument is missing",
         "asset": "VTRS",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": null
       },
       {
+        "result": "pending",
+        "reason": "current instrument is missing",
         "asset": "S",
         "previous_date": "2026-11-10",
-        "current_date": "2026-11-10",
+        "current_date": "2026-11-11",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null,
-        "result": "pending",
-        "reason": "US data date did not advance: 2026-11-10 <= 2026-11-10"
+        "current_close": null
       }
     ],
     "summary": {
       "watchlist": 9,
-      "evaluated": 0,
-      "pending": 9,
+      "evaluated": 4,
+      "pending": 5,
       "counts": {
-        "pending": 9
+        "not_triggered": 2,
+        "triggered_open": 2,
+        "pending": 5
       }
     }
   },
