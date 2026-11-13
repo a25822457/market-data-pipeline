@@ -53,6 +53,8 @@ jobs:
               generated_taipei = generated.astimezone(ZoneInfo("Asia/Taipei"))
               age_hours = (now_taipei - generated_taipei).total_seconds() / 3600
               latest_completed_utc_day = (now_utc - timedelta(days=1)).date().isoformat()
+              from market_pipeline.report_gate import latest_expected_us_trading_day
+              latest_completed_us_day = latest_expected_us_trading_day(now_utc)
               data_as_of = payload.get("data_as_of", {})
               already_fresh = (
                   generated_taipei.date() == now_taipei.date()
@@ -62,6 +64,7 @@ jobs:
                   and payload.get("us_benchmark", {}).get("status") == "pass"
                   and payload.get("us_benchmark", {}).get("last_date")
                   == data_as_of.get("us")
+                  and data_as_of.get("us") == latest_completed_us_day
                   and data_as_of.get("crypto") == latest_completed_utc_day
                   and payload.get("summary_gate", {}).get("status")
                   in {"ready", "ready_with_warnings"}
@@ -70,7 +73,9 @@ jobs:
               print(
                   f"generated_at_taipei={generated_taipei.isoformat()} "
                   f"age_hours={age_hours:.2f} "
+                  f"latest_completed_us_day={latest_completed_us_day} "
                   f"latest_completed_utc_day={latest_completed_utc_day} "
+                  f"data_as_of_us={data_as_of.get('us')} "
                   f"data_as_of_crypto={data_as_of.get('crypto')}"
               )
           except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError):
