@@ -80,6 +80,12 @@ def screen_us(rows: list[dict], spy_rows: list[dict] | None = None) -> dict:
         entry_status = (
             "triggered" if closes[i] >= recommended_entry else "waiting_breakout"
         )
+        # A waiting setup is not a position. If the close falls through the
+        # planned stop before the breakout, invalidate the setup and remove it
+        # from the actionable SEPA list instead of continuing to watch it.
+        if entry_status == "waiting_breakout" and closes[i] <= stop_loss:
+            entry_status = "invalidated_before_entry"
+            sepa_pass = False
     return {
         "date": rows[i]["date"],
         "close": closes[i],
