@@ -86,6 +86,7 @@ def _backtest_section(backtest: dict) -> list[str]:
     )
     result_labels = {
         "not_triggered": "未觸發",
+        "invalidated_before_entry": "未進場、跌破失效位",
         "triggered_open": "已觸發、持續觀察",
         "open": "持倉中、未觸及目標或停損",
         "target": "達到 2R 止盈",
