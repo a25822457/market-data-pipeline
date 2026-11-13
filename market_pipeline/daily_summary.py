@@ -122,7 +122,7 @@ def _backtest_section(backtest: dict) -> list[str]:
             f"| 待補資料 | {crypto_summary.get('pending', 0)} |",
             f"| 方向命中率（只計 up/down） | {hit_rate_text} |",
             "",
-            "定義：美股用昨日參考價位對今日高低價判定；若同一日同時穿越停損與止盈，不擅自猜測先後。合約只檢查昨日 up/down 方向與今日報酬同向，不等同實際損益。",
+            "定義：美股未進場前跌破失效位記為「未進場、跌破失效位」；已進場才用昨日參考價位對今日高低價判定停損/止盈；若同一日同時穿越停損與止盈，不擅自猜測先後。合約只檢查昨日 up/down 方向與今日報酬同向，不等同實際損益。",
             "",
             "[查看完整回測 JSON](https://github.com/a25822457/market-data-pipeline/blob/main/data/backtest.json)　"
             "[查看觀察名單歷史](https://github.com/a25822457/market-data-pipeline/blob/main/data/observation_history.json)",
