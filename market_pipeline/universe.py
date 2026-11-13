@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from urllib.parse import urlencode
 
+from .report_gate import latest_expected_us_trading_day
+
 from .sources import (
     fetch_okx_daily,
     fetch_okx_swap_instruments,
@@ -41,7 +43,11 @@ def fetch_top_us_stocks(target: int = 100, min_bars: int = 252) -> tuple[list[st
             continue
         seen.add(symbol)
         try:
-            fetch_yahoo_daily(symbol, min_bars=min_bars)
+            rows = fetch_yahoo_daily(symbol, min_bars=min_bars)
+            expected_date = latest_expected_us_trading_day()
+            latest_date = max(row.get("date", "") for row in rows)
+            if latest_date != expected_date:
+                continue
         except Exception:
             continue
         selected.append(symbol)
