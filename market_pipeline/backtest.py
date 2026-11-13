@@ -330,7 +330,7 @@ def build_backtest(
         "us": us,
         "crypto": crypto,
         "methodology": {
-            "us": "以昨日參考進場、停損與2R止盈，使用今日高低價判定；同日同時觸及兩個價位標記為順序不明。",
+            "us": "未進場前跌破失效位記為 invalidated_before_entry；已進場後才用今日高低價判定停損/止盈；同日同時觸及兩個價位標記為順序不明。",
             "crypto": "沿用昨日 up/down 趨勢，以今日單日報酬同方向視為 hit，mixed 不列入勝率。",
         },
     }
