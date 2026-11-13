@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 from datetime import date, datetime, timedelta, timezone
 from market_pipeline.metrics import screen_crypto, screen_us
+from market_pipeline.backtest import _classify_us
 from market_pipeline.validation import validate_rows
 from market_pipeline.report_gate import latest_expected_us_trading_day, validate_report
 
@@ -67,6 +68,32 @@ class PipelineTests(unittest.TestCase):
         )
         self.assertEqual(result["status"], "fail")
         self.assertTrue(any("latest completed NYSE/Nasdaq" in error for error in result["errors"]))
+
+    def test_pre_entry_stop_breach_invalidates_setup(self):
+        previous = {
+            "entry_status": "waiting_breakout",
+            "recommended_entry": 281.0808,
+            "stop_loss": 258.5943,
+            "take_profit_2r": 326.0538,
+        }
+        current = {"high": 250.0, "low": 229.0, "close": 231.35}
+        self.assertEqual(
+            _classify_us(previous, current)["result"],
+            "invalidated_before_entry",
+        )
+
+    def test_waiting_breakout_above_stop_remains_untriggered(self):
+        previous = {
+            "entry_status": "waiting_breakout",
+            "recommended_entry": 281.0808,
+            "stop_loss": 258.5943,
+            "take_profit_2r": 326.0538,
+        }
+        current = {"high": 250.0, "low": 259.0, "close": 260.0}
+        self.assertEqual(
+            _classify_us(previous, current)["result"],
+            "not_triggered",
+        )
 
     def test_metrics_are_computed(self):
         result = screen_us(rows(), rows())
