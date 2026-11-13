@@ -176,9 +176,9 @@ def _validate_us_rows(rows: list[dict[str, str]], as_of: str | None) -> list[str
                         )
                 except (KeyError, TypeError, ValueError):
                     pass
-        elif any(row.get(key) for key in (*level_keys, "entry_status")):
+        elif any(row.get(key) for key in level_keys) or row.get("entry_status") not in {None, "", "invalidated_before_entry"}:
             errors.append(
-                f"US {row.get('asset')} has entry levels despite sepa_pass=False"
+                f"US {row.get('asset')} has entry levels or invalid state despite sepa_pass=False"
             )
     return errors
 
