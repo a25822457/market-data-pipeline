@@ -86,6 +86,8 @@ def screen_us(rows: list[dict], spy_rows: list[dict] | None = None) -> dict:
         if entry_status == "waiting_breakout" and closes[i] <= stop_loss:
             entry_status = "invalidated_before_entry"
             sepa_pass = False
+            # Invalid setups must not publish stale trade levels.
+            recommended_entry = stop_loss = take_profit_2r = None
     return {
         "date": rows[i]["date"],
         "close": closes[i],
