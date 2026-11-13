@@ -115,6 +115,10 @@ def _classify_us(previous: dict, current: dict | None) -> dict:
 
     entry_status = previous.get("entry_status")
     if entry_status == "waiting_breakout":
+        # No position exists before the breakout. A move below the planned
+        # stop invalidates the setup; it is not a stopped-out trade.
+        if high < entry and low <= stop:
+            return {"result": "invalidated_before_entry"}
         if high < entry:
             return {"result": "not_triggered"}
         if low <= stop and high >= target:
