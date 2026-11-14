@@ -64,7 +64,7 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
         item = {
             "asset": symbol,
             "market": "us_stock",
-            "source": "Yahoo Finance chart API",
+            "source": "Yahoo Finance chart API with Stooq fallback",
         }
         try:
             rows = fetch_yahoo_daily(symbol, min_bars=min_bars)
@@ -90,7 +90,7 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
         benchmark_validation = validate_rows(spy, min_bars)
         report["us_benchmark"] = {
             "asset": "SPY",
-            "source": "Yahoo Finance chart API",
+            "source": "Yahoo Finance chart API with Stooq fallback",
             **benchmark_validation,
         }
         if benchmark_validation["status"] == "pass":
@@ -99,7 +99,7 @@ def run(output_dir: Path, report_path: Path, min_bars: int = 252):
     except Exception as exc:
         report["us_benchmark"] = {
             "asset": "SPY",
-            "source": "Yahoo Finance chart API",
+            "source": "Yahoo Finance chart API with Stooq fallback",
             "status": "fail",
             "bars": 0,
             "errors": [f"{type(exc).__name__}: {exc}"],
