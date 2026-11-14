@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import io
 import json
 import time
 from datetime import datetime, timezone
@@ -7,10 +9,14 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 
-def _get_json(url: str, timeout: int = 30) -> dict | list:
+def _get_text(url: str, timeout: int = 30) -> str:
     request = Request(url, headers={"User-Agent": "free-market-pipeline/0.1"})
     with urlopen(request, timeout=timeout) as response:
-        return json.loads(response.read().decode("utf-8"))
+        return response.read().decode("utf-8")
+
+
+def _get_json(url: str, timeout: int = 30) -> dict | list:
+    return json.loads(_get_text(url, timeout=timeout))
 
 
 def fetch_binance_json(path: str) -> dict | list:
@@ -75,43 +81,101 @@ def fetch_yahoo_most_active_candidates(limit: int = 250) -> list[str]:
     return [symbol for symbol, _ in sorted(eligible, key=lambda item: item[1], reverse=True)]
 
 
+def fetch_stooq_daily(symbol: str, min_bars: int = 252) -> list[dict]:
+    """Fetch daily US equity bars from Stooq as a no-key fallback.
+
+    Yahoo can temporarily rate-limit GitHub-hosted runners. Stooq is used only
+    when both Yahoo chart hosts fail or return too few complete bars; the same
+    bar-count and date gates are applied by the caller.
+    """
+    query = urlencode({"s": f"{symbol.lower()}.us", "i": "d"})
+    text = _get_text(f"https://stooq.com/q/d/l/?{query}")
+    reader = csv.DictReader(io.StringIO(text))
+    rows = []
+    for item in reader:
+        if not item.get("Date") or item.get("Close") in (None, "", "N/D"):
+            continue
+        try:
+            rows.append(
+                {
+                    "date": item["Date"],
+                    "open": float(item["Open"]),
+                    "high": float(item["High"]),
+                    "low": float(item["Low"]),
+                    "close": float(item["Close"]),
+                    "volume": float(item.get("Volume") or 0),
+                }
+            )
+        except (KeyError, TypeError, ValueError):
+            continue
+    if len(rows) < min_bars:
+        raise RuntimeError(
+            f"Stooq returned {len(rows)} complete bars; need at least {min_bars}"
+        )
+    return rows
+
+
 def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     period2 = int(time.time()) + 86400
     period1 = period2 - 500 * 86400
-    query = urlencode({"period1": period1, "period2": period2, "interval": "1d", "events": "history", "includeAdjustedClose": "true"})
-    last_error = None
-    payload = None
+    query = urlencode(
+        {
+            "period1": period1,
+            "period2": period2,
+            "interval": "1d",
+            "events": "history",
+            "includeAdjustedClose": "true",
+        }
+    )
+    yahoo_error = None
     for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
         try:
             payload = _get_json(f"https://{host}/v8/finance/chart/{symbol}?{query}")
-            if payload.get("chart", {}).get("result"):
-                break
+            result = payload.get("chart", {}).get("result")
+            error = payload.get("chart", {}).get("error")
+            if not result:
+                yahoo_error = RuntimeError(f"Yahoo returned no result: {error}")
+                continue
+            block = result[0]
+            timestamps = block.get("timestamp", [])
+            quote = block.get("indicators", {}).get("quote", [{}])[0]
+            rows = []
+            current_utc_date = datetime.now(timezone.utc).date()
+            for i, stamp in enumerate(timestamps):
+                bar_date = datetime.fromtimestamp(stamp, timezone.utc).date()
+                # Exclude the in-progress US session.
+                if bar_date >= current_utc_date:
+                    continue
+                vals = {
+                    key: (quote.get(key) or [None] * len(timestamps))[i]
+                    for key in ("open", "high", "low", "close", "volume")
+                }
+                if all(v is not None for v in vals.values()):
+                    rows.append(
+                        {
+                            "date": bar_date.isoformat(),
+                            "open": vals["open"],
+                            "high": vals["high"],
+                            "low": vals["low"],
+                            "close": vals["close"],
+                            "volume": vals["volume"],
+                        }
+                    )
+            if len(rows) >= min_bars:
+                return rows
+            yahoo_error = RuntimeError(
+                f"Yahoo returned {len(rows)} complete bars; need at least {min_bars}"
+            )
         except Exception as exc:
-            last_error = exc
-    if payload is None:
-        raise RuntimeError(f"all Yahoo public endpoints failed; last error: {last_error}")
-    result = payload.get("chart", {}).get("result")
-    error = payload.get("chart", {}).get("error")
-    if not result:
-        raise RuntimeError(f"Yahoo returned no result: {error}")
-    block = result[0]
-    timestamps = block.get("timestamp", [])
-    quote = block.get("indicators", {}).get("quote", [{}])[0]
-    rows = []
-    current_utc_date = datetime.now(timezone.utc).date()
-    for i, stamp in enumerate(timestamps):
-        bar_date = datetime.fromtimestamp(stamp, timezone.utc).date()
-        # Yahoo includes the in-progress US session. The Taiwan morning run
-        # must use only the latest completed US trading session.
-        if bar_date >= current_utc_date:
-            continue
-        vals = {key: (quote.get(key) or [None] * len(timestamps))[i] for key in ("open", "high", "low", "close", "volume")}
-        if all(v is not None for v in vals.values()):
-            rows.append({"date": bar_date.isoformat(), "open": vals["open"], "high": vals["high"], "low": vals["low"], "close": vals["close"], "volume": vals["volume"]})
-    if len(rows) < min_bars:
-        raise RuntimeError(f"Yahoo returned {len(rows)} complete bars; need at least {min_bars}")
-    return rows
+            yahoo_error = exc
 
+    try:
+        return fetch_stooq_daily(symbol, min_bars=min_bars)
+    except Exception as stooq_error:
+        raise RuntimeError(
+            f"Yahoo and Stooq daily endpoints failed for {symbol}; "
+            f"Yahoo: {yahoo_error}; Stooq: {stooq_error}"
+        ) from stooq_error
 
 def fetch_binance_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     query = urlencode({"symbol": symbol, "interval": "1d", "limit": 1000})
