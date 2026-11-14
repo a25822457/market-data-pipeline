@@ -89,7 +89,7 @@ def fetch_stooq_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     bar-count and date gates are applied by the caller.
     """
     query = urlencode({"s": f"{symbol.lower()}.us", "i": "d"})
-    text = _get_text(f"https://stooq.com/q/d/l/?{query}")
+    text = _get_text(f"https://stooq.com/q/d/l/?{query}", timeout=15)
     reader = csv.DictReader(io.StringIO(text))
     rows = []
     for item in reader:
@@ -130,7 +130,10 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
     yahoo_error = None
     for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
         try:
-            payload = _get_json(f"https://{host}/v8/finance/chart/{symbol}?{query}")
+            payload = _get_json(
+                f"https://{host}/v8/finance/chart/{symbol}?{query}",
+                timeout=8,
+            )
             result = payload.get("chart", {}).get("result")
             error = payload.get("chart", {}).get("error")
             if not result:
