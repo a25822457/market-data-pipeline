@@ -30,13 +30,12 @@
         "current_close": 523.8800048828125
       },
       {
-        "result": "pending",
-        "reason": "current instrument is missing",
+        "result": "triggered_open",
         "asset": "JNJ",
         "previous_date": "2026-11-12",
         "current_date": "2026-11-13",
         "previous_entry_status": "waiting_breakout",
-        "current_close": null
+        "current_close": 285.75
       },
       {
         "result": "triggered_open",
@@ -82,25 +81,25 @@
     ],
     "summary": {
       "watchlist": 9,
-      "evaluated": 7,
-      "pending": 2,
+      "evaluated": 8,
+      "pending": 1,
       "counts": {
         "invalidated_before_entry": 2,
-        "triggered_open": 3,
-        "pending": 2,
-        "not_triggered": 2
+        "triggered_open": 4,
+        "not_triggered": 2,
+        "pending": 1
       }
     }
   },
   "crypto": {
     "summary": {
       "watchlist": 252,
-      "evaluated": 228,
-      "hits": 187,
+      "evaluated": 227,
+      "hits": 186,
       "misses": 41,
-      "pending": 1,
-      "excluded_mixed": 23,
-      "hit_rate": 0.8201754385964912
+      "pending": 4,
+      "excluded_mixed": 21,
+      "hit_rate": 0.8193832599118943
     },
     "results": [
       {
@@ -1964,8 +1963,8 @@
         "previous_date": "2026-11-12",
         "current_date": "2026-11-13",
         "previous_trend": "down",
-        "current_return_1d": -0.06161526949780427,
-        "result": "hit"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "NEO-USDT-SWAP",
@@ -2036,8 +2035,8 @@
         "previous_date": "2026-11-12",
         "current_date": "2026-11-13",
         "previous_trend": "mixed",
-        "current_return_1d": -0.022362309223622923,
-        "result": "excluded_mixed"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "BTC-USDT-SWAP",
@@ -2108,8 +2107,8 @@
         "previous_date": "2026-11-12",
         "current_date": "2026-11-13",
         "previous_trend": "mixed",
-        "current_return_1d": -0.024957802559256725,
-        "result": "excluded_mixed"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "TAO-USDT-SWAP",
