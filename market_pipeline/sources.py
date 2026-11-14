@@ -8,6 +8,9 @@ from datetime import datetime, timezone
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+_YAHOO_DAILY_UNAVAILABLE = False
+_YAHOO_DAILY_FAILURES = 0
+
 
 def _get_text(url: str, timeout: int = 30) -> str:
     request = Request(url, headers={"User-Agent": "free-market-pipeline/0.1"})
@@ -116,6 +119,13 @@ def fetch_stooq_daily(symbol: str, min_bars: int = 252) -> list[dict]:
 
 
 def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
+    global _YAHOO_DAILY_UNAVAILABLE, _YAHOO_DAILY_FAILURES
+
+    # Once two consecutive symbols confirm a Yahoo outage, stop spending
+    # timeout budget on the same broken source for the rest of this run.
+    if _YAHOO_DAILY_UNAVAILABLE:
+        return fetch_stooq_daily(symbol, min_bars=min_bars)
+
     period2 = int(time.time()) + 86400
     period1 = period2 - 500 * 86400
     query = urlencode(
@@ -127,6 +137,7 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
             "includeAdjustedClose": "true",
         }
     )
+    yahoo_errors = 0
     yahoo_error = None
     for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
         try:
@@ -146,7 +157,6 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
             current_utc_date = datetime.now(timezone.utc).date()
             for i, stamp in enumerate(timestamps):
                 bar_date = datetime.fromtimestamp(stamp, timezone.utc).date()
-                # Exclude the in-progress US session.
                 if bar_date >= current_utc_date:
                     continue
                 vals = {
@@ -165,12 +175,19 @@ def fetch_yahoo_daily(symbol: str, min_bars: int = 252) -> list[dict]:
                         }
                     )
             if len(rows) >= min_bars:
+                _YAHOO_DAILY_FAILURES = 0
                 return rows
             yahoo_error = RuntimeError(
                 f"Yahoo returned {len(rows)} complete bars; need at least {min_bars}"
             )
         except Exception as exc:
+            yahoo_errors += 1
             yahoo_error = exc
+
+    if yahoo_errors >= 2:
+        _YAHOO_DAILY_FAILURES += 1
+        if _YAHOO_DAILY_FAILURES >= 2:
+            _YAHOO_DAILY_UNAVAILABLE = True
 
     try:
         return fetch_stooq_daily(symbol, min_bars=min_bars)
