@@ -4,9 +4,11 @@ on:
   push:
     branches: ["main"]
   schedule:
-    # Run every 30 minutes so a delayed or missed GitHub schedule is recovered.
-    # The freshness guard skips duplicate work after a valid snapshot exists.
-    - cron: "*/30 * * * *"
+    # GitHub cron is UTC. Run every 10 minutes during the Taiwan morning window
+    # so the 10:00 summary has multiple chances to receive a fresh snapshot.
+    - cron: "*/10 0-2 * * *"
+    # Keep a lower-frequency recovery schedule outside the morning window.
+    - cron: "*/30 3-23 * * *"
   workflow_dispatch:
 
 permissions:
