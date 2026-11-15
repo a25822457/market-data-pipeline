@@ -126,12 +126,12 @@
   "crypto": {
     "summary": {
       "watchlist": 252,
-      "evaluated": 235,
-      "hits": 231,
+      "evaluated": 234,
+      "hits": 230,
       "misses": 4,
-      "pending": 0,
+      "pending": 1,
       "excluded_mixed": 17,
-      "hit_rate": 0.9829787234042553
+      "hit_rate": 0.9829059829059829
     },
     "results": [
       {
@@ -2147,8 +2147,8 @@
         "previous_date": "2026-11-13",
         "current_date": "2026-11-14",
         "previous_trend": "down",
-        "current_return_1d": -0.004144117790453872,
-        "result": "hit"
+        "current_return_1d": null,
+        "result": "pending"
       }
     ]
   },
