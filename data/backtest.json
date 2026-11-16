@@ -126,12 +126,12 @@
   "crypto": {
     "summary": {
       "watchlist": 252,
-      "evaluated": 237,
+      "evaluated": 234,
       "hits": 22,
-      "misses": 215,
-      "pending": 2,
-      "excluded_mixed": 13,
-      "hit_rate": 0.09282700421940929
+      "misses": 212,
+      "pending": 6,
+      "excluded_mixed": 12,
+      "hit_rate": 0.09401709401709402
     },
     "results": [
       {
@@ -2091,8 +2091,8 @@
         "previous_date": "2026-11-14",
         "current_date": "2026-11-15",
         "previous_trend": "down",
-        "current_return_1d": 0.03877995642701526,
-        "result": "miss"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "AUCTION-USDT-SWAP",
@@ -2107,8 +2107,8 @@
         "previous_date": "2026-11-14",
         "current_date": "2026-11-15",
         "previous_trend": "mixed",
-        "current_return_1d": 5.89763504832419e-05,
-        "result": "excluded_mixed"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "TAO-USDT-SWAP",
@@ -2123,16 +2123,16 @@
         "previous_date": "2026-11-14",
         "current_date": "2026-11-15",
         "previous_trend": "down",
-        "current_return_1d": 0.014640638864241495,
-        "result": "miss"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "BNB-USDT-SWAP",
         "previous_date": "2026-11-14",
         "current_date": "2026-11-15",
         "previous_trend": "down",
-        "current_return_1d": 0.025517573423206708,
-        "result": "miss"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "COMP-USDT-SWAP",
