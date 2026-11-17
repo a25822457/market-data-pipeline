@@ -2097,8 +2097,8 @@
         "previous_date": "2026-11-15",
         "current_date": "2026-11-16",
         "previous_trend": "down",
-        "current_return_1d": -0.009093237704917989,
-        "result": "hit"
+        "current_return_1d": null,
+        "result": "pending"
       },
       {
         "asset": "VANA-USDT-SWAP",
@@ -2121,8 +2121,8 @@
         "previous_date": "2026-11-15",
         "current_date": "2026-11-16",
         "previous_trend": "down",
-        "current_return_1d": null,
-        "result": "pending"
+        "current_return_1d": -0.01825789273488021,
+        "result": "hit"
       }
     ]
   },
