@@ -4,11 +4,9 @@ on:
   push:
     branches: ["main"]
   schedule:
-    # GitHub cron is UTC. Run every 10 minutes during the Taiwan morning window
-    # so the 10:00 summary has multiple chances to receive a fresh snapshot.
-    - cron: "*/10 0-2 * * *"
-    # Keep a lower-frequency recovery schedule outside the morning window.
-    - cron: "*/30 3-23 * * *"
+    # One simple expression is more reliable than split hour ranges on GitHub.
+    # Run every 10 minutes; the freshness guard skips duplicate snapshots.
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 permissions:
