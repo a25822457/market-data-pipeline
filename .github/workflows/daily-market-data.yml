@@ -3,10 +3,6 @@ name: Daily market data pipeline
 on:
   push:
     branches: ["main"]
-  schedule:
-    # One simple expression is more reliable than split hour ranges on GitHub.
-    # Run every 10 minutes; the freshness guard skips duplicate snapshots.
-    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 permissions:
