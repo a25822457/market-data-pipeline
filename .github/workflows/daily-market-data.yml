@@ -92,7 +92,7 @@ jobs:
               exit 0
             fi
             if [ "$attempt" -lt 3 ]; then
-              sleep 30
+              sleep 120
             fi
           done
           exit 1
@@ -126,3 +126,4 @@ jobs:
           git add data/us_screen.csv data/crypto_screen.csv data/backtest.json data/observation_history.json data/daily_summary_input.json data/daily_summary.md validation_report.json
           git diff --cached --quiet || git commit -m "Update daily market data snapshot"
           git push origin HEAD:main
+
